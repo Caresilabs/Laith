@@ -2,11 +2,11 @@
 
 Laith is developed and produced by:
 
-Andreas Karlsson
-Henrik Phan
-Simon Bothen
-Simon Johansson
-Tim Lindstam
+Andreas Karlsson\n
+Henrik Phan\n
+Simon Bothen\n
+Simon Johansson\n
+Tim Lindstam\n
 
 (c) 2015
 
