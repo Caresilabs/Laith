@@ -1,5 +1,17 @@
 # Laith
 
+Laith is developed and produced by:
+
+Andreas Karlsson
+Henrik Phan
+Simon Bothen
+Simon Johansson
+Tim Lindstam
+
+(c) 2015
+
+Developed for Malmö Högskola, 15hp.
+
 #SWEDISH
 
 Laith är ett plattformsspel i stil med Trine och Lost Vikings. Spelet är ämnat för två spelare
