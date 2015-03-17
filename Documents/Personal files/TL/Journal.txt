@@ -1,0 +1,5 @@
+17 mars
+
+Har börjat skriva på verifieringsdokumentet. Har lagt ca en timme på det. Har i det påbörjat mallen så det kan
+fyllas på allt eftersom att vi kommer till själva testmomenten. Har även börjat skriva på texten om hur testen-
+processen kommer att fungera. Kommer inte att bli klar med det idag.
