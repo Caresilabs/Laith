@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// Base player is the base for player. Extend this class for different player mechanics
+/// Written by Simon B
+/// </summary>
+
 public class BasePlayer : MonoBehaviour {
 	
 	float speed  = 6.0f;
@@ -8,11 +13,14 @@ public class BasePlayer : MonoBehaviour {
 	float gravity  = 20.0f;
 	
 	private Vector3 moveDirection = Vector3.zero;
+
+	// the amount of jumps
 	private int jumpCount;
 
 	public void Update() {
 		CharacterController controller = GetComponent<CharacterController>();
 
+		// reset jump count at landing
 		if (controller.isGrounded) {
 			jumpCount = 0;
 		}
