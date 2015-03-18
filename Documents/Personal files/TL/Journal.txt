@@ -3,3 +3,10 @@
 Har börjat skriva på verifieringsdokumentet. Har lagt ca en timme på det. Har i det påbörjat mallen så det kan
 fyllas på allt eftersom att vi kommer till själva testmomenten. Har även börjat skriva på texten om hur testen-
 processen kommer att fungera. Kommer inte att bli klar med det idag.
+
+18 mars
+
+Har skrivit ca en timme på mitt dokument, det börjar ta form, men är fortfarande långt ifrån komplett. Kommer behöva
+hjälp från min grupp att blir klar med det.
+Jag har också lekt runt med Unity och försökt lära mig flera funktioner för hur leveldesign och scriptande kommer att
+gå till på.
