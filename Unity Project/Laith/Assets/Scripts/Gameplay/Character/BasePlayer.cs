@@ -3,7 +3,7 @@ using System.Collections;
 
 /// <summary>
 /// Base player is the base for player. Extend this class for different player mechanics
-/// Written by Simon B
+/// Author: Simon B
 /// </summary>
 
 public class BasePlayer : MonoBehaviour {
@@ -42,5 +42,8 @@ public class BasePlayer : MonoBehaviour {
 		
 		// Move the controller
 		controller.Move(moveDirection * Time.deltaTime);
+
+		// Set z to 0
+		controller.transform.position = new Vector3 (controller.transform.position.x, controller.transform.position.y, 0);
 	}
 }
