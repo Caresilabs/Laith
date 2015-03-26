@@ -77,11 +77,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
-<<<<<<< HEAD
- <HintPath>C:/Users/Spellabbet/Laith/Laith/Unity Project/Laith/Assets/Plugins/Plugins/WP8/Photon3Unity3D.dll</HintPath>
-=======
- <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
->>>>>>> origin/master
+ <HintPath>C:/Users/Spellabbet/Laith/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
