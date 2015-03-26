@@ -2,8 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Network\TestNetwork.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\Plugins\Photon Unity Networking\Editor\PhotonNetwork\AccountService.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Network\TestNetwork.cs" Line="16" Column="1" />
+=======
+      <File FileName="Assets\Scripts\Network\TestNetwork.cs" Line="16" Column="3" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
