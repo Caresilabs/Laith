@@ -7,18 +7,17 @@ using System.Collections;
 /// </summary>
 
 public class BasePlayer : MonoBehaviour {
-
-	protected CharacterController controller;
-	public float speed  = 6.0f;
-	public float jumpSpeed  = 11.0f;
-	public float gravity  = 20.0f;
+	
+	float speed  = 6.0f;
+	float jumpSpeed  = 11.0f;
+	float gravity  = 20.0f;
 	
 	private Vector3 moveDirection = Vector3.zero;
+
 	// the amount of jumps
 	private int jumpCount;
 
-	public virtual void Update() {
-
+	public void Update() {
 		CharacterController controller = GetComponent<CharacterController>();
 
 		// reset jump count at landing
@@ -39,7 +38,7 @@ public class BasePlayer : MonoBehaviour {
 		}
 		
 		// Apply gravity
-		moveDirection.y -= gravity * Time.deltaTime;	
+		moveDirection.y -= gravity * Time.deltaTime;
 		
 		// Move the controller
 		controller.Move(moveDirection * Time.deltaTime);
@@ -47,9 +46,4 @@ public class BasePlayer : MonoBehaviour {
 		// Set z to 0
 		controller.transform.position = new Vector3 (controller.transform.position.x, controller.transform.position.y, 0);
 	}
-
-//	void MovePlayer(){
-//		controller.Move(moveDirection * Time.deltaTime);
-//	}
-
 }
