@@ -155,7 +155,9 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\BasePlayer.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Character\Narissa.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" />
+     <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\Network\TestNetwork.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
@@ -168,7 +170,6 @@
      <None Include="Assets\Scripts\Network\Server\replace me.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Plugins\release_history.txt" />
-     <None Include="Assets\Scripts\Level\replace me.txt" />
      <None Include="Assets\Assets\Textures\replace me.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
@@ -185,13 +186,13 @@
      <None Include="Assets\Assets\Particles\replace me.txt" />
      <None Include="Assets\Scripts\GUI\replace me.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Spellabbet/Laith/Laith/Unity Project/Laith/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>C:/Users/Timmy/Laith/Laith/Unity Project/Laith/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Spellabbet/Laith/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Users/Timmy/Laith/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
