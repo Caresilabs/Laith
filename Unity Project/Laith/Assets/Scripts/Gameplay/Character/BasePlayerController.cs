@@ -7,36 +7,45 @@ using System.Collections;
 /// </summary>
 
 public class BasePlayerController :  MonoBehaviour {
-
-	public float speed  = 6.0f;
-	public float jumpSpeed  = 9.0f;
-
-	public bool hasKey = false;
-
+	
+	public float speed = 10;
+	public float jumpAcceleration  = 30.0f;
+	
 	// the amount of jumps
-	private int jumpCount;
+	private int JumpCount { get; set;}
+	
+	protected int MaxJumps { get; set;}
 
+	public bool HasKey { get; set; }
+	
 	public virtual void Update() {
 		UpdateInput ();
+		
+		Debug.Log (rigidbody.velocity);
 	}
 	
 	void UpdateInput ()
 	{
 		
-		if (Input.GetKey(KeyCode.D))
-			rigidbody.MovePosition(rigidbody.position + Vector3.right * speed * Time.deltaTime);
+		if (Input.GetKey (KeyCode.D))
+			rigidbody.velocity += (Vector3.right * speed * Time.deltaTime);
+		//rigidbody.MovePosition(rigidbody.position + Vector3.right * speed * Time.deltaTime);
 		
 		if (Input.GetKey(KeyCode.A))
-			rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
-
-
+			rigidbody.velocity += (Vector3.left * speed * Time.deltaTime);
+		//rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
+		
+		// Clamp to max velocity
+		rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -5f, 5f), rigidbody.velocity.y, 0);
+		
 		if (IsGrounded()) {
-			jumpCount = 0;
+			JumpCount = 0;
 		}
-
-		if (Input.GetKeyDown ("space") && jumpCount < 2) {
-			rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
-			jumpCount++;
+		
+		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
+			//rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
+			rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
+			JumpCount++;
 		}
 		/*
 		CharacterController controller = GetComponent<CharacterController>();
@@ -44,14 +53,12 @@ public class BasePlayerController :  MonoBehaviour {
 		if (controller.isGrounded) {
 			jumpCount = 0;
 		}
-
 		float prevSpeed = moveDirection.y;
 		moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, 0);
 		//Input.GetAxis("Vertical"));
 		moveDirection = transform.TransformDirection (moveDirection);
 		moveDirection *= speed;
 		moveDirection.y = prevSpeed;
-
 		// Allow double jumping
 		if (Input.GetKeyDown ("space") && jumpCount < 2) {
 			moveDirection.y = jumpSpeed;
@@ -65,10 +72,10 @@ public class BasePlayerController :  MonoBehaviour {
 		controller.transform.position = new Vector3 (controller.transform.position.x, controller.transform.position.y, 0);
 */
 	}
-
+	
 	private bool IsGrounded() {
-		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.1f);
+		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
 	}
 	
-
+	
 }
