@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyTrigger : MonoBehaviour {
+public class KeyTrigger : MonoBehaviour {
 
 	public GameObject toDestroy;
+
+
+	public bool hasKey;
 
 	// Use this for initialization
 	void Start () {
@@ -16,13 +19,10 @@ public class DestroyTrigger : MonoBehaviour {
 	}
 	//Door remover
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().hasKey) {
-			 
+		if (hasKey == true) {	
 			Destroy (gameObject);
 			Destroy(toDestroy);
 		}	
 	}
-
-
 
 }
