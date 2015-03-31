@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DestroyTrigger : MonoBehaviour {
+public class KeyTrigger : MonoBehaviour {
 
 	public GameObject toDestroy;
 
@@ -14,15 +14,13 @@ public class DestroyTrigger : MonoBehaviour {
 	void Update () {
 
 	}
-	//Door remover
+	//Key Enabler & remover
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().HasKey == true) {
-
+		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().HasKey == false) {
+			hit.GetComponent<BasePlayerController>().HasKey = true;
 			Destroy (gameObject);
 			Destroy(toDestroy);
 		}	
 	}
-
-
 
 }
