@@ -16,8 +16,8 @@ public class DestroyTrigger : MonoBehaviour {
 	}
 	//Door remover
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().hasKey) {
-			 
+		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().hasKey == true) {
+
 			Destroy (gameObject);
 			Destroy(toDestroy);
 		}	

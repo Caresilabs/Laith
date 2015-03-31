@@ -5,9 +5,6 @@ public class KeyTrigger : MonoBehaviour {
 
 	public GameObject toDestroy;
 
-
-	public bool hasKey;
-
 	// Use this for initialization
 	void Start () {
 	
@@ -17,9 +14,10 @@ public class KeyTrigger : MonoBehaviour {
 	void Update () {
 
 	}
-	//Door remover
+	//Key Enabler & remover
 	void OnTriggerEnter(Collider hit) {
-		if (hasKey == true) {	
+		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().hasKey == false) {
+			hit.GetComponent<BasePlayerController>().hasKey = true;
 			Destroy (gameObject);
 			Destroy(toDestroy);
 		}	

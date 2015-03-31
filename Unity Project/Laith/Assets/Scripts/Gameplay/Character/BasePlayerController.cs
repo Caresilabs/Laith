@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 /// <summary>
@@ -8,42 +8,35 @@ using System.Collections;
 
 public class BasePlayerController :  MonoBehaviour {
 
-	public float speed = 10;
-	public float jumpAcceleration  = 30.0f;
+	public float speed  = 6.0f;
+	public float jumpSpeed  = 9.0f;
+
+	public bool hasKey = false;
 
 	// the amount of jumps
-	private int JumpCount { get; set;}
-
-	protected int MaxJumps { get; set;}
+	private int jumpCount;
 
 	public virtual void Update() {
 		UpdateInput ();
-
-		Debug.Log (rigidbody.velocity);
 	}
 	
 	void UpdateInput ()
 	{
 		
-		if (Input.GetKey (KeyCode.D))
-			rigidbody.velocity += (Vector3.right * speed * Time.deltaTime);
-			//rigidbody.MovePosition(rigidbody.position + Vector3.right * speed * Time.deltaTime);
+		if (Input.GetKey(KeyCode.D))
+			rigidbody.MovePosition(rigidbody.position + Vector3.right * speed * Time.deltaTime);
 		
 		if (Input.GetKey(KeyCode.A))
-			rigidbody.velocity += (Vector3.left * speed * Time.deltaTime);
-			//rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
+			rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
 
-		// Clamp to max velocity
-		rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -5f, 5f), rigidbody.velocity.y, 0);
 
 		if (IsGrounded()) {
-			JumpCount = 0;
+			jumpCount = 0;
 		}
 
-		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
-			//rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
-			rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
-			JumpCount++;
+		if (Input.GetKeyDown ("space") && jumpCount < 2) {
+			rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
+			jumpCount++;
 		}
 		/*
 		CharacterController controller = GetComponent<CharacterController>();
@@ -74,7 +67,7 @@ public class BasePlayerController :  MonoBehaviour {
 	}
 
 	private bool IsGrounded() {
-		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
+		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.1f);
 	}
 	
 
