@@ -1,0 +1,54 @@
+Initialize engine version: 4.6.3f1 (4753d8b6ef2b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6700 Series (ID=0x673e)
+    Vendor:   ATI
+    VRAM:     1011 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.075 seconds
+desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Initialize engine version: 4.6.3f1 (4753d8b6ef2b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6700 Series (ID=0x673e)
+    Vendor:   ATI
+    VRAM:     1011 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.076 seconds
+desktop: 1680x1050 60Hz; virtual: 1680x1050 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.dll (this message is harmless)
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
