@@ -18,34 +18,33 @@ public class NetworkManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (Input.GetKeyUp(KeyCode.Escape) ){
+			PhotonNetwork.LeaveRoom();
+		}
 	}
 
-	private const string roomName = "#";
 	private RoomInfo[] roomsList;
 	
 	void OnGUI()
 	{
-		if (!PhotonNetwork.connected)
-		{
-			GUILayout.Label(PhotonNetwork.connectionStateDetailed.ToString());
-		}
-		else if (PhotonNetwork.room == null)
-		{
+		if (!PhotonNetwork.connected) {
+			GUILayout.Label (PhotonNetwork.connectionStateDetailed.ToString ());
+		} else if (PhotonNetwork.room == null) {
 			// Create Room
-			if (GUI.Button(new Rect(100, 100, 250, 100), "Start Server"))
-				//PhotonNetwork.CreateRoom(roomName + Guid.NewGuid().ToString("N"), true, true, 2);
-				PhotonNetwork.CreateRoom("", new RoomOptions() {isVisible = true, isOpen = true, maxPlayers = 2}, TypedLobby.Default);
+			if (GUI.Button (new Rect (100, 50, 250, 80), "Create New Game"))
+				PhotonNetwork.CreateRoom ("#" + roomsList.Length, new RoomOptions () {isVisible = true, isOpen = true, maxPlayers = 2}, TypedLobby.Default);
 			
 			// Join Room
-			if (roomsList != null)
-			{
-				for (int i = 0; i < roomsList.Length; i++)
-				{
-					if (GUI.Button(new Rect(100, 250 + (110 * i), 250, 100), "Join " + roomsList[i].name))
-						PhotonNetwork.JoinRoom(roomsList[i].name);
+			if (roomsList != null && roomsList.Length != 0) {
+				GUI.Label (new Rect (110, 170, 150, 60), "Open games");
+
+				for (int i = 0; i < roomsList.Length; i++) {
+					if (GUI.Button (new Rect (100, 200 + (110 * i), 250, 80), "Join Room " + roomsList [i].name))
+						PhotonNetwork.JoinRoom (roomsList [i].name);
 				}
 			}
+		} else {
+			GUILayout.Label("Room: " + PhotonNetwork.room.name);
 		}
 	}
 	
@@ -54,12 +53,20 @@ public class NetworkManager : MonoBehaviour {
 		roomsList = PhotonNetwork.GetRoomList();
 	}
 
-	public GameObject playerPrefab;
-	
+	public GameObject narissa;
+	public GameObject gareth;
+
 	void OnJoinedRoom()
 	{
 		// Spawn player
-		GameObject player = PhotonNetwork.Instantiate(playerPrefab.name, Vector3.up * 5, Quaternion.identity, 0);
+		GameObject player;
+
+		if (PhotonNetwork.room.playerCount == 1) {
+			player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);
+		} else {
+			player = PhotonNetwork.Instantiate(narissa.name, Vector3.up * 5, Quaternion.identity, 0);
+		}
+
 
 		player.GetComponent<BasePlayerController> ().enabled = true;
 	}
