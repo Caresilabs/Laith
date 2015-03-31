@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -105,8 +105,8 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Character\Gareth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\Narissa.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" />
      <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\KeyTrigger.cs" />
      <Compile Include="Assets\Scripts\Network\Client\NetworkPlayer.cs" />
@@ -115,25 +115,25 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Assets\Particles\replace me.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
-     <None Include="Assets\Assets\Sound\Music\replace me.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\Assets\Sound\Music\replace me.txt" />
      <None Include="Assets\Plugins\release_history.txt" />
-     <None Include="Assets\Assets\Textures\replace me.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
      <None Include="Assets\Assets\Models\Static\replace me.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
+     <None Include="Assets\Assets\Sound\Effects\replace me.txt" />
+     <None Include="Assets\Assets\Textures\replace me.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
-     <None Include="Assets\Assets\Sound\Effects\replace me.txt" />
+     <None Include="Assets\Scripts\GUI\replace me.txt" />
      <None Include="Assets\Assets\Models\Dynamic\replace me.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
-     <None Include="Assets\Assets\Particles\replace me.txt" />
-     <None Include="Assets\Scripts\GUI\replace me.txt" />
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files/Unity3d/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/Spellabbet/Laith/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>

@@ -7,6 +7,10 @@ public class Narissa : BasePlayerController {
 
 	private SpringJoint hook;
 
+	public void Start() {
+		MaxJumps = 2;
+	}
+
 	public override void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			Hook ();
