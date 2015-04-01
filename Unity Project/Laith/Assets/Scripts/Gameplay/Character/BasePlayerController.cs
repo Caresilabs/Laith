@@ -16,7 +16,7 @@ public class BasePlayerController :  MonoBehaviour {
 	
 	protected int MaxJumps { get; set;}
 
-	public bool HasKey { get; set; }
+	public bool HasKey = false;
 	
 	public virtual void Update() {
 		UpdateInput ();

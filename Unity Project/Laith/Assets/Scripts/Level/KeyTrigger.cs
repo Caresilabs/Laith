@@ -5,6 +5,12 @@ public class KeyTrigger : MonoBehaviour {
 
 	public GameObject toDestroy;
 
+	//Summary
+	//Class used to trigger set level keys which can be used to open doors. Can be re-used as a module.
+	//Author: Tim L
+	//
+
+
 	// Use this for initialization
 	void Start () {
 	

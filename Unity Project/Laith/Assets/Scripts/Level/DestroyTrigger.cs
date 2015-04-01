@@ -3,6 +3,11 @@ using System.Collections;
 
 public class DestroyTrigger : MonoBehaviour {
 
+	//Summary
+	//Class used to trigger and open a certain door. Can be used in different locations.
+	//Author: Tim L
+	//
+
 	public GameObject toDestroy;
 
 	// Use this for initialization
@@ -16,7 +21,8 @@ public class DestroyTrigger : MonoBehaviour {
 	}
 	//Door remover
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().HasKey == true) {
+		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().HasKey == true) 
+		{
 
 			Destroy (gameObject);
 			Destroy(toDestroy);

@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" />
      <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\KeyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Level\KillPlayer.cs" />
      <Compile Include="Assets\Scripts\Network\Client\NetworkPlayer.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
