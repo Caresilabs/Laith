@@ -8,11 +8,11 @@ using System.Collections;
 
 public class BasePlayerController :  MonoBehaviour {
 	
-	public float speed = 10;
-	public float jumpAcceleration  = 30.0f;
+	public float speed = 100;
+	public float jumpAcceleration  = 300.0f;
 	
 	// the amount of jumps
-	private int JumpCount { get; set;}
+	public int JumpCount { get; set;}
 	
 	protected int MaxJumps { get; set;}
 
