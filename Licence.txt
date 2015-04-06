@@ -1,0 +1,3 @@
+TODO write licence for this project
+
+For now all assets and all code belongs to the owners.
