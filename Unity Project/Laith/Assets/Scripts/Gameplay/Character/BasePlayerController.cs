@@ -9,6 +9,7 @@ using System.Collections;
 public class BasePlayerController :  MonoBehaviour {
 	
 	public float speed = 100;
+	public float maxSpeed = 5.0f;
 	public float jumpAcceleration  = 300.0f;
 	
 	// the amount of jumps
@@ -36,7 +37,7 @@ public class BasePlayerController :  MonoBehaviour {
 		//rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
 		
 		// Clamp to max velocity
-		rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -5f, 5f), rigidbody.velocity.y, 0);
+		rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -maxSpeed, maxSpeed), rigidbody.velocity.y, 0);
 		
 		if (IsGrounded()) {
 			JumpCount = 0;
@@ -73,7 +74,7 @@ public class BasePlayerController :  MonoBehaviour {
 */
 	}
 	
-	private bool IsGrounded() {
+	protected bool IsGrounded() {
 		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
 	}
 	
