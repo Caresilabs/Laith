@@ -25,7 +25,7 @@ public class BasePlayerController :  MonoBehaviour {
 		Debug.Log (rigidbody.velocity);
 	}
 	
-	void UpdateInput ()
+	protected void UpdateInput ()
 	{
 		
 		if (Input.GetKey (KeyCode.D))

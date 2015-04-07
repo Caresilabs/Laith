@@ -22,7 +22,7 @@ public class Gareth : BasePlayerController {
 	public void Start() {
 		MaxJumps = 1;
 		defaultMaxSpeed = maxSpeed;
-		shield = PhotonNetwork.Instantiate (shield.name) as GameObject;
+		shield = Instantiate (shield) as GameObject;
 	}
 	public void Shield(){
 		if (Input.GetKey (KeyCode.Mouse0)) {

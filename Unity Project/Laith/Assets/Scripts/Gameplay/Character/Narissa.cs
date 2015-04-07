@@ -7,52 +7,65 @@ public class Narissa : BasePlayerController {
 	public float hookSpeed = 50f;
 	public float maxHookLength = 10f;
 
-	private GameObject prefab;
+	public float spring = 500f;
+
+	public GameObject prefabHook;
 	private GameObject hook;
-	//public Vector3 hookPoint;
 	public bool hooked;
-	public float pullForce = 100000f;
 
 	public SpringJoint joint;
 
 	public void Start() {
 		MaxJumps = 2;
-		prefab = Resources.Load ("Hook") as GameObject;
+		prefabHook = Resources.Load ("Hook") as GameObject;
 	}
 
 	public override void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0) && !hooked && hook == null) {
-			Hook ();
+			FireHook ();
 		}
 
 		if (hooked) {
-			if (Input.GetKeyDown ("space")) {
-				hooked = false;
-				Destroy (joint);
-				Destroy (hook);
-			}
-
-			if(Input.GetKey (KeyCode.S)){
-				joint.maxDistance += 0.05f;
-				if(joint.maxDistance > maxHookLength)
-					joint.maxDistance = maxHookLength;
-			}
-			if(Input.GetKey (KeyCode.W)){
-				joint.maxDistance -= 0.05f;
-				if(joint.maxDistance < 0)
-					joint.maxDistance = 0;
-			}
-
-//			Vector3 hookDir = hookPoint - transform.position;
-//			hookDir.Normalize ();
-//			rigidbody.AddForce (hookDir * pullForce * Time.deltaTime);
+			HangingOnHook();
+		} else {
+			UpdateInput ();
 		}
-
-		base.Update ();
 	}
 
-	void Hook(){
-		hook = Instantiate (prefab) as GameObject;
+	void HangingOnHook(){
+		Vector3 pullDirection = joint.connectedBody.rigidbody.transform.position - rigidbody.transform.position;
+		Vector3 rb = rigidbody.transform.position;
+		pullDirection.Normalize ();
+
+		if(Input.GetKey (KeyCode.S)){
+			if(joint.maxDistance < 0)
+				return;
+			joint.maxDistance += 0.08f;
+		}
+		if(Input.GetKey (KeyCode.W)){
+			if(joint.maxDistance > maxHookLength){
+				return;
+			}
+			joint.maxDistance -= 0.08f;
+		}
+		joint.maxDistance = Mathf.Clamp (joint.maxDistance, 0, maxHookLength);
+		
+		if (Input.GetKeyDown ("space")) {
+			DestroyHook ();
+			rigidbody.AddForce(0, jumpAcceleration/2f * rigidbody.mass, 0);
+		}
+
+		Vector3 swingDirectionCC = Vector3.Cross (pullDirection, Vector3.forward);
+		
+		if (Input.GetKey (KeyCode.D))
+			rigidbody.AddForce(swingDirectionCC * 200 * rigidbody.mass * Time.deltaTime);
+		
+		if (Input.GetKey(KeyCode.A))
+			rigidbody.AddForce(-swingDirectionCC * 200 * rigidbody.mass * Time.deltaTime);
+	}
+
+	void FireHook(){
+		hook = Instantiate (prefabHook) as GameObject;
 		hook.transform.position = transform.position;
 
 		Physics.IgnoreCollision (collider, hook.collider);
@@ -71,23 +84,14 @@ public class Narissa : BasePlayerController {
 
 		joint.maxDistance = 1000f;
 		joint.minDistance = 0f;
-		joint.spring = 200f;
+		joint.spring = spring;
 		joint.damper = 100f;
 	}
 
-//	Drar Narissa mot en hookpoint istället för att skapa en spring joint.	
-//	void Hook(){
-//		GameObject hook = Instantiate (prefab) as GameObject;
-//		Physics.IgnoreCollision (collider, hook.collider);
-//		hook.transform.position = transform.position;
-//		Rigidbody rb = hook.GetComponent<Rigidbody> ();
-//
-//		HookProjectile hp = hook.GetComponent<HookProjectile> ();
-//		hp.shooter = gameObject;
-//
-//		Vector3 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(rigidbody.transform.position);
-//		mouseDirection.Normalize ();
-//
-//		rb.velocity = mouseDirection * hookSpeed;
-//	}
+	public void DestroyHook(){
+		hooked = false;
+		Destroy (joint);
+		Destroy (hook);
+	}
+
 }

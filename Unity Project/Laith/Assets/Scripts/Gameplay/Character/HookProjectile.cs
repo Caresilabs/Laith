@@ -13,11 +13,9 @@ public class HookProjectile : MonoBehaviour {
 		if (shooter == null)
 			return;
 
-//		n.hookPoint = transform.position;
 		n.hooked = true;
 
-		n.joint.maxDistance = 4;
-		--n.JumpCount; 
+		n.joint.maxDistance = (n.transform.position - transform.position).magnitude-2;
 
 		rigidbody.isKinematic = true;
 		hooked = true;
@@ -31,8 +29,9 @@ public class HookProjectile : MonoBehaviour {
 	void Update(){
 		if (hooked)
 			return;
-		if (lifeTime >= maxLifeTime)
-			Destroy (gameObject);
+		if (lifeTime >= maxLifeTime) {
+			n.DestroyHook();
+		}
 		lifeTime += Time.deltaTime;
 	}
 
