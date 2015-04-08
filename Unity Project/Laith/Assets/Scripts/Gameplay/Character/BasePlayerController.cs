@@ -27,20 +27,24 @@ public class BasePlayerController :  MonoBehaviour {
 	
 	protected void UpdateInput ()
 	{
-		
-		if (Input.GetKey (KeyCode.D))
+		if (Input.GetKey (KeyCode.D)) {
 			rigidbody.velocity += (Vector3.right * speed * Time.deltaTime);
-		//rigidbody.MovePosition(rigidbody.position + Vector3.right * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.A))
+			//rigidbody.MovePosition (rigidbody.position + Vector3.right * speed/5f * Time.deltaTime);
+		}
+		if (Input.GetKey (KeyCode.A)) {
 			rigidbody.velocity += (Vector3.left * speed * Time.deltaTime);
-		//rigidbody.MovePosition(rigidbody.position - Vector3.right * speed * Time.deltaTime);
-		
+			//rigidbody.MovePosition (rigidbody.position - Vector3.right * speed/5f * Time.deltaTime);
+		}
+
 		// Clamp to max velocity
 		rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -maxSpeed, maxSpeed), rigidbody.velocity.y, 0);
 		
 		if (IsGrounded()) {
 			JumpCount = 0;
+			//Characters stop themselves when no input is given
+			if(!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)){
+				rigidbody.velocity *= 0.95f;
+			}
 		}
 		
 		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {

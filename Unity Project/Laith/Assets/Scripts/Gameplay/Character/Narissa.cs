@@ -6,6 +6,8 @@ public class Narissa : BasePlayerController {
 	public float hookRange = 12f;
 	public float hookSpeed = 50f;
 	public float maxHookLength = 10f;
+	public float swingAcceleration = 200f;
+	public float hookChangeSpeed = 0.08f;
 
 	public float spring = 500f;
 
@@ -33,20 +35,18 @@ public class Narissa : BasePlayerController {
 	}
 
 	void HangingOnHook(){
-		Vector3 pullDirection = joint.connectedBody.rigidbody.transform.position - rigidbody.transform.position;
-		Vector3 rb = rigidbody.transform.position;
+		Vector3 pullDirection = joint.connectedBody.transform.position - transform.position;
 		pullDirection.Normalize ();
 
 		if(Input.GetKey (KeyCode.S)){
 			if(joint.maxDistance < 0)
 				return;
-			joint.maxDistance += 0.08f;
+			joint.maxDistance += hookChangeSpeed;
 		}
 		if(Input.GetKey (KeyCode.W)){
-			if(joint.maxDistance > maxHookLength){
+			if(joint.maxDistance > maxHookLength)
 				return;
-			}
-			joint.maxDistance -= 0.08f;
+			joint.maxDistance -= hookChangeSpeed;
 		}
 		joint.maxDistance = Mathf.Clamp (joint.maxDistance, 0, maxHookLength);
 		
@@ -58,10 +58,11 @@ public class Narissa : BasePlayerController {
 		Vector3 swingDirectionCC = Vector3.Cross (pullDirection, Vector3.forward);
 		
 		if (Input.GetKey (KeyCode.D))
-			rigidbody.AddForce(swingDirectionCC * 200 * rigidbody.mass * Time.deltaTime);
+			rigidbody.AddForce(swingDirectionCC * swingAcceleration * rigidbody.mass * Time.deltaTime);
 		
 		if (Input.GetKey(KeyCode.A))
-			rigidbody.AddForce(-swingDirectionCC * 200 * rigidbody.mass * Time.deltaTime);
+			rigidbody.AddForce(-swingDirectionCC * swingAcceleration * rigidbody.mass * Time.deltaTime);
+
 	}
 
 	void FireHook(){
@@ -82,7 +83,7 @@ public class Narissa : BasePlayerController {
 		joint = gameObject.AddComponent<SpringJoint> ();
 		joint.connectedBody = rb;
 
-		joint.maxDistance = 1000f;
+		joint.maxDistance = 100f;
 		joint.minDistance = 0f;
 		joint.spring = spring;
 		joint.damper = 100f;
