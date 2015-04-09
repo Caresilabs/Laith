@@ -41,36 +41,13 @@ public class BasePlayerController :  MonoBehaviour {
 		if (IsGrounded()) {
 			JumpCount = 0;
 		}
-		
+
+		// TODO fix bug where you can power jump by spamming space
 		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
 			//rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
 			rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
 			JumpCount++;
 		}
-		/*
-		CharacterController controller = GetComponent<CharacterController>();
-		// reset jump count at landing
-		if (controller.isGrounded) {
-			jumpCount = 0;
-		}
-		float prevSpeed = moveDirection.y;
-		moveDirection = new Vector3 (Input.GetAxis ("Horizontal"), 0, 0);
-		//Input.GetAxis("Vertical"));
-		moveDirection = transform.TransformDirection (moveDirection);
-		moveDirection *= speed;
-		moveDirection.y = prevSpeed;
-		// Allow double jumping
-		if (Input.GetKeyDown ("space") && jumpCount < 2) {
-			moveDirection.y = jumpSpeed;
-			jumpCount++;
-		}
-		// Apply gravity
-		moveDirection.y -= gravity * Time.deltaTime;
-		// Move the controller
-		controller.Move (moveDirection * Time.deltaTime);
-		// Set z to 0
-		controller.transform.position = new Vector3 (controller.transform.position.x, controller.transform.position.y, 0);
-*/
 	}
 	
 	private bool IsGrounded() {

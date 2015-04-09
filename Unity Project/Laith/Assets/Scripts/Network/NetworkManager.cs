@@ -31,7 +31,7 @@ public class NetworkManager : MonoBehaviour {
 			GUILayout.Label (PhotonNetwork.connectionStateDetailed.ToString ());
 		} else if (PhotonNetwork.room == null) {
 			// Create Room
-			if (GUI.Button (new Rect (100, 50, 250, 80), "Create New Game"))
+			if (GUI.Button (new Rect (100, 50, 250, 80), "Create New Room"))
 				PhotonNetwork.CreateRoom ("#" + roomsList.Length, new RoomOptions () {isVisible = true, isOpen = true, maxPlayers = 2}, TypedLobby.Default);
 			
 			// Join Room
