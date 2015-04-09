@@ -14,6 +14,9 @@ public class NetworkManager : MonoBehaviour {
 	void Start()
 	{
 		PhotonNetwork.ConnectUsingSettings("0.1");
+
+		narissa = Resources.Load ("Gareth") as GameObject;
+		gareth = Resources.Load ("Narissa") as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -53,8 +56,8 @@ public class NetworkManager : MonoBehaviour {
 		roomsList = PhotonNetwork.GetRoomList();
 	}
 
-	public GameObject narissa;
-	public GameObject gareth;
+	private GameObject narissa;
+	private GameObject gareth; 
 
 	void OnJoinedRoom()
 	{

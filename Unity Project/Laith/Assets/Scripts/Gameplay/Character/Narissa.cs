@@ -83,8 +83,9 @@ public class Narissa : BasePlayerController {
 	}
 
 	void FireHook(){
-		hook = Instantiate (prefabHook) as GameObject;
-		hook.transform.position = transform.position;
+		hook = PhotonNetwork.Instantiate (prefabHook.name, transform.position, Quaternion.identity, 0) as GameObject;
+		//hook.transform.position = transform.position;
+		hook.GetComponent<PhotonView> ().ObservedComponents.Add (hook.transform);
 
 		Physics.IgnoreCollision (collider, hook.collider);
 
@@ -108,8 +109,9 @@ public class Narissa : BasePlayerController {
 
 	public void DestroyHook(){
 		hooked = false;
-		Destroy (joint);
-		Destroy (hook);
+		//PhotonNetwork.Destroy (joint as GameObject);
+		PhotonNetwork.Destroy (hook);
+
 	}
 
 	void Climbing(){
