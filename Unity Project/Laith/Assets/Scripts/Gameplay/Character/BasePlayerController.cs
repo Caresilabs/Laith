@@ -8,9 +8,9 @@ using System.Collections;
 
 public class BasePlayerController :  MonoBehaviour {
 	
-	public float speed = 100;
-	public float maxSpeed = 5.0f;
-	public float jumpAcceleration  = 300.0f;
+	public float acceleration;
+	public float maxSpeed;
+	public float jumpSpeed;
 	
 	// the amount of jumps
 	public int JumpCount { get; set;}
@@ -27,29 +27,27 @@ public class BasePlayerController :  MonoBehaviour {
 	
 	protected void UpdateInput ()
 	{
-		if (Input.GetKey (KeyCode.D)) {
-			rigidbody.velocity += (Vector3.right * speed * Time.deltaTime);
+		if (Input.GetKey (KeyCode.D) && rigidbody.velocity.x < maxSpeed) {
+			rigidbody.velocity += (Vector3.right * acceleration * Time.deltaTime);
 			//rigidbody.MovePosition (rigidbody.position + Vector3.right * speed/5f * Time.deltaTime);
 		}
-		if (Input.GetKey (KeyCode.A)) {
-			rigidbody.velocity += (Vector3.left * speed * Time.deltaTime);
+		if (Input.GetKey (KeyCode.A) && rigidbody.velocity.x > -maxSpeed) {
+			rigidbody.velocity += (Vector3.left * acceleration * Time.deltaTime);
 			//rigidbody.MovePosition (rigidbody.position - Vector3.right * speed/5f * Time.deltaTime);
 		}
 
-		// Clamp to max velocity
-		rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -maxSpeed, maxSpeed), rigidbody.velocity.y, 0);
-		
-		if (IsGrounded()) {
+		if (IsGrounded ()) {
 			JumpCount = 0;
 			//Characters stop themselves when no input is given
-			if(!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)){
+			if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
 				rigidbody.velocity *= 0.95f;
 			}
 		}
-		
+		// Clamp to max velocity
+		//rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -maxSpeed, maxSpeed), rigidbody.velocity.y, 0);
+
 		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
-			//rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
-			rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
+			Jump();
 			JumpCount++;
 		}
 		/*
@@ -77,7 +75,12 @@ public class BasePlayerController :  MonoBehaviour {
 		controller.transform.position = new Vector3 (controller.transform.position.x, controller.transform.position.y, 0);
 */
 	}
-	
+
+	protected void Jump(){
+		rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
+		//rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
+	}
+
 	protected bool IsGrounded() {
 		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
 	}

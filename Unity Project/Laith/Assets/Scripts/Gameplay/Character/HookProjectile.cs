@@ -11,8 +11,12 @@ public class HookProjectile : MonoBehaviour {
 	private bool hooked;
 
 	void OnTriggerEnter(Collider other){
-		if (shooter == null)
+		if (other.gameObject.collider.isTrigger)
 			return;
+		else if (other.gameObject.tag != "Hookable" || shooter == null) {
+			n.DestroyHook ();
+			return;
+		}
 
 		n.hooked = true;
 
