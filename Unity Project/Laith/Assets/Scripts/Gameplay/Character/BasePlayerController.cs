@@ -43,14 +43,14 @@ public class BasePlayerController :  MonoBehaviour {
 				rigidbody.velocity *= 0.95f;
 			}
 		}
-<<<<<<< HEAD
+
 
 		// TODO fix bug where you can power jump by spamming space
-=======
+
 		// Clamp to max velocity
 		//rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -maxSpeed, maxSpeed), rigidbody.velocity.y, 0);
 
->>>>>>> origin/master
+
 		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
 			Jump();
 			JumpCount++;
