@@ -65,6 +65,11 @@ public class BasePlayerController :  MonoBehaviour {
 	protected bool IsGrounded() {
 		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
 	}
-	
+
+	protected Vector3 MouseDirection() {
+		Vector3 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(rigidbody.transform.position);
+		mouseDirection.Normalize ();
+		return mouseDirection;
+	}
 	
 }
