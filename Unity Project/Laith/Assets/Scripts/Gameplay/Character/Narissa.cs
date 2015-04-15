@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Narissa : BasePlayerController {
 
+	//NOTE: Climbing requires a trigger collider component.
+
 	public float hookRange = 12f;
 	public float hookSpeed = 30f;
 	public float maxHookLength = 12f;
@@ -32,6 +34,7 @@ public class Narissa : BasePlayerController {
 
 		MaxJumps = 2;
 		prefabHook = Resources.Load ("Hook") as GameObject;
+		base.Start ();
 	}
 
 	public override void Update () {
@@ -56,7 +59,7 @@ public class Narissa : BasePlayerController {
 		}
 	}
 
-	void ReleaseArrow(){
+	private void ReleaseArrow(){
 
 		GameObject arrow = Instantiate (Resources.Load ("Arrow"), transform.position, Quaternion.LookRotation(MouseDirection())) as GameObject;
 		Physics.IgnoreCollision (collider, arrow.collider);
@@ -66,12 +69,12 @@ public class Narissa : BasePlayerController {
 		arrowPotentialSpeed = 0;
 	}
 
-	void FireHook(){
+	private void FireHook(){
 		hook = PhotonNetwork.Instantiate (prefabHook.name, transform.position, Quaternion.identity, 0) as GameObject;
 		//hook.transform.position = transform.position;
 		hook.GetComponent<PhotonView> ().ObservedComponents.Add (hook.transform);
 		
-		Physics.IgnoreCollision (collider, hook.collider);
+		//Physics.IgnoreCollision (collider, hook.collider);
 		
 		HookProjectile hp = hook.GetComponent<HookProjectile> ();
 		hp.shooter = gameObject;
@@ -88,7 +91,7 @@ public class Narissa : BasePlayerController {
 		joint.damper = 100f;
 	}
 
-	void HangingOnHook(){
+	private void HangingOnHook(){
 		Vector3 pullDirection = joint.connectedBody.transform.position - transform.position;
 		pullDirection.Normalize ();
 
@@ -127,7 +130,7 @@ public class Narissa : BasePlayerController {
 		rigidbody.useGravity = true;
 	}
 
-	void Climbing(){
+	private void Climbing(){
 		//rigidbody.useGravity = false;
 		rigidbody.velocity = Vector3.zero;
 
@@ -171,7 +174,7 @@ public class Narissa : BasePlayerController {
 				climbing = true;
 				rigidbody.useGravity = false;
 			}
-		} 
+		}
 	}
 
 }

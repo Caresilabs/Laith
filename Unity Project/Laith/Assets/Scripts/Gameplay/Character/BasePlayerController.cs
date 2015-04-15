@@ -18,7 +18,14 @@ public class BasePlayerController :  MonoBehaviour {
 	protected int MaxJumps { get; set;}
 
 	public bool HasKey = false;
-	
+
+	protected enum Direction{left = -1, none, right}
+	protected Direction faceDirection = Direction.right;
+
+	public void Start(){
+		Physics.IgnoreLayerCollision (8, 9);
+	}
+
 	public virtual void Update() {
 		UpdateInput ();
 		
@@ -27,6 +34,8 @@ public class BasePlayerController :  MonoBehaviour {
 	
 	protected void UpdateInput ()
 	{
+		UpdateDirection();
+
 		if (Input.GetKey (KeyCode.D) && rigidbody.velocity.x < maxSpeed) {
 			rigidbody.velocity += (Vector3.right * acceleration * Time.deltaTime);
 			//rigidbody.MovePosition (rigidbody.position + Vector3.right * speed/5f * Time.deltaTime);
@@ -57,6 +66,10 @@ public class BasePlayerController :  MonoBehaviour {
 		}
 	}
 
+	protected void UpdateDirection(){
+		faceDirection = (Direction)(MouseDirection ().x/Mathf.Abs (MouseDirection ().x));
+	}
+
 	protected void Jump(){
 		rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
 		//rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
@@ -67,7 +80,7 @@ public class BasePlayerController :  MonoBehaviour {
 	}
 
 	protected Vector3 MouseDirection() {
-		Vector3 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(rigidbody.transform.position);
+		Vector3 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 		mouseDirection.Normalize ();
 		return mouseDirection;
 	}

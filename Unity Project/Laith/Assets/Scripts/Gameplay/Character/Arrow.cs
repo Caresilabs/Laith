@@ -16,9 +16,9 @@ public class Arrow : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-		if (other.gameObject.collider.isTrigger)
+		if (other.gameObject.collider.isTrigger) {
 			return;
-		else if (other.gameObject.tag != "Enemy") {
+		} else if (other.gameObject.tag != "Enemy") {
 			Destroy (this.gameObject);
 			return;
 		}
