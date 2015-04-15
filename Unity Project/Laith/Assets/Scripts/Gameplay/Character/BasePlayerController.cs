@@ -21,8 +21,6 @@ public class BasePlayerController :  MonoBehaviour {
 	
 	public virtual void Update() {
 		UpdateInput ();
-		
-		Debug.Log (rigidbody.velocity);
 	}
 	
 	protected void UpdateInput ()

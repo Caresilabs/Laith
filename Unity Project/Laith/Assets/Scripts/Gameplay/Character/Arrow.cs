@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Arrow : MonoBehaviour {
+public class Arrow : Photon.MonoBehaviour {
 
 	float damage;
 
@@ -16,10 +16,13 @@ public class Arrow : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
+		if (!photonView.isMine)
+			return;
+
 		if (other.gameObject.collider.isTrigger)
 			return;
 		else if (other.gameObject.tag != "Enemy") {
-			Destroy (this.gameObject);
+			PhotonNetwork.Destroy (this.gameObject);
 			return;
 		}
 

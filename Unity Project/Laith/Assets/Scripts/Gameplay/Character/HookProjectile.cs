@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HookProjectile : MonoBehaviour {
+public class HookProjectile : Photon.MonoBehaviour {
 
 	public GameObject shooter;
 	public LineRenderer line;
@@ -11,6 +11,9 @@ public class HookProjectile : MonoBehaviour {
 	private bool hooked;
 
 	void OnTriggerEnter(Collider other){
+		if (!photonView.isMine)
+			return;
+
 		if (other.gameObject.collider.isTrigger)
 			return;
 		else if (other.gameObject.tag != "Hookable" || shooter == null) {

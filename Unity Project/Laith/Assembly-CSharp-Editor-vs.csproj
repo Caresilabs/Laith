@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -85,10 +85,10 @@
  <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/Unity3d/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Program Files/Unity3d/Data/UnityExtensions/Unity/GUISystem/4.6.3/Editor/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
@@ -97,7 +97,7 @@
  <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

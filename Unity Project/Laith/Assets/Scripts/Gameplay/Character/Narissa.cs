@@ -14,7 +14,9 @@ public class Narissa : BasePlayerController {
 
 	public float climbSpeed = 5;
 
-	public GameObject prefabHook;
+	private GameObject prefabHook;
+	private GameObject prefabArrow;
+
 	private GameObject hook;
 
 	public float arrowMaxSpeed = 20;
@@ -32,6 +34,7 @@ public class Narissa : BasePlayerController {
 
 		MaxJumps = 2;
 		prefabHook = Resources.Load ("Hook") as GameObject;
+		prefabArrow = Resources.Load ("Arrow") as GameObject;
 	}
 
 	public override void Update () {
@@ -57,8 +60,9 @@ public class Narissa : BasePlayerController {
 	}
 
 	void ReleaseArrow(){
+		GameObject arrow = PhotonNetwork.Instantiate (prefabArrow.name, transform.position, Quaternion.LookRotation(MouseDirection()),0) as GameObject;
+		arrow.GetComponent<Arrow> ().enabled = true;
 
-		GameObject arrow = Instantiate (Resources.Load ("Arrow"), transform.position, Quaternion.LookRotation(MouseDirection())) as GameObject;
 		Physics.IgnoreCollision (collider, arrow.collider);
 
 		arrow.rigidbody.velocity = MouseDirection() * arrowPotentialSpeed;
@@ -68,8 +72,9 @@ public class Narissa : BasePlayerController {
 
 	void FireHook(){
 		hook = PhotonNetwork.Instantiate (prefabHook.name, transform.position, Quaternion.identity, 0) as GameObject;
+		hook.GetComponent<HookProjectile> ().enabled = true;
 		//hook.transform.position = transform.position;
-		hook.GetComponent<PhotonView> ().ObservedComponents.Add (hook.transform);
+		//hook.GetComponent<PhotonView> ().ObservedComponents.Add (hook.transform);
 		
 		Physics.IgnoreCollision (collider, hook.collider);
 		
@@ -156,6 +161,7 @@ public class Narissa : BasePlayerController {
 	public void DestroyHook(){
 		hooked = false;
 		//PhotonNetwork.Destroy (joint as GameObject);
+		Destroy (joint);
 		PhotonNetwork.Destroy (hook);
 		
 	}
