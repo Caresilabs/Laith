@@ -29,6 +29,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+<<<<<<< HEAD
 																																							GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																															GlobalSection(MonoDevelopProperties) = preSolution
@@ -38,6 +39,9 @@ Global
 >>>>>>> origin/master
 =======
 																							GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> origin/master
+=======
+						GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
@@ -50,12 +54,14 @@ Global
 		$2.scope = text/x-csharp
 		$0.TextStylePolicy = $3
 		$3.FileWidth = 120
-		$3.TabWidth = 4
-		$3.IndentWidth = 4
+		$3.TabsToSpaces = False
 		$3.EolMarker = Unix
-		$3.inheritsSet = Mono
+		$3.inheritsSet = VisualStudio
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
 	EndGlobalSection
 
 EndGlobal
