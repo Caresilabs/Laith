@@ -72,5 +72,6 @@ public class NetworkManager : MonoBehaviour {
 
 
 		player.GetComponent<BasePlayerController> ().enabled = true;
+		player.transform.FindChild("Camera").gameObject.SetActive(true);
 	}
 }
