@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Character\HookProjectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\Narissa.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\Sword.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameManager.cs" />
      <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\KeyTrigger.cs" />
@@ -139,13 +140,13 @@
      <None Include="Assets\Assets\Models\Dynamic\replace me.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
- <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
+ <HintPath>D:/GitHub/Laith/Unity Project/Laith/Library/ScriptAssemblies/Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/Unity3d/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>D:/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
