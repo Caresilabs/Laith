@@ -6,11 +6,7 @@ using System.Collections;
 /// Author: Simon B
 /// </summary>
 
-public class BasePlayerController :  MonoBehaviour {
-	
-	public float acceleration;
-	public float maxSpeed;
-	public float jumpSpeed;
+public class BasePlayerController :  Actor {
 	
 	// the amount of jumps
 	public int JumpCount { get; set;}
@@ -19,10 +15,7 @@ public class BasePlayerController :  MonoBehaviour {
 
 	public bool HasKey = false;
 
-	protected enum Direction{left = -1, none, right}
-	protected Direction faceDirection = Direction.right;
-
-	public void Start(){
+	public virtual void Start(){
 		Physics.IgnoreLayerCollision (8, 9);
 	}
 
@@ -63,18 +56,9 @@ public class BasePlayerController :  MonoBehaviour {
 			JumpCount++;
 		}
 	}
-
+	
 	protected void UpdateDirection(){
 		faceDirection = (Direction)(MouseDirection ().x/Mathf.Abs (MouseDirection ().x));
-	}
-
-	protected void Jump(){
-		rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
-		//rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
-	}
-
-	protected bool IsGrounded() {
-		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
 	}
 
 	protected Vector3 MouseDirection() {

@@ -104,14 +104,17 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SmoothSyncMovement.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\SupportLogger.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Character\Arrow.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Actor.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\Gareth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\HookProjectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\Narissa.cs" />
-     <Compile Include="Assets\Scripts\Gameplay\Character\Sword.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Enemies\MeleeEnemy.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" />
      <Compile Include="Assets\Scripts\Gameplay\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Projectile.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Weapon.cs" />
      <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\KeyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\KillPlayer.cs" />
@@ -143,7 +146,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>D:/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Henrik/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

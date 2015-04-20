@@ -18,17 +18,20 @@ public class Gareth : BasePlayerController {
 	public GameObject shield;
 	public float shieldDistance = 1;
 	public Vector3 shieldOffset = new Vector3(0, 0.5f, 0);
+	public float shieldMoveSpeed = 3f;
 
-	private GameObject swordPivot;
 	public GameObject sword;
+	private GameObject swordPivot;
 	public Vector3 swordOffset = new Vector3 (0.6f, 0, 0);
+
 	private int attackDirection;
 	private float attackTime = 1f;
 	private float currentAttackTime = 0f;
 	private bool attacking;
 	private float angle = 0;
 
-	public void Start() {
+	public override void Start() {
+		attackDamage = 1;
 		acceleration = 20f;
 		maxSpeed = 5f;
 		jumpSpeed = 7f;
@@ -46,6 +49,10 @@ public class Gareth : BasePlayerController {
 		sword.transform.parent = swordPivot.transform;
 		sword.transform.localPosition = new Vector3 (0.1f, 1, 0);
 		sword.collider.enabled = false;
+
+		Weapon s = sword.GetComponent<Weapon> ();
+		s.damage = attackDamage;
+		s.wielder = this;
 		base.Start ();
 	}
 
@@ -83,7 +90,9 @@ public class Gareth : BasePlayerController {
 
 	private void Shield(){
 		if (Input.GetKey (KeyCode.Mouse1)) {
-
+			if(!sprint){
+			maxSpeed = shieldMoveSpeed;
+			}
 			if(Input.mousePosition.y < Camera.main.WorldToScreenPoint(transform.position).y){
 				Vector3 shieldDirection = new Vector3((int)faceDirection,0,0);
 				shield.transform.LookAt(transform.position + shieldDirection * 10);
@@ -99,6 +108,9 @@ public class Gareth : BasePlayerController {
 			shield.transform.Rotate(90,0,0);
 			shield.transform.position = transform.position + shieldOffset + mouseDirection * shieldDistance;
 		} else {
+			if(!sprint){
+			maxSpeed = defaultMaxSpeed;
+			}
 			shield.transform.rotation = Quaternion.Euler (90, 0, 0);
 			shield.transform.position = transform.position + new Vector3(0, 0, 1) * shieldDistance;
 		}

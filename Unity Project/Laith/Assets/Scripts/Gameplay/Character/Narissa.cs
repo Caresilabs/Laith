@@ -27,13 +27,15 @@ public class Narissa : BasePlayerController {
 
 	public SpringJoint joint;
 
-	public void Start() {
+	public override void Start() {
+	    attackDamage = 1f;
 		acceleration = 25f;
 		maxSpeed = 7f;
 		jumpSpeed = 7f;
 
 		MaxJumps = 2;
 		prefabHook = Resources.Load ("Hook") as GameObject;
+
 		base.Start ();
 	}
 
@@ -42,7 +44,7 @@ public class Narissa : BasePlayerController {
 			arrowPotentialSpeed += drawBackSpeed * Time.deltaTime;
 		} else if (Input.GetKeyUp (KeyCode.Mouse0) && arrowPotentialSpeed >= 6) {
 			ReleaseArrow ();
-		} else if(!Input.GetKey (KeyCode.Mouse0)) {
+		} else if (!Input.GetKey (KeyCode.Mouse0)) {
 			arrowPotentialSpeed = 0;
 		}
 			
@@ -67,6 +69,10 @@ public class Narissa : BasePlayerController {
 		arrow.rigidbody.velocity = MouseDirection() * arrowPotentialSpeed;
 
 		arrowPotentialSpeed = 0;
+
+		Weapon a = arrow.GetComponent<Weapon> ();
+		a.damage = attackDamage;
+		a.wielder = this;
 	}
 
 	private void FireHook(){

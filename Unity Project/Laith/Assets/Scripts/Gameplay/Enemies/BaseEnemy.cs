@@ -1,15 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaseEnemy : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+public abstract class BaseEnemy :  Actor {
+
+
+	public virtual void Start(){
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	public virtual void Update() {
+
 	}
+	
 }
