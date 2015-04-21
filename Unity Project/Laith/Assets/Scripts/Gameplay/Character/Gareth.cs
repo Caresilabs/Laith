@@ -25,7 +25,7 @@ public class Gareth : BasePlayerController {
 	public Vector3 swordOffset = new Vector3 (0.6f, 0, 0);
 
 	private int attackDirection;
-	private float attackTime = 1f;
+	private float attackTime = 0.6f;
 	private float currentAttackTime = 0f;
 	private bool attacking;
 	private float angle = 0;

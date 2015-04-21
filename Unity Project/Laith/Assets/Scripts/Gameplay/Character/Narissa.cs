@@ -165,6 +165,7 @@ public class Narissa : BasePlayerController {
 	public void DestroyHook(){
 		hooked = false;
 		//PhotonNetwork.Destroy (joint as GameObject);
+		Destroy (joint);
 		PhotonNetwork.Destroy (hook);
 		
 	}

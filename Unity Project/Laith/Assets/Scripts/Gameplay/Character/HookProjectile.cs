@@ -35,6 +35,9 @@ public class HookProjectile : Photon.MonoBehaviour {
 	}
 
 	void Update(){
+		rigidbody.transform.rotation = Quaternion.LookRotation (rigidbody.velocity);
+		rigidbody.transform.Rotate (90, 0, 0);
+
 		line.SetPosition (0, shooter.transform.position);
 		line.SetPosition (1, transform.position);
 		if (hooked)

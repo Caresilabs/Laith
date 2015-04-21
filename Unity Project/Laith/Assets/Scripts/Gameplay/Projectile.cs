@@ -10,7 +10,8 @@ public class Projectile : Weapon {
 		if (maxLifeTime <= 0)
 			Destroy (this.gameObject);
 
-		rigidbody.rotation = Quaternion.LookRotation (rigidbody.velocity);
+		rigidbody.transform.rotation = Quaternion.LookRotation (rigidbody.velocity);
+		rigidbody.transform.Rotate (90, 0, 0);
 	}
 
 	public override void OnTriggerEnter(Collider other){
