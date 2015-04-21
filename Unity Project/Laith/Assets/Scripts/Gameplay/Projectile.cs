@@ -8,7 +8,7 @@ public class Projectile : Weapon {
 	void Update () {
 		maxLifeTime -= Time.deltaTime;
 		if (maxLifeTime <= 0)
-			Destroy (this.gameObject);
+			PhotonNetwork.Destroy (this.gameObject);
 
 		rigidbody.transform.rotation = Quaternion.LookRotation (rigidbody.velocity);
 		rigidbody.transform.Rotate (90, 0, 0);
@@ -18,7 +18,7 @@ public class Projectile : Weapon {
 		if (other.isTrigger == true) {
 			return;
 		} else {
-			Destroy (this.gameObject);
+			PhotonNetwork.Destroy (this.gameObject);
 		}
 		if (wielder.gameObject.tag == "Player" && other.gameObject.tag == "Enemy") {
 			BaseEnemy e = other.GetComponent<BaseEnemy>();

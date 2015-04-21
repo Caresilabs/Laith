@@ -88,17 +88,10 @@
  <HintPath>D:/Program Files/Unity3d/Data/UnityExtensions/Unity/GUISystem/4.6.3/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
-<<<<<<< HEAD
- <HintPath>C:/Users/Spellabbet/Documents/GitHub/Laith/Unity Project/Laith/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
- </Reference>
- <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Spellabbet/Documents/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
-=======
  <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Assets/Photon Unity Networking/Editor/PhotonNetwork/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
  <HintPath>C:/Users/Simon/Documents/GitHub/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
->>>>>>> origin/master
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Program Files/Unity3d/Data/Managed/UnityEditor.Graphs.dll</HintPath>

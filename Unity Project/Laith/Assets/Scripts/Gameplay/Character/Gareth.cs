@@ -15,12 +15,14 @@ public class Gareth : BasePlayerController {
 	
 	//private float lastPos;
 
-	public GameObject shield;
+
+	private GameObject shield;
+
 	public float shieldDistance = 1;
 	public Vector3 shieldOffset = new Vector3(0, 0.5f, 0);
 	public float shieldMoveSpeed = 3f;
 
-	public GameObject sword;
+	private GameObject sword;
 	private GameObject swordPivot;
 	public Vector3 swordOffset = new Vector3 (0.6f, 0, 0);
 
@@ -38,14 +40,14 @@ public class Gareth : BasePlayerController {
 		
 		MaxJumps = 1;
 		defaultMaxSpeed = maxSpeed;
-		shield = Instantiate (shield) as GameObject;
+		shield = PhotonNetwork.Instantiate (Resources.Load("Shield").name, Vector3.zero, Quaternion.identity, 0) as GameObject;
 
 		//Pivot sets origin point so that the sword rotates around this point instead of around its center.
 		swordPivot = new GameObject ("SwordPivot");
 		swordPivot.transform.parent = transform;
 		swordPivot.transform.rotation = Quaternion.Euler(0,90,0);
 
-		sword = Instantiate (sword) as GameObject;
+		sword = PhotonNetwork.Instantiate (Resources.Load("Sword").name,  Vector3.zero, Quaternion.identity, 0) as GameObject;
 		sword.transform.parent = swordPivot.transform;
 		sword.transform.localPosition = new Vector3 (0.1f, 1, 0);
 		sword.collider.enabled = false;

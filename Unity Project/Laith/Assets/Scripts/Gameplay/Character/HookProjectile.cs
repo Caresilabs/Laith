@@ -29,17 +29,28 @@ public class HookProjectile : Photon.MonoBehaviour {
 	}
 
 	void Start(){
-		n = shooter.GetComponent<Narissa> ();
-		maxLifeTime = n.hookRange/rigidbody.velocity.magnitude;
+		if (shooter == null)
+			shooter = GameObject.Find ("Narissa(Clone)");
 
+		n = shooter.GetComponent<Narissa> ();
+
+		if (!photonView.isMine)
+			return;
+
+		maxLifeTime = n.hookRange/rigidbody.velocity.magnitude;
 	}
 
 	void Update(){
+		line.SetPosition (0, shooter.transform.position);
+		line.SetPosition (1, transform.position);
+
+		if (!photonView.isMine)
+			return;
+
 		rigidbody.transform.rotation = Quaternion.LookRotation (rigidbody.velocity);
 		rigidbody.transform.Rotate (90, 0, 0);
 
-		line.SetPosition (0, shooter.transform.position);
-		line.SetPosition (1, transform.position);
+
 		if (hooked)
 			return;
 		if (lifeTime >= maxLifeTime) {

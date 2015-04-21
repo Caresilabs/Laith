@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Weapon : MonoBehaviour {
+public class Weapon : Photon.MonoBehaviour {
 
 	public float damage;
 	public Actor wielder;
