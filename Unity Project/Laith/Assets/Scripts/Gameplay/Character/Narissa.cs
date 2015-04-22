@@ -5,6 +5,7 @@ public class Narissa : BasePlayerController {
 
 	//NOTE: Climbing requires a trigger collider component.
 
+	public float hookPullForce = 1000;
 	public float hookRange = 12f;
 	public float hookSpeed = 30f;
 	public float maxHookLength = 12f;
@@ -32,7 +33,7 @@ public class Narissa : BasePlayerController {
 	public override void Start() {
 	    attackDamage = 1f;
 		acceleration = 25f;
-		maxSpeed = 7f;
+		maxSpeed = 6f;
 		jumpSpeed = 7f;
 
 		MaxJumps = 2;
@@ -114,12 +115,16 @@ public class Narissa : BasePlayerController {
 				return;
 			joint.maxDistance -= hookChangeSpeed * Time.deltaTime;
 		}
+
 		joint.maxDistance = Mathf.Clamp (joint.maxDistance, 0, maxHookLength);
 		joint.minDistance = joint.maxDistance;
 		
 		if (Input.GetKeyDown ("space")) {
 			DestroyHook ();
-			//Jump ();
+		}
+
+		if (IsGrounded ()) {
+			UpdateInput ();
 		}
 
 		Vector3 swingDirectionCC = Vector3.Cross (pullDirection, Vector3.forward);
@@ -170,7 +175,9 @@ public class Narissa : BasePlayerController {
 		//PhotonNetwork.Destroy (joint as GameObject);
 		Destroy (joint);
 		PhotonNetwork.Destroy (hook);
-		
+		HookProjectile hp = hook.GetComponent<HookProjectile> ();
+		if(hp.hookedObject != null)
+		Destroy(hp.hookedObject.transform.FindChild ("HookPivot").gameObject);
 	}
 
 	void OnTriggerExit(){
