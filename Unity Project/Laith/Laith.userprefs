@@ -1,31 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Character\HookProjectile.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gameplay\Character\HookProjectile.cs" Line="39" Column="78" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Narissa.cs" Line="124" Column="4" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Gareth.cs" Line="50" Column="84" />
-      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="31" Column="95" />
-      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="68" Column="3" />
-      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="30" Column="31" />
-      <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="21" Column="11" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="32" Column="5" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\MeleeEnemy.cs" Line="19" Column="17" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" Line="41" Column="2" />
+      <File FileName="Assets\Scripts\Gameplay\Character\HookProjectile.cs" Line="10" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>PhotonNetwork.Instantiate (((GameObject)Resources.Load("Sword")).name,  Vector3.zero, Quaternion.identity, 0) as GameObject;</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint enabled="false" file="C:\Users\Spellabbet\Documents\GitHub\Laith\Unity Project\Laith\Assets\Scripts\Gameplay\Character\BasePlayerController.cs" line="65" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
-    <Watch file="Assets\Scripts\Gameplay\Character\Gareth.cs" line="53" offsetX="445" offsetY="884" expression="sword" liveUpdate="False" />
-  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
