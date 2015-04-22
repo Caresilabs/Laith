@@ -20,12 +20,13 @@ public class Projectile : Weapon {
 		} else {
 			PhotonNetwork.Destroy (this.gameObject);
 		}
-		if (wielder.gameObject.tag == "Player" && other.gameObject.tag == "Enemy") {
-			BaseEnemy e = other.GetComponent<BaseEnemy>();
-			e.TakeDamage (damage);
-		} else if (wielder.gameObject.tag == "Enemy" && other.gameObject.tag == "Player") {
-			BasePlayerController p = other.GetComponent<BasePlayerController>();
-			p.TakeDamage (damage);
-		}
+//		if (wielder.gameObject.tag == "Player" && other.gameObject.tag == "Enemy") {
+//			BaseEnemy e = other.GetComponent<BaseEnemy>();
+//			e.TakeDamage (damage);
+//		} else if (wielder.gameObject.tag == "Enemy" && other.gameObject.tag == "Player") {
+//			BasePlayerController p = other.GetComponent<BasePlayerController>();
+//			p.TakeDamage (damage);
+//		}
+		base.OnTriggerEnter (other);
 	}
 }

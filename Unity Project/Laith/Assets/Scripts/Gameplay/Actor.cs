@@ -15,6 +15,9 @@ public abstract class Actor : MonoBehaviour {
 	protected enum Direction{left = -1, none, right}
 	protected Direction faceDirection = Direction.right;
 
+	protected bool wasGrounded;
+	protected bool leftGround;
+
 	public void TakeDamage(float damage){
 		currentHealth -= damage;
 	}
@@ -23,8 +26,8 @@ public abstract class Actor : MonoBehaviour {
 		rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
 		//rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
 	}
-	
+
 	protected bool IsGrounded() {
-		return Physics.Raycast(transform.position, -Vector3.up,  collider.bounds.extents.y + 0.05f);
+		return Physics.Raycast (transform.position, -Vector3.up, collider.bounds.extents.y + 0.05f);
 	}
 }

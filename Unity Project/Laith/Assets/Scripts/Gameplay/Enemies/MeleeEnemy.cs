@@ -31,7 +31,7 @@ public class MeleeEnemy : BaseEnemy {
 		weapon.layer = 1;
 		Weapon w = weapon.GetComponent<Weapon> ();
 		w.damage = 1f;
-		w.wielder = this;
+		w.wielder = this as Actor;
 		base.Start ();
 	}
 	

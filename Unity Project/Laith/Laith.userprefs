@@ -1,19 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Network\NetworkManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gameplay\Character\Gareth.cs" Line="55" Column="30" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="53" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\MeleeEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Narissa.cs" Line="84" Column="5" />
-      <File FileName="Assets\Scripts\Gameplay\Character\HookProjectile.cs" Line="33" Column="46" />
-      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="17" Column="39" />
-      <File FileName="Assets\Scripts\Network\Client\NetworkRigidBody.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="4" Column="43" />
-      <File FileName="Assets\Scripts\Network\NetworkManager.cs" Line="79" Column="87" />
+      <File FileName="Assets\Scripts\Gameplay\Character\HookProjectile.cs" Line="39" Column="78" />
+      <File FileName="Assets\Scripts\Gameplay\Character\Narissa.cs" Line="124" Column="4" />
+      <File FileName="Assets\Scripts\Gameplay\Character\Gareth.cs" Line="50" Column="84" />
+      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="31" Column="95" />
+      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="68" Column="3" />
+      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="30" Column="31" />
+      <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="21" Column="11" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="32" Column="5" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\MeleeEnemy.cs" Line="19" Column="17" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
@@ -25,7 +22,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="C:\Users\Spellabbet\Documents\GitHub\Laith\Unity Project\Laith\Assets\Scripts\Gameplay\Character\BasePlayerController.cs" line="65" />
+      <Breakpoint enabled="false" file="C:\Users\Spellabbet\Documents\GitHub\Laith\Unity Project\Laith\Assets\Scripts\Gameplay\Character\BasePlayerController.cs" line="65" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
