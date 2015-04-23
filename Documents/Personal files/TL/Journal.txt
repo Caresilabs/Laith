@@ -42,4 +42,12 @@ på andra spel för att försöka få inspiration av hur andra spel har gjort för att
 
 Vecka 16
 
-Denna
+Denna veckan har jag fortsatt arbetet på som jag påbörjade förra veckan. Jag har även börjat på designen av de två banor
+som vi minst ska ha vid release. Arbetet tog längre tid än vad jag trodde. Trots alla mina timmar så fick jag gjort ca
+90% av min första bana och ca 50% av min andra. Får arbeta extra utöver nästa vecka för att hinna ifatt.
+
+Vecka 17
+Har påbörjat bygget.
+Måndag: Påbörjat bygget.
+Tisdag: Bygga + Möte
+Onsdag: Köttat hårt på level 1, designmässigt runt 40%, har inte implementerat skripten än.
