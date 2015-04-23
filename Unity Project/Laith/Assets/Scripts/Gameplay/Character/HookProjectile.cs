@@ -7,7 +7,6 @@ public class HookProjectile : Photon.MonoBehaviour {
 	public LineRenderer line;
 	public GameObject hookedObject;
 	private Narissa n;
-	private float pullForce;
 	private float maxLifeTime;
 	private float lifeTime = 0;
 	private bool hooked;
@@ -45,7 +44,6 @@ public class HookProjectile : Photon.MonoBehaviour {
 			shooter = GameObject.Find ("Narissa(Clone)");
 
 		n = shooter.GetComponent<Narissa> ();
-		pullForce = n.hookPullForce;
 		if (!photonView.isMine)
 			return;
 

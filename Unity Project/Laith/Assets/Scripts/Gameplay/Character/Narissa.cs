@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Narissa : BasePlayerController {
-
+	
 	//NOTE: Climbing requires a trigger collider component.
 
 	public float hookPullForce = 1000;
@@ -182,13 +182,14 @@ public class Narissa : BasePlayerController {
 		rigidbody.useGravity = true;
 	}
 
-	void OnTriggerStay(Collider other){
+	protected override void OnTriggerStay(Collider other){
 		if (other.gameObject.tag == "Climbable") {
 			if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.S)) {
 				climbing = true;
 				rigidbody.useGravity = false;
 			}
 		}
+		base.OnTriggerStay (other);
 	}
 
 }

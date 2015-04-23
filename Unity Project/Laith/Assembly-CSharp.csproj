@@ -117,8 +117,11 @@
      <Compile Include="Assets\Scripts\Gameplay\Projectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Weapon.cs" />
      <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
+     <Compile Include="Assets\Scripts\Level\Gate.cs" />
      <Compile Include="Assets\Scripts\Level\KeyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\KillPlayer.cs" />
+     <Compile Include="Assets\Scripts\Level\Switch.cs" />
+     <Compile Include="Assets\Scripts\Level\Triggerable.cs" />
      <Compile Include="Assets\Scripts\Network\Client\NetworkRigidBody.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
@@ -146,7 +149,7 @@
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.3/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Photon3Unity3D">
- <HintPath>C:/Users/Spellabbet/Laith/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
+ <HintPath>C:/Henrik/Laith/Unity Project/Laith/Assets/Plugins/Photon3Unity3D.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

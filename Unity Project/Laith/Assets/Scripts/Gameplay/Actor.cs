@@ -15,8 +15,6 @@ public abstract class Actor : MonoBehaviour {
 	protected enum Direction{left = -1, none, right}
 	protected Direction faceDirection = Direction.right;
 
-	protected bool wasGrounded;
-	protected bool leftGround;
 
 	public void TakeDamage(float damage){
 		currentHealth -= damage;

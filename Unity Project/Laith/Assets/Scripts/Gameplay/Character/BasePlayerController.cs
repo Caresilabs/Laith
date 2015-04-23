@@ -14,6 +14,7 @@ public class BasePlayerController :  Actor {
 	protected int MaxJumps { get; set;}
 
 	public bool HasKey = false;
+	public bool use;
 
 	public virtual void Start(){
 		Physics.IgnoreLayerCollision (8, 9);
@@ -55,8 +56,21 @@ public class BasePlayerController :  Actor {
 			Jump();
 			JumpCount++;
 		}
+
+			use = false;
 	}
 	
+	protected virtual void OnTriggerStay(Collider other){
+		if (Input.GetKeyDown (KeyCode.E) && use == false) {
+			Use (other.gameObject);
+			use = true;
+		}
+	}
+
+	void Use(GameObject trigger){
+		trigger.SendMessage("Trigger");
+	}
+
 	protected void UpdateDirection(){
 		faceDirection = (Direction)(MouseDirection ().x/Mathf.Abs (MouseDirection ().x));
 	}
