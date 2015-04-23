@@ -175,9 +175,6 @@ public class Narissa : BasePlayerController {
 		//PhotonNetwork.Destroy (joint as GameObject);
 		Destroy (joint);
 		PhotonNetwork.Destroy (hook);
-		HookProjectile hp = hook.GetComponent<HookProjectile> ();
-		if(hp.hookedObject != null)
-		Destroy(hp.hookedObject.transform.FindChild ("HookPivot").gameObject);
 	}
 
 	void OnTriggerExit(){

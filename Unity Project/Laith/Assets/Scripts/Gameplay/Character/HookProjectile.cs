@@ -30,17 +30,13 @@ public class HookProjectile : Photon.MonoBehaviour {
 
 	void AttachHook(GameObject hookedObject){
 		this.hookedObject = hookedObject;
-		GameObject pivot = new GameObject("HookPivot");
-		pivot.transform.parent = hookedObject.transform;
-		pivot.transform.position = transform.position;
-		
-		//rigidbody.isKinematic = true;
+
 		n.hooked = true;
 		n.joint.maxDistance = (n.transform.position - transform.position).magnitude;
 		
 		hooked = true;
 
-		FixedJoint joint = gameObject.AddComponent<FixedJoint> ();
+		CharacterJoint joint = gameObject.AddComponent<CharacterJoint> ();
 		joint.connectedBody = hookedObject.rigidbody;
 	}
 
@@ -64,7 +60,6 @@ public class HookProjectile : Photon.MonoBehaviour {
 			return;
 		
 		if (hooked) {
-			transform.position = hookedObject.transform.FindChild ("HookPivot").position;
 			return;
 		}
 		if (lifeTime >= maxLifeTime) {
