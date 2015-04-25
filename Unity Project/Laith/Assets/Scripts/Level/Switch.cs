@@ -6,7 +6,6 @@ public class Switch : Triggerable {
 	public Triggerable connectedTrigger;
 
 	void Start () {
-		playerActivated = true;
 	}
 
 	void Update(){

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Projectile : Weapon {
 
-	private float maxLifeTime = 20;
+	public float maxLifeTime = 20;
 
 	void Update () {
 		maxLifeTime -= Time.deltaTime;
@@ -18,9 +18,13 @@ public class Projectile : Weapon {
 		if (other.isTrigger == true) {
 			return;
 		} else {
-			PhotonNetwork.Destroy (this.gameObject);
+			maxLifeTime = 0;
 		}
 
 		base.OnTriggerEnter (other);
+	}
+
+	public override void DealDamage(Actor a){
+		a.TakeDamage (damage, knockbackForce * rigidbody.velocity.normalized);
 	}
 }
