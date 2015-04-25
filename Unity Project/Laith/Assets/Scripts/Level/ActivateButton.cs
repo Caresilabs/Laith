@@ -11,7 +11,7 @@ public class ActivateButton : MonoBehaviour {
 	public float Yval;
 	public float Zval;
 	//Summary
-	//
+	//ss
 	//Author: Tim L
 	//
 	
@@ -25,12 +25,12 @@ public class ActivateButton : MonoBehaviour {
 	void Update () {
 		
 	}
-	//Key Enabler & remover
+
 	void OnTriggerEnter(Collider hit) {
 		if (hit.tag == "Narissa") {
 			isActivated = true;
 
-			toMove.rigidbody.position = new Vector3(Xval, Yval, Zval);
+			toMove.transform.position = new Vector3(161, 20, 0);
 		}	
 	}
 	
