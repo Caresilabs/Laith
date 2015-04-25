@@ -23,24 +23,45 @@ public class RangedEnemy : BaseEnemy {
 	public override void Update () {
 		attackTimer -= Time.deltaTime;
 
-		if (attackTimer <= 0) {
-			RaycastHit rch;
-			if (Physics.Raycast (transform.position, new Vector3 ((int)faceDirection, 0, 0), out rch, 20f)) {
-				if (rch.collider.gameObject.tag == "Player") {
-					FireProjectile (new Vector3 ((int)faceDirection, 0, 0));
-				}
+		BasePlayerController[] bpc = GameObject.FindObjectsOfType<BasePlayerController> ();
+		float closestDistance = 1000;
+		BasePlayerController closest = null;
+		for (int i = 0; i < bpc.GetLength(0); i++) {
+			if(closest == null){
+				closest = bpc[i];
+				closestDistance = (bpc[i].transform.position - transform.position).magnitude;
+				continue;
 			}
+			float distance = (bpc[i].transform.position - transform.position).magnitude;
+			if(distance < closestDistance){
+				closest = bpc[i];
+				closestDistance = (bpc[i].transform.position - transform.position).magnitude;
+			}
+		}
+		target = closest;
+
+		if (attackTimer <= 0 && closestDistance < 20) {
+			FireProjectile (target.transform.position - transform.position);
+			
+//			RaycastHit rch;
+//			int layerMask = 1 << 8;
+//			if (Physics.Raycast (transform.position, new Vector3 ((int)faceDirection, 0, 0), out rch, 20f, layerMask)) {
+//				if (rch.collider.gameObject.tag == "Player") {
+//					FireProjectile (new Vector3 ((int)faceDirection, 0, 0));
+//				}
+//			}
 		}
 
 		base.Update ();
 	}
 
 	public void FireProjectile(Vector3 direction){
+		direction.Normalize ();
 		GameObject projectile = PhotonNetwork.Instantiate ("Arrow", transform.position, Quaternion.LookRotation(direction), 0) as GameObject;
 		projectile.layer = 1;
 		projectile.GetComponent<Projectile> ().enabled = true;
 		Physics.IgnoreCollision (collider, projectile.collider);
-		
+
 		projectile.rigidbody.velocity = direction * projectileSpeed;
 		projectile.rigidbody.useGravity = false;
 		

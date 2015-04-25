@@ -15,8 +15,8 @@ public class NetworkManager : MonoBehaviour {
 	{
 		PhotonNetwork.ConnectUsingSettings("0.1");
 
-		narissa = Resources.Load ("Gareth") as GameObject;
-		gareth = Resources.Load ("Narissa") as GameObject;
+		narissa = Resources.Load ("Narissa") as GameObject;
+		gareth = Resources.Load ("Gareth") as GameObject;
 	}
 	
 	// Update is called once per frame
@@ -65,9 +65,9 @@ public class NetworkManager : MonoBehaviour {
 		GameObject player;
 
 		if (PhotonNetwork.room.playerCount == 1) {
-			player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);
-		} else {
 			player = PhotonNetwork.Instantiate(narissa.name, Vector3.up * 5, Quaternion.identity, 0);
+		} else {
+			player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);
 		}
 
 

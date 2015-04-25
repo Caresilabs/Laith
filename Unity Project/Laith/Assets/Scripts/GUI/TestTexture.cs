@@ -30,7 +30,7 @@ public class TestTexture : MonoBehaviour {
 		FindPlayer ();
 		
 		if (player != null) {
-			player.TakeDamage(1*Time.deltaTime);
+			player.TakeDamage(1*Time.deltaTime, Vector3.zero);
 		}
 	}
 }

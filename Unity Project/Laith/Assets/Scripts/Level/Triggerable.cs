@@ -3,7 +3,7 @@ using System.Collections;
 
 public abstract class Triggerable : MonoBehaviour {
 
-	protected bool playerActivated;
+	public bool playerActivated;
 	public bool activated;
 
 	public virtual void Trigger (){

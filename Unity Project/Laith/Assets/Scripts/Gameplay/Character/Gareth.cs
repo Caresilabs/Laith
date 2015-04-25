@@ -41,6 +41,7 @@ public class Gareth : BasePlayerController {
 		MaxJumps = 1;
 		defaultMaxSpeed = maxSpeed;
 		shield = PhotonNetwork.Instantiate (Resources.Load("Shield").name, Vector3.zero, Quaternion.identity, 0) as GameObject;
+		shield.transform.parent = transform;
 
 		//Pivot sets origin point so that the sword rotates around this point instead of around its center.
 		swordPivot = new GameObject ("SwordPivot");

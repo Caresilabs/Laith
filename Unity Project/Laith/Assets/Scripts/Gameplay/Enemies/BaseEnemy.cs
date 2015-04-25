@@ -6,6 +6,7 @@ public abstract class BaseEnemy :  Actor {
 
 	private GameObject healthBar;
 	public Vector3 posOffSet;
+	public BasePlayerController target;
 
 	public virtual void Start(){
 		maxHealth = 100.0f;

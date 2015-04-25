@@ -63,19 +63,21 @@ public class BasePlayerController :  Actor {
 	protected virtual void OnTriggerStay(Collider other){
 		if (Input.GetKeyDown (KeyCode.E) && use == false) {
 			Use (other.gameObject);
-			use = true;
 		}
 	}
 
 	void Use(GameObject trigger){
-		trigger.SendMessage("Trigger");
+		Triggerable t = trigger.gameObject.GetComponent<Triggerable>();
+		if(t.playerActivated)
+			t.Trigger ();
+		use = true;
 	}
 
 	protected void UpdateDirection(){
 		faceDirection = (Direction)(MouseDirection ().x/Mathf.Abs (MouseDirection ().x));
 	}
 
-	protected Vector3 MouseDirection() {
+	public Vector3 MouseDirection() {
 		Vector3 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 		mouseDirection.Normalize ();
 		return mouseDirection;

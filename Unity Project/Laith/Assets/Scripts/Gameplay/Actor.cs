@@ -12,12 +12,13 @@ public abstract class Actor : MonoBehaviour {
 	public float maxSpeed;
 	public float jumpSpeed;
 
-	protected enum Direction{left = -1, none, right}
-	protected Direction faceDirection = Direction.right;
+	public enum Direction{left = -1, none, right}
+	public Direction faceDirection = Direction.right;
 
 
-	public void TakeDamage(float damage){
+	public void TakeDamage(float damage, Vector3 knockback){
 		currentHealth -= damage;
+		rigidbody.AddForce (knockback + new Vector3(0,1,0));
 	}
 
 	protected void Jump(){

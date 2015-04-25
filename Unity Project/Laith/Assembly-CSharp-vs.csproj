@@ -110,6 +110,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Character\Gareth.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\HookProjectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Character\Narissa.cs" />
+     <Compile Include="Assets\Scripts\Gameplay\Character\Shield.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Enemies\MeleeEnemy.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" />

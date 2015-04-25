@@ -24,7 +24,7 @@ public class MeleeEnemy : BaseEnemy {
 		weaponPivot.transform.localPosition = new Vector3((int)faceDirection* weaponOffset.x,weaponOffset.y,weaponOffset.z);
 		weaponPivot.transform.rotation = Quaternion.Euler(0,90,0);
 		
-		weapon = Instantiate (weapon) as GameObject;
+		//weapon = PhotonNetwork.Instantiate (Resources.Load("Sword").name,  Vector3.zero, Quaternion.identity, 0) as GameObject;
 		weapon.transform.parent = weaponPivot.transform;
 		weapon.transform.localPosition = new Vector3 (0.1f, 1, 0);
 		weapon.collider.enabled = false;
@@ -45,7 +45,8 @@ public class MeleeEnemy : BaseEnemy {
 		if (attacking)
 			return;
 		RaycastHit rch;
-		if(Physics.Raycast(transform.position, new Vector3((int)faceDirection, 0, 0), out rch, 2f)){
+		int layerMask = 1 << 8;
+		if(Physics.Raycast(transform.position, new Vector3((int)faceDirection, 0, 0), out rch, 2f, layerMask)){
 			if(rch.collider.gameObject.tag == "Player"){
 				Attack ();
 			}

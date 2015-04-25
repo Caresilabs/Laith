@@ -7,7 +7,6 @@ public class Gate : Triggerable {
 	public float timer = 1;
 
 	void Start () {
-		playerActivated = false;
 	}
 
 	void Update(){
