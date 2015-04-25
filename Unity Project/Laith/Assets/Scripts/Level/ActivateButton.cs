@@ -5,7 +5,7 @@ public class ActivateButton : MonoBehaviour {
 	
 	public GameObject toActivate;
 	public GameObject toMove;
-	public bool isActivated;
+
 
 	public float Xval;
 	public float Yval;
@@ -18,7 +18,7 @@ public class ActivateButton : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		isActivated = false;
+
 	}
 	
 	// Update is called once per frame
@@ -28,7 +28,8 @@ public class ActivateButton : MonoBehaviour {
 
 	void OnTriggerEnter(Collider hit) {
 		if (hit.tag == "Narissa") {
-			isActivated = true;
+			Debug.Log ("Asshat");
+
 
 			toMove.transform.position = new Vector3(161, 20, 0);
 		}	
