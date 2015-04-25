@@ -27,7 +27,7 @@ public class ActivateButton : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Narissa") {
+		if (hit.tag == "Player") {
 			Debug.Log ("Asshat");
 
 
