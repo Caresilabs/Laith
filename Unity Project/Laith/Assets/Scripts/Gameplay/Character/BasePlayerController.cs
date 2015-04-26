@@ -15,15 +15,44 @@ public class BasePlayerController :  Actor {
 
 	public bool HasKey = false;
 	public bool use;
+	public bool dead;
 
 	public virtual void Start(){
 		Physics.IgnoreLayerCollision (8, 9);
 	}
 
 	public virtual void Update() {
-		UpdateInput ();
+		if (!dead) {
+			UpdateInput();
+			CheckForDead();
+		}
 	}
-	
+	protected bool CheckForDead(){
+		if(currentHealth <= 0){
+			GetComponent<PhotonView>().RPC ("SendDeadInfo", PhotonTargets.All, null); 
+			//dead = true;
+			return true;
+		}
+		return false;
+	}
+	public void respawn(Vector3 lastCheckpoint){
+
+		transform.position = lastCheckpoint;
+		GetComponent<PhotonView> ().RPC ("SendRespawnInfo", PhotonTargets.All, null);
+	}
+	[RPC]
+	public void SendDeadInfo(){
+
+		dead = true;
+		GetComponentInChildren<MeshRenderer>().enabled = false;
+	}
+	[RPC]
+	public void SendRespawnInfo (){
+
+		dead = false;
+		GetComponentInChildren<MeshRenderer>().enabled = true;
+		currentHealth = maxHealth;
+	}
 	protected void UpdateInput ()
 	{
 		UpdateDirection();

@@ -60,7 +60,14 @@ public class Narissa : BasePlayerController {
 		} else if (climbing) {
 			Climbing ();
 		} else {
-			UpdateInput ();
+			if(!dead){
+				UpdateInput ();
+			}
+		}
+		if (CheckForDead()) {
+			if(hook != null){
+				DestroyHook();
+			}
 		}
 	}
 

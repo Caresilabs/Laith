@@ -118,6 +118,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Projectile.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Weapon.cs" />
      <Compile Include="Assets\Scripts\Level\ActivateButton.cs" />
+     <Compile Include="Assets\Scripts\Level\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\Level\DestroyTrigger.cs" />
      <Compile Include="Assets\Scripts\Level\Gate.cs" />
      <Compile Include="Assets\Scripts\Level\KeyTrigger.cs" />

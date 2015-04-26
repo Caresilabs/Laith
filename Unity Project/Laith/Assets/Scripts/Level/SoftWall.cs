@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class SoftWall : MonoBehaviour {
-
+	
 	//Summary
 	//Class used to destroy a soft object
 	//Author: Simon J
@@ -17,9 +17,11 @@ public class SoftWall : MonoBehaviour {
 	void Update () {
 	
 	}
-	void OnTriggerEnter(Collider Entity){
-		if (Entity.tag == "Player" && Entity.GetComponent<Gareth>().sprint == true) {
-			Destroy(this.gameObject);
+	void OnCollisionEnter(Collision Entity){
+		if (Entity.gameObject.tag == "Player" && Entity.gameObject.name == "Gareth(Clone)") {
+			if(Entity.gameObject.GetComponent<Gareth>().sprint == true){
+				Destroy (this.gameObject);
+			}
 		}
 	}
 }
