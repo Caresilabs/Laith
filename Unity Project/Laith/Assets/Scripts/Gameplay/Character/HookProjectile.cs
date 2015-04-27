@@ -3,6 +3,11 @@ using System.Collections;
 
 public class HookProjectile : Photon.MonoBehaviour {
 
+	/// <summary>
+	/// Hook script. Attaches hook upon contact with appropriate body.
+	/// Author: Henrik P.
+	/// </summary>
+
 	public GameObject shooter;
 	public LineRenderer line;
 	public GameObject hookedObject;

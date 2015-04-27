@@ -21,11 +21,12 @@ public class BasePlayerController :  Actor {
 		Physics.IgnoreLayerCollision (8, 9);
 	}
 
-	public virtual void Update() {
+	public override void Update() {
 		if (!dead) {
 			UpdateInput();
 			CheckForDead();
 		}
+		base.Update ();
 	}
 	protected bool CheckForDead(){
 		if(currentHealth <= 0){

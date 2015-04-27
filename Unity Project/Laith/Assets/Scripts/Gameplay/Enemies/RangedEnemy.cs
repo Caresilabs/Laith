@@ -3,6 +3,11 @@ using System.Collections;
 
 public class RangedEnemy : BaseEnemy {
 
+	/// <summary>
+	/// Fires projectiles at target player.
+	/// Author: Henrik P.
+	/// </summary>
+
 	public float projectileSpeed = 5f;
 	public float attacksPerSecond = 0.5f;
 	float attackCooldown;
@@ -23,36 +28,39 @@ public class RangedEnemy : BaseEnemy {
 	public override void Update () {
 		attackTimer -= Time.deltaTime;
 
-		BasePlayerController[] bpc = GameObject.FindObjectsOfType<BasePlayerController> ();
-		float closestDistance = 1000;
-		BasePlayerController closest = null;
-		for (int i = 0; i < bpc.GetLength(0); i++) {
-			if(closest == null){
-				closest = bpc[i];
-				closestDistance = (bpc[i].transform.position - transform.position).magnitude;
-				continue;
-			}
-			float distance = (bpc[i].transform.position - transform.position).magnitude;
-			if(distance < closestDistance){
-				closest = bpc[i];
-				closestDistance = (bpc[i].transform.position - transform.position).magnitude;
-			}
-		}
-		target = closest;
+		target = FindTarget();
 
-		if (attackTimer <= 0 && closestDistance < 20) {
+		if (target != null && attackTimer <= 0) {
 			FireProjectile (target.transform.position - transform.position);
-			
-//			RaycastHit rch;
-//			int layerMask = 1 << 8;
-//			if (Physics.Raycast (transform.position, new Vector3 ((int)faceDirection, 0, 0), out rch, 20f, layerMask)) {
-//				if (rch.collider.gameObject.tag == "Player") {
-//					FireProjectile (new Vector3 ((int)faceDirection, 0, 0));
-//				}
-//			}
 		}
 
 		base.Update ();
+	}
+
+	private BasePlayerController FindTarget(){
+		BasePlayerController[] bpc = GameObject.FindObjectsOfType<BasePlayerController> ();
+		float closestDistance = 1000;
+		BasePlayerController closest = null;
+
+		for (int i = 0; i < bpc.GetLength(0); i++) {
+			if (closest == null) {
+				closest = bpc [i];
+				closestDistance = (bpc [i].transform.position - transform.position).magnitude;
+				continue;
+			}
+
+			float distance = (bpc [i].transform.position - transform.position).magnitude;
+
+			if (distance < closestDistance) {
+				closest = bpc [i];
+				closestDistance = (bpc [i].transform.position - transform.position).magnitude;
+			}
+		}
+
+		if (closestDistance > 20)
+			return null;
+		else
+			return closest;
 	}
 
 	public void FireProjectile(Vector3 direction){

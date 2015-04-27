@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Weapon : Photon.MonoBehaviour {
 
+	/// <summary>
+	/// Checks for collision and deals damage if appropriate. Extend this class for anything that deals damage upon contact.
+	/// Author: Henrik P.
+	/// </summary>
+
 	public float damage;
 	public float knockbackForce;
 	public Actor wielder;
@@ -21,7 +26,8 @@ public class Weapon : Photon.MonoBehaviour {
 			return;
 		}
 
-		if (wielder.gameObject.layer == 8 && other.gameObject.layer == 10 || 
+		if (wielder == null || 
+		    wielder.gameObject.layer == 8 && other.gameObject.layer == 10 || 
 		    wielder.gameObject.layer == 10 && other.gameObject.layer == 8) {
 			Actor a;
 			a = other.GetComponent<Actor>();

@@ -34,9 +34,10 @@ public abstract class BaseEnemy :  Actor {
 		}
 	}
 	
-	public virtual void Update() {
+	public override void Update() {
 		HealthBar ();
 		CheckForDestroy ();
+		base.Update ();
 	}
 	
 }

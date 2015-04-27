@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Projectile : Weapon {
 
+	/// <summary>
+	/// Rotates body to look at the velocity direction. Knockback scales depending on velocity.
+	/// Author: Henrik P.
+	/// </summary>
+
 	public float maxLifeTime = 20;
 
 	void Update () {

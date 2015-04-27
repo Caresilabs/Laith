@@ -3,9 +3,8 @@ using System.Collections;
 
 public class Narissa : BasePlayerController {
 	
-	//NOTE: Climbing requires a trigger collider component.
+	//NOTE: Climbing requires a trigger collider component attached.
 
-	public float hookPullForce = 1000;
 	public float hookRange = 12f;
 	public float hookSpeed = 30f;
 	public float maxHookLength = 12f;
@@ -22,7 +21,7 @@ public class Narissa : BasePlayerController {
 
 	private GameObject hook;
 
-	public float arrowMaxSpeed = 20;
+	public float arrowMaxSpeed = 30;
 	public float drawBackSpeed = 30;
 	public float arrowPotentialSpeed = 0;
 	
@@ -69,10 +68,10 @@ public class Narissa : BasePlayerController {
 				DestroyHook();
 			}
 		}
+		Invulnerability ();
 	}
 
 	private void ReleaseArrow(){
-
 		GameObject arrow = PhotonNetwork.Instantiate (prefabArrow.name, transform.position, Quaternion.LookRotation(MouseDirection()), 0) as GameObject;
 		arrow.GetComponent<Projectile> ().enabled = true;
 
@@ -80,18 +79,16 @@ public class Narissa : BasePlayerController {
 
 		arrow.rigidbody.velocity = MouseDirection() * arrowPotentialSpeed;
 
-		arrowPotentialSpeed = 0;
-
 		Weapon a = arrow.GetComponent<Weapon> ();
-		a.damage = attackDamage;
+		a.damage = (int)arrowPotentialSpeed;
 		a.wielder = this;
+
+		arrowPotentialSpeed = 0;
 	}
 
 	private void FireHook(){
 		hook = PhotonNetwork.Instantiate (prefabHook.name, transform.position, Quaternion.identity, 0) as GameObject;
 		//hook.GetComponent<HookProjectile> ().enabled = true;
-		
-		//Physics.IgnoreCollision (collider, hook.collider);
 		
 		HookProjectile hp = hook.GetComponent<HookProjectile> ();
 		hp.shooter = gameObject;

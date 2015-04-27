@@ -1,0 +1,28 @@
+var annotated =
+[
+    [ "ActivateButton", "class_activate_button.html", "class_activate_button" ],
+    [ "Actor", "class_actor.html", "class_actor" ],
+    [ "BaseEnemy", "class_base_enemy.html", "class_base_enemy" ],
+    [ "BasePlayerController", "class_base_player_controller.html", "class_base_player_controller" ],
+    [ "Checkpoint", "class_checkpoint.html", null ],
+    [ "DestroyTrigger", "class_destroy_trigger.html", "class_destroy_trigger" ],
+    [ "DumbTurret", "class_dumb_turret.html", "class_dumb_turret" ],
+    [ "GameManager", "class_game_manager.html", "class_game_manager" ],
+    [ "Gareth", "class_gareth.html", "class_gareth" ],
+    [ "Gate", "class_gate.html", "class_gate" ],
+    [ "HookProjectile", "class_hook_projectile.html", "class_hook_projectile" ],
+    [ "KeyTrigger", "class_key_trigger.html", "class_key_trigger" ],
+    [ "KillPlayer", "class_kill_player.html", "class_kill_player" ],
+    [ "MeleeEnemy", "class_melee_enemy.html", "class_melee_enemy" ],
+    [ "Narissa", "class_narissa.html", "class_narissa" ],
+    [ "NetworkManager", "class_network_manager.html", null ],
+    [ "NetworkRigidBody", "class_network_rigid_body.html", "class_network_rigid_body" ],
+    [ "Projectile", "class_projectile.html", "class_projectile" ],
+    [ "RangedEnemy", "class_ranged_enemy.html", "class_ranged_enemy" ],
+    [ "Shield", "class_shield.html", null ],
+    [ "SoftWall", "class_soft_wall.html", null ],
+    [ "Switch", "class_switch.html", "class_switch" ],
+    [ "TestTexture", "class_test_texture.html", null ],
+    [ "Triggerable", "class_triggerable.html", "class_triggerable" ],
+    [ "Weapon", "class_weapon.html", "class_weapon" ]
+];

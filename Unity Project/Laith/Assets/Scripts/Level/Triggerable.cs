@@ -3,6 +3,11 @@ using System.Collections;
 
 public abstract class Triggerable : MonoBehaviour {
 
+	/// <summary>
+	/// Extend this class for anything with an on/off state.
+	/// Author: Henrik P.
+	/// </summary>
+
 	public bool playerActivated;
 	public bool activated;
 

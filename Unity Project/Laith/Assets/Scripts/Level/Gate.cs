@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Gate : Triggerable {
 
+	/// <summary>
+	/// Moves object up when activated, down when deactivated.
+	/// Author: Henrik P.
+	/// </summary>
+
 	public bool opening, closing;
 	public float timer = 1;
 

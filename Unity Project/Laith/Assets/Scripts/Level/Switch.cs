@@ -5,6 +5,11 @@ public class Switch : Triggerable {
 
 	public Triggerable connectedTrigger;
 
+	/// <summary>
+	/// Toggles connected trigger when activated.
+	/// Author: Henrik P.
+	/// </summary>
+
 	void Start () {
 	}
 

@@ -3,6 +3,11 @@ using System.Collections;
 
 public class MeleeEnemy : BaseEnemy {
 
+	/// <summary>
+	/// Uses same code as for Gareth's sword.
+	/// Author: Henrik P.
+	/// </summary>
+
 	private GameObject weaponPivot;
 	public GameObject weapon;
 	public Vector3 weaponOffset = new Vector3 (0.6f, 0, 0);
