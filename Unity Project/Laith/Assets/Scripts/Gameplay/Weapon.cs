@@ -31,7 +31,8 @@ public class Weapon : Photon.MonoBehaviour {
 		    wielder.gameObject.layer == 10 && other.gameObject.layer == 8) {
 			Actor a;
 			a = other.GetComponent<Actor>();
-			DealDamage (a);
+			if (a != null)
+				DealDamage (a);
 		}
 	}
 
