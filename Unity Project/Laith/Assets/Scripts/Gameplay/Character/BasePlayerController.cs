@@ -71,7 +71,7 @@ public class BasePlayerController :  Actor {
 			JumpCount = 0;
 			//Characters stop themselves when no input is given
 			if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
-				rigidbody.velocity *= 0.95f;
+				rigidbody.velocity *= 0.93f;
 			}
 		}
 

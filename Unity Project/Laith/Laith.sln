@@ -35,28 +35,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																						GlobalSection(MonoDevelopProperties) = preSolution
-=======
-																																																																						GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> origin/master
-=======
-																																																												GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> origin/master
-=======
-																																																			GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> 0b6a5127df5e4b1ac35491d22fcdc9893a812f23
-=======
-																																															GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> origin/master
-=======
-																					GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> origin/master
-=======
-																							GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> origin/master
-=======
-					GlobalSection(MonoDevelopProperties) = preSolution
->>>>>>> origin/master
+							GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
@@ -73,6 +52,13 @@ Global
 		$3.inheritsSet = VisualStudio
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
+		GlobalSection(MonoDevelopProperties) = preSolution
 		GlobalSection(MonoDevelopProperties) = preSolution
 		GlobalSection(MonoDevelopProperties) = preSolution
 		GlobalSection(MonoDevelopProperties) = preSolution

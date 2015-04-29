@@ -12,110 +12,53 @@ public class Gareth : BasePlayerController {
 	
 	public bool sprint = false;
 	public bool cooldown = false;
-	
-	//private float lastPos;
 
-
-	private GameObject shield;
-
-	public float shieldDistance = 1;
-	public Vector3 shieldOffset = new Vector3(0, 0.5f, 0);
+	private Sword sword;
+	private Shield shield;
 	public float shieldMoveSpeed = 3f;
 
-	private GameObject sword;
-	private GameObject swordPivot;
-	public Vector3 swordOffset = new Vector3 (0.6f, 0, 0);
-
-	private int attackDirection;
-	private float attackTime = 0.6f;
-	private float currentAttackTime = 0f;
-	private bool attacking;
-	private float angle = 0;
 
 	public override void Start() {
-		attackDamage = 1;
+		attackDamage = 20;
 		acceleration = 20f;
 		maxSpeed = 5f;
-		jumpSpeed = 7f;
+		jumpSpeed = 10f;
 		
 		MaxJumps = 1;
 		defaultMaxSpeed = maxSpeed;
-		shield = PhotonNetwork.Instantiate (Resources.Load("Shield").name, Vector3.zero, Quaternion.identity, 0) as GameObject;
-		shield.transform.parent = transform;
 
-		//Pivot sets origin point so that the sword rotates around this point instead of around its center.
-		swordPivot = new GameObject ("SwordPivot");
-		swordPivot.transform.parent = transform;
-		swordPivot.transform.rotation = Quaternion.Euler(0,90,0);
+		sword = Sword.Create (this as Actor);
+		shield = Shield.Create (this);
 
-		sword = PhotonNetwork.Instantiate (Resources.Load("Sword").name,  Vector3.zero, Quaternion.identity, 0) as GameObject;
-		sword.transform.parent = swordPivot.transform;
-		sword.transform.localPosition = new Vector3 (0.1f, 1, 0);
-		sword.collider.enabled = false;
-
-		Weapon s = sword.GetComponent<Weapon> ();
-		s.damage = attackDamage;
-		s.wielder = this;
 		base.Start ();
 	}
 
 	public override void Update () {
-		Sword ();
-		Shield ();
+		Attack ();
+		Block ();
 		Charge ();
 		Sprint ();
 		Cooldown ();
 		base.Update ();
 	}
 
-	private void Sword(){
-		if (Input.GetKeyDown (KeyCode.Mouse0) && !attacking) {
-			attacking = true;
-			attackDirection = (int)faceDirection;
-			sword.collider.enabled = true;
-			currentAttackTime = 0;
-		}
-
-		if (attacking) {
-			currentAttackTime += Time.deltaTime;
-			angle += 3;
-			swordPivot.transform.Rotate (new Vector3 (3 * attackDirection, 0, 0));
-			if (currentAttackTime >= attackTime) {
-				attacking = false;
-				sword.collider.enabled = false;
-				swordPivot.transform.rotation = Quaternion.Euler (0, 90, 0);
-			}
-		}
-		if(!attacking) {
-			swordPivot.transform.localPosition = new Vector3((int)faceDirection* swordOffset.x,swordOffset.y,swordOffset.z);
+	private void Attack(){
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+			sword.Attack();
 		}
 	}
 
-	private void Shield(){
+	private void Block(){
 		if (Input.GetKey (KeyCode.Mouse1)) {
 			if(!sprint){
 			maxSpeed = shieldMoveSpeed;
 			}
-			if(Input.mousePosition.y < Camera.main.WorldToScreenPoint(transform.position).y){
-				Vector3 shieldDirection = new Vector3((int)faceDirection,0,0);
-				shield.transform.LookAt(transform.position + shieldDirection * 10);
-				shield.transform.Rotate(90,0,0);
-				shield.transform.position = transform.position + shieldOffset + shieldDirection * shieldDistance;
-				return;
-			}
-
-			Vector3 mouseDirection = MouseDirection ();
-			//float angle = Mathf.Asin (mouseDirection.y / 1f) * 180f / Mathf.PI;
-			//shield.transform.rotation = Quaternion.Euler (0, 0, angle);
-			shield.transform.LookAt(transform.position + mouseDirection * 10);
-			shield.transform.Rotate(90,0,0);
-			shield.transform.position = transform.position + shieldOffset + mouseDirection * shieldDistance;
+			shield.ShieldUp(MouseDirection());
 		} else {
 			if(!sprint){
 			maxSpeed = defaultMaxSpeed;
 			}
-			shield.transform.rotation = Quaternion.Euler (90, 0, 0);
-			shield.transform.position = transform.position + new Vector3(0, 0, 1) * shieldDistance;
+			shield.ShieldDown ();
 		}
 
 	}

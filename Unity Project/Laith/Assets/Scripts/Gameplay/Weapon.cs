@@ -12,12 +12,10 @@ public class Weapon : Photon.MonoBehaviour {
 	public float knockbackForce;
 	public Actor wielder;
 
-	// Use this for initialization
 	void Start () {
 
 	}
 	
-	// Update is called once per frame
 	void Update () {
 	}
 
