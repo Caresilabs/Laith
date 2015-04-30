@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ActivateButton : MonoBehaviour {
 	
-	public GameObject toActivate;
+	public GameObject toKill;
 	public GameObject toMove;
 
 
@@ -11,7 +11,7 @@ public class ActivateButton : MonoBehaviour {
 	public float Yval;
 	public float Zval;
 	//Summary
-	//ss
+	//This scipt can trigger items, move objects and remove others.
 	//Author: Tim L
 	//
 	
@@ -31,7 +31,9 @@ public class ActivateButton : MonoBehaviour {
 			Debug.Log ("Asshat");
 
 
-			toMove.transform.position = new Vector3(161, 20, 0);
+			toMove.transform.position = new Vector3(Xval, Yval, Zval);
+			Destroy(toKill);
+			//161,20,0
 		}	
 	}
 	

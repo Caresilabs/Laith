@@ -1,15 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Sword.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level\ActivateButton.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gameplay\Shield.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Shield.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Narissa.cs" Line="70" Column="57" />
-      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="20" Column="30" />
-      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="23" Column="20" />
-      <File FileName="Assets\Scripts\Gameplay\Bow.cs" Line="7" Column="37" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="45" Column="31" />
-      <File FileName="Assets\Scripts\Gameplay\Sword.cs" Line="28" Column="24" />
+      <File FileName="Assets\Scripts\Gameplay\Character\Narissa.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Bow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Sword.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Level\ActivateButton.cs" Line="14" Column="65" />
+      <File FileName="Assets\Scripts\Level\DestroyTrigger.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
