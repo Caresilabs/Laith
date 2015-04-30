@@ -10,7 +10,7 @@ public class NextLevel : MonoBehaviour {
 	void OnTriggerEnter(Collider hit) {
 		if (hit.tag == "Player") {
 			int currentLevel =  int.Parse(Application.loadedLevelName.Substring(Application.loadedLevelName.Length - 2, 2 ));
-			PhotonNetwork.LoadLevel ("Level" + (currentLevel+1));
+			PhotonNetwork.LoadLevel ("Level0" + (currentLevel+1));
 		}
 	}
 }
