@@ -11,6 +11,7 @@ public abstract class Triggerable : MonoBehaviour {
 	public bool playerActivated;
 	public bool activated;
 
+	//This method is called when the player activates the object.
 	public virtual void Trigger (){
 		if (activated) {
 			Deactivate ();

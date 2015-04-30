@@ -10,8 +10,9 @@ public class BasePlayerController :  Actor {
 	
 	// the amount of jumps
 	public int JumpCount { get; set;}
-	
 	protected int MaxJumps { get; set;}
+
+	private float brakeModifier = 3.6f;
 
 	public bool HasKey = false;
 	public bool use;
@@ -36,7 +37,7 @@ public class BasePlayerController :  Actor {
 		}
 		return false;
 	}
-	public void respawn(Vector3 lastCheckpoint){
+	public void Respawn(Vector3 lastCheckpoint){
 
 		transform.position = lastCheckpoint;
 		GetComponent<PhotonView> ().RPC ("SendRespawnInfo", PhotonTargets.All, null);
@@ -71,7 +72,10 @@ public class BasePlayerController :  Actor {
 			JumpCount = 0;
 			//Characters stop themselves when no input is given
 			if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
-				rigidbody.velocity *= 0.93f;
+				float modifier = 1 - brakeModifier * Time.deltaTime;
+				if(modifier < 0)
+					modifier = 0;
+				rigidbody.velocity *= modifier;
 			}
 		}
 
@@ -96,9 +100,11 @@ public class BasePlayerController :  Actor {
 		}
 	}
 
-	void Use(GameObject trigger){
+	private void Use(GameObject trigger){
 		Triggerable t = trigger.gameObject.GetComponent<Triggerable>();
-		if(t.playerActivated)
+		if (t == null)
+			return;
+		if (t.playerActivated)
 			t.Trigger ();
 		use = true;
 	}

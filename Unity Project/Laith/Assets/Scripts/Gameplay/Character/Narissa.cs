@@ -29,7 +29,7 @@ public class Narissa : BasePlayerController {
 	    attackDamage = 1f;
 		acceleration = 25f;
 		maxSpeed = 6f;
-		jumpSpeed = 10f;
+		jumpSpeed = 8f;
 		MaxJumps = 2;
 
 		bow = Bow.Create (this);
@@ -52,15 +52,11 @@ public class Narissa : BasePlayerController {
 			HangingOnHook ();
 		} else if (climbing) {
 			Climbing ();
-		} else {
-			if(!dead){
-				UpdateInput ();
-			}
+		} else if (!dead){
+			UpdateInput ();
 		}
-		if (CheckForDead()) {
-			if(hook != null){
+		if (CheckForDead() && hook != null) {
 				DestroyHook();
-			}
 		}
 		Invulnerability ();
 	}
@@ -88,6 +84,7 @@ public class Narissa : BasePlayerController {
 		Vector3 pullDirection = joint.connectedBody.transform.position - transform.position;
 		pullDirection.Normalize ();
 
+		//Extend hook and pull in hook
 		if(Input.GetKey (KeyCode.S)){
 			if(joint.maxDistance >= maxHookLength)
 				return;
@@ -98,37 +95,32 @@ public class Narissa : BasePlayerController {
 				return;
 			joint.maxDistance -= hookChangeSpeed * Time.deltaTime;
 		}
-
 		joint.maxDistance = Mathf.Clamp (joint.maxDistance, 0, maxHookLength);
 		joint.minDistance = joint.maxDistance;
-		
-		if (Input.GetKeyDown ("space")) {
-			DestroyHook ();
-		}
 
-		if (IsGrounded ()) {
-			UpdateInput ();
-		}
-
+		//Swing controls
 		Vector3 swingDirectionCC = Vector3.Cross (pullDirection, Vector3.forward);
-		
 		if (Input.GetKey (KeyCode.D))
 			rigidbody.AddForce(swingDirectionCC * swingAcceleration * rigidbody.mass * Time.deltaTime);
-		
 		if (Input.GetKey(KeyCode.A))
 			rigidbody.AddForce(-swingDirectionCC * swingAcceleration * rigidbody.mass * Time.deltaTime);
-
 		if (rigidbody.velocity.magnitude > maxSwingSpeed) {
 			Vector3 direction = rigidbody.velocity.normalized;
 			rigidbody.velocity = direction * maxSwingSpeed;
 		}
 
+		if (Input.GetKeyDown ("space")) {
+			DestroyHook ();
+		}
+		
+		if (IsGrounded ()) {
+			UpdateInput ();
+		}
 		climbing = false;
 		rigidbody.useGravity = true;
 	}
 
 	private void Climbing(){
-		//rigidbody.useGravity = false;
 		rigidbody.velocity = Vector3.zero;
 
 		Vector3 movePosition = Vector3.zero;

@@ -4,11 +4,11 @@ using System.Collections;
 public class MeleeEnemy : BaseEnemy {
 
 	/// <summary>
-	/// Uses same code as for Gareth's sword.
+	/// Uses same code as for Gareth's sword. Attacks player if within range.
 	/// Author: Henrik P.
 	/// </summary>
 
-	public Sword weapon;
+	private Sword weapon;
 
 	public override void Start () {
 		attackDamage = 1;

@@ -10,17 +10,6 @@ public class Switch : Triggerable {
 	/// Author: Henrik P.
 	/// </summary>
 
-	void Start () {
-	}
-
-	void Update(){
-		if (activated) {
-			gameObject.name = "Active";
-		} else {
-			gameObject.name = "Inactive";
-		}
-	}
-
 	public override void Activate (){
 		connectedTrigger.Trigger ();
 		activated = connectedTrigger.activated;

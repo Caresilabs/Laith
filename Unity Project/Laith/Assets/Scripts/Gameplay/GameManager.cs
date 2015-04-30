@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -36,8 +36,8 @@ public class GameManager : MonoBehaviour {
 		if (gareth != null && narissa != null) {
 			if (gareth.GetComponent<BasePlayerController> ().dead == true &&
 			    narissa.GetComponent<BasePlayerController> ().dead == true) {
-				narissa.GetComponent<BasePlayerController>().respawn(lastCheckpoint.transform.position);
-				gareth.GetComponent<BasePlayerController>().respawn(lastCheckpoint.transform.position);
+				narissa.GetComponent<BasePlayerController>().Respawn(lastCheckpoint.transform.position);
+				gareth.GetComponent<BasePlayerController>().Respawn(lastCheckpoint.transform.position);
 			} else if (gareth.GetComponent<BasePlayerController> ().dead == true) {
 				gareth.transform.position = narissa.transform.position;
 			} else if (narissa.GetComponent<BasePlayerController> ().dead == true) {
@@ -45,11 +45,11 @@ public class GameManager : MonoBehaviour {
 			}
 		} else if (gareth == null && narissa != null) {
 			if(narissa.GetComponent<BasePlayerController> ().dead == true){
-				narissa.GetComponent<BasePlayerController>().respawn(lastCheckpoint.transform.position);
+				narissa.GetComponent<BasePlayerController>().Respawn(lastCheckpoint.transform.position);
 			}
 		} else if (narissa == null && gareth != null) {
 			if(gareth.GetComponent<BasePlayerController> ().dead == true){
-				gareth.GetComponent<BasePlayerController>().respawn(lastCheckpoint.transform.position);
+				gareth.GetComponent<BasePlayerController>().Respawn(lastCheckpoint.transform.position);
 			}
 		}
 	}

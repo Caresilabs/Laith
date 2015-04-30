@@ -18,7 +18,7 @@ public class Sword : Weapon {
 	private float currentAttackTime = 0f;
 	private bool attacking;
 
-	//Something like a constructor.
+	//Basically a constructor.
 	public static Sword Create(Actor wielder){
 		GameObject newSword = PhotonNetwork.Instantiate (prefab.name,  Vector3.zero, Quaternion.identity, 0) as GameObject;
 		Sword sword = newSword.GetComponent<Sword> ();

@@ -4,7 +4,7 @@ using System.Collections;
 public class Bow : MonoBehaviour {
 
 	/// <summary>
-	/// Script bound to the Bow prefab.
+	/// Script bound to the Bow prefab. Follows cursor, fires arrows.
 	/// Author: Henrik P.
 	/// </summary>
 	

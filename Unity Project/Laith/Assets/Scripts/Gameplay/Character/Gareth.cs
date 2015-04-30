@@ -22,7 +22,7 @@ public class Gareth : BasePlayerController {
 		attackDamage = 20;
 		acceleration = 20f;
 		maxSpeed = 5f;
-		jumpSpeed = 10f;
+		jumpSpeed = 8f;
 		
 		MaxJumps = 1;
 		defaultMaxSpeed = maxSpeed;
@@ -60,7 +60,6 @@ public class Gareth : BasePlayerController {
 			}
 			shield.ShieldDown ();
 		}
-
 	}
 
 	private void Charge() {

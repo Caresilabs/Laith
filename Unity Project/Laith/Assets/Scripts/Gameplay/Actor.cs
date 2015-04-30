@@ -17,13 +17,12 @@ public abstract class Actor : MonoBehaviour {
 	public float maxSpeed;
 	public float jumpSpeed;
 
-	public float invulnerabilityFrames;
+	public float invulnerabilityFrames = 10;
 	private float invulnerabilityTimer = 0;
 	public bool invulnerable;
 
 	public enum Direction{left = -1, none, right}
 	public Direction faceDirection = Direction.right;
-
 
 	public virtual void Update(){
 		Invulnerability ();

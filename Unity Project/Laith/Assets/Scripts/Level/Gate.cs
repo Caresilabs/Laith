@@ -9,9 +9,13 @@ public class Gate : Triggerable {
 	/// </summary>
 
 	public bool opening, closing;
-	public float timer = 1;
+	public float distanceMoved;
+	float time;
+	float timer;
 
 	void Start () {
+		time = distanceMoved / 5f;
+		timer = time;
 	}
 
 	void Update(){
@@ -20,14 +24,14 @@ public class Gate : Triggerable {
 			timer -= Time.deltaTime;
 			if (timer <= 0) {
 				opening = false;
-				timer = 1;
+				timer = time;
 			}
 		} else if (closing) {
 			transform.Translate (new Vector3 (0, -5, 0) * Time.deltaTime);
 			timer -= Time.deltaTime;
 			if (timer <= 0) {
 				closing = false;
-				timer = 1;
+				timer = time;
 			}
 		}
 	}
