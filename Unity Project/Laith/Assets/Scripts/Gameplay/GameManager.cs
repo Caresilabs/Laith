@@ -7,15 +7,16 @@ public class GameManager : MonoBehaviour {
 	private GameObject narissa;
 
 	private GameObject lastCheckpoint;
-	public GameObject start;
+	public int start = 1;
 
 	// Use this for initialization
-	void Start () {
+	//void Awake () {
+	void OnLevelWasLoaded(int level) {
 		Vector3 startPos;
 		if (start == null) {
 			startPos = GameObject.Find ("Checkpoint 1") == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint 1").transform.position;
 		} else {
-			startPos = start.transform.position;
+			startPos = GameObject.Find ("Checkpoint " + start) == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint " + start).transform.position;//start.transform.position;
 		}
 		if (GameObject.Find ("Gareth") != null) {
 			gareth = GameObject.Find ("Gareth");
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour {
 					player.transform.FindChild ("Camera").GetComponent<AudioListener> ().enabled = true;
 					PhotonNetwork.Destroy(narissa);
 					gareth = GameObject.Find ("Gareth");
-				} else{
+				} else if(gareth != null){
 					GameObject tempNarissa = Resources.Load ("Narissa") as GameObject;
 					player = PhotonNetwork.Instantiate(tempNarissa.name, gareth.transform.position, Quaternion.identity, 0);
 					player.transform.name = "Narissa";
@@ -93,6 +94,8 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		DeadState ();
-		ChangeChar ();
+
+		if (PhotonNetwork.inRoom)
+			ChangeChar ();
 	}
 }

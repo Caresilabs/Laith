@@ -21,7 +21,7 @@ public class Checkpoint : MonoBehaviour {
 	void OnTriggerEnter(Collider entity){
 		if (entity.tag == "Player" && !entered) {
 			entered = true;
-			GameObject test = GameObject.Find("_LEVELSCRIPTS");
+			GameObject test = GameObject.Find("_SCRIPTS");
 			test.GetComponent<GameManager>().SetLastCheckpoint(this.gameObject);
 		}
 	}
