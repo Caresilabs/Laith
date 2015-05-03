@@ -55,7 +55,7 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	public void OnCreateRoomClick() {
-		if (PhotonNetwork.room == null) {
+		if (PhotonNetwork.room == null && PhotonNetwork.insideLobby) {
 			// Create Room
 			PhotonNetwork.CreateRoom ("#" + roomsList.Length, new RoomOptions () {isVisible = true, isOpen = true, maxPlayers = 2}, TypedLobby.Default);
 		}
@@ -85,10 +85,10 @@ public class NetworkManager : MonoBehaviour {
 
 			if (GameObject.Find("ToggleNarrisa").GetComponent<Toggle>().isOn) {
 				player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);
-				player.transform.name = "Narissa";
+				player.name = "Narissa";
 			} else {
 				player = PhotonNetwork.Instantiate(gareth.name, start, Quaternion.identity, 0);
-				player.transform.name = "Gareth";
+				player.name = "Gareth";
 			}
 
 		} else {
@@ -96,10 +96,10 @@ public class NetworkManager : MonoBehaviour {
 	
 			if (GameObject.Find("Gareth") != null) {
 				player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);
-				player.transform.name = "Gareth";
+				player.name = "Gareth";
 			} else {
 				player = PhotonNetwork.Instantiate(narissa.name, Vector3.up * 5, Quaternion.identity, 0);
-				player.transform.name = "Narissa";
+				player.name = "Narissa";
 			}
 		}
 		
