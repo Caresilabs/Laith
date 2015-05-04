@@ -28,9 +28,9 @@ public class Narissa : BasePlayerController {
 	public override void Start() {
 	    attackDamage = 1f;
 		acceleration = 25f;
-		maxSpeed = 6f;
-		jumpSpeed = 8f;
-		MaxJumps = 2;
+		maxSpeed = 7f;
+		jumpSpeed = 10f;
+		MaxJumps = 1;
 
 		bow = Bow.Create (this);
 

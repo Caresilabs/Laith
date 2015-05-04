@@ -20,9 +20,9 @@ public class Gareth : BasePlayerController {
 
 	public override void Start() {
 		attackDamage = 20;
-		acceleration = 20f;
-		maxSpeed = 5f;
-		jumpSpeed = 8f;
+		acceleration = 25f;
+		maxSpeed = 6f;
+		jumpSpeed = 10f;
 		
 		MaxJumps = 1;
 		defaultMaxSpeed = maxSpeed;

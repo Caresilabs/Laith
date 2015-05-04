@@ -52,6 +52,6 @@ public abstract class Actor : MonoBehaviour {
 	}
 
 	protected bool IsGrounded() {
-		return Physics.Raycast (transform.position, -Vector3.up, collider.bounds.extents.y + 0.05f);
+		return Physics.Raycast (transform.position, -Vector3.up, collider.bounds.extents.y);
 	}
 }

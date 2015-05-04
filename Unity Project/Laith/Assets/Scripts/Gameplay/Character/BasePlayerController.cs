@@ -9,7 +9,8 @@ using System.Collections;
 public class BasePlayerController :  Actor {
 	
 	// the amount of jumps
-	public int JumpCount { get; set;}
+	//public int JumpCount { get; set;}
+	public int JumpCount;
 	protected int MaxJumps { get; set;}
 
 	private float brakeModifier = 3.6f;
@@ -40,6 +41,7 @@ public class BasePlayerController :  Actor {
 	public void Respawn(Vector3 lastCheckpoint){
 
 		transform.position = lastCheckpoint;
+		rigidbody.velocity = Vector3.zero;
 		GetComponent<PhotonView> ().RPC ("SendRespawnInfo", PhotonTargets.All, null);
 	}
 	[RPC]
@@ -88,6 +90,7 @@ public class BasePlayerController :  Actor {
 
 		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
 			Jump();
+			transform.position = new Vector3(transform.position.x, transform.position.y + 0.15f, transform.position.z);
 			JumpCount++;
 		}
 

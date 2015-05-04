@@ -18,10 +18,10 @@ public class SoftWall : MonoBehaviour {
 	
 	}
 	void OnCollisionEnter(Collision Entity){
-		if (Entity.gameObject.tag == "Player" && Entity.gameObject.name == "Gareth(Clone)") {
+		//if (Entity.gameObject.tag == "Player" && Entity.gameObject.name == "Gareth(Clone)") {
 			if(Entity.gameObject.GetComponent<Gareth>().sprint == true){
 				Destroy (this.gameObject);
 			}
-		}
+		//}
 	}
 }

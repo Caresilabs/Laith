@@ -20,7 +20,7 @@ public class HookProjectile : Photon.MonoBehaviour {
 		if (!photonView.isMine)
 			return;
 
-		if (other.isTrigger) {
+		if (other.isTrigger || hooked) {
 			return;
 		} else if (other.gameObject.tag == "Hookable" || shooter == null) {
 			AttachHook(other.gameObject);
@@ -36,7 +36,7 @@ public class HookProjectile : Photon.MonoBehaviour {
 		this.hookedObject = hookedObject;
 
 		n.hooked = true;
-		n.joint.maxDistance = (n.transform.position - transform.position).magnitude;
+		n.joint.maxDistance = (n.transform.position - transform.position).magnitude - 3;
 		
 		hooked = true;
 
