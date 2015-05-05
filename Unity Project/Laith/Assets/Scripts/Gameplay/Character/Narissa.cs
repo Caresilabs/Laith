@@ -8,7 +8,7 @@ public class Narissa : BasePlayerController {
 	public float hookRange = 12f;
 	public float hookSpeed = 30f;
 	public float maxHookLength = 12f;
-	public float hookChangeSpeed = 5f;
+	public float hookChangeSpeed = 7f;
 	public float spring = 1000f;
 	
 	public float maxSwingSpeed = 12f;
@@ -28,7 +28,7 @@ public class Narissa : BasePlayerController {
 	public override void Start() {
 	    attackDamage = 1f;
 		acceleration = 25f;
-		maxSpeed = 7f;
+		maxSpeed = 10f;
 		jumpSpeed = 10f;
 		MaxJumps = 1;
 
@@ -113,7 +113,7 @@ public class Narissa : BasePlayerController {
 			DestroyHook ();
 		}
 		
-		if (IsGrounded ()) {
+		if (isGrounded) {
 			UpdateInput ();
 		}
 		climbing = false;

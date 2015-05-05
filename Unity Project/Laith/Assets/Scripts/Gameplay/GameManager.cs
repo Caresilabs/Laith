@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	//void Awake () {
+	void Start(){
+		Physics.IgnoreLayerCollision (8, 9);
+		Physics.IgnoreLayerCollision (10, 12);
+	}
+
 	void OnLevelWasLoaded(int level) {
 		Vector3 startPos;
 		if (!start.HasValue) {

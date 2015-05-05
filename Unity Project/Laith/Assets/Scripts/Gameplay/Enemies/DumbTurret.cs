@@ -1,27 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DumbTurret : MonoBehaviour {
+public class DumbTurret : Triggerable {
 
 	//Summary
 	//Class used to Fire Projectiles in interval
 	//Author: Simon J
 	//
 
-	public bool interval;
-	public float intervalTime;
-	private float currentIntervalTimer;
+	public bool fireInVolleys;
+	public int shotsPerVolley;
+	private int remainingShotsInVolley;
 
-	private bool delay;
-	public float delayTime;
-	private float currentDelayTimer;
+	private bool waitForNextVolley;
+	public float secondsBetweenVolleys;							//Time between volleys
+	private float secondsToNextVolley;
 
-	public float fireRate;
-	private float currentFireTimer;
-
-	public bool triggerable;
-	public GameObject objectToTrigger;
-
+	public float secondsBetweenShots;				//Time between shots
+	private float secondsToNextShot;
+	
 	public GameObject projectile;
 	public float projectileSpeed;
 	public float projectileLifeTime;
@@ -29,63 +26,59 @@ public class DumbTurret : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		currentIntervalTimer = 0;
-		currentFireTimer = 0;
-		currentDelayTimer = 0;
+		remainingShotsInVolley = 0;
+		secondsToNextShot = 0;
+		secondsToNextVolley = 0;
 	}
 	private void ShootProjectile(){
-		GameObject test = PhotonNetwork.Instantiate (projectile.name , transform.position, transform.rotation, 0) as GameObject;
-		test.layer = 1;
-		test.transform.parent = transform;
-		test.transform.parent = GameObject.Find ("_EnemyProjectiles").transform;
-		//Physics.IgnoreCollision (collider, test.collider);
-
-		test.GetComponent<Projectile>().enabled = true;
-		Vector2 test2 = new Vector2 (Mathf.Cos ((transform.eulerAngles.z + 90) * Mathf.PI / 180.0f), Mathf.Sin ((transform.eulerAngles.z + 90) * Mathf.PI / 180.0f));
-
-		test.rigidbody.velocity = new Vector3(test2.x, test2.y, 0) * projectileSpeed;//transform.eulerAngles * projectileSpeed;
-		test.rigidbody.useGravity = false;
-		
-		Projectile p = test.GetComponent<Projectile> ();
-		p.damage = projectileDamage;
-		p.wielder = null;
-		p.maxLifeTime = projectileLifeTime;
-
-	}
-	private void FireRateTimer(){
-		currentFireTimer += Time.deltaTime;
-		if (currentFireTimer >= fireRate) {
-			ShootProjectile();
-			currentFireTimer = 0;
+		Projectile p = Projectile.Create (
+			projectile.name,
+			transform.position,
+			projectileSpeed * transform.forward,
+			projectileDamage,
+			projectileLifeTime,
+			gameObject,
+			false
+			);
+		p.transform.parent = gameObject.transform;
+		p.gameObject.name = "Trap Arrow";
+		if (fireInVolleys) {
+			TrackVolleyCount();
 		}
 	}
-	private void IntervalTimer(){
-		currentIntervalTimer += Time.deltaTime;
-		if (currentIntervalTimer >= intervalTime) {
-			delay = true;
-			currentIntervalTimer = 0;
+	private void FireRateTimer(){
+		secondsToNextShot += Time.deltaTime;
+		if (secondsToNextShot >= secondsBetweenShots) {
+			ShootProjectile();
+			secondsToNextShot = 0;
+		}
+	}
+	private void TrackVolleyCount(){
+		--remainingShotsInVolley;
+		if(remainingShotsInVolley <= 0){
+			waitForNextVolley = true;
+			remainingShotsInVolley = shotsPerVolley;
 		}
 	}
 	private void DelayTimer(){
-		currentDelayTimer += Time.deltaTime;
-		if (currentDelayTimer >= delayTime) {
-			delay = false;
-			currentDelayTimer = 0;
-			currentFireTimer = 0;
+		secondsToNextVolley += Time.deltaTime;
+		if (secondsToNextVolley >= secondsBetweenVolleys) {
+			waitForNextVolley = false;
+			secondsToNextVolley = 0;
+			secondsToNextShot = 0;
 		}
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		if (!PhotonNetwork.isMasterClient)
 			return;
 
+		if (!activated)
+			return;
+
 		if (GameObject.FindGameObjectWithTag("Player") != null) {
-			if (!delay || !interval) {
+			if (!waitForNextVolley || !fireInVolleys) {
 				FireRateTimer ();
-				if(interval){
-					IntervalTimer ();
-				}
 			} else {
 				DelayTimer ();
 			}

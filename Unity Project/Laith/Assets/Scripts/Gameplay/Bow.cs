@@ -10,7 +10,7 @@ public class Bow : MonoBehaviour {
 	
 	public float arrowMaxSpeed = 30;
 	public float arrowMinSpeed = 10;
-	public float drawBackSpeed = 30;
+	public float drawSpeed = 40;
 	public float arrowPotentialSpeed = 0;
 	private Narissa narissa;
 	private Vector3 offset = new Vector3(0,0.5f,0);
@@ -40,20 +40,21 @@ public class Bow : MonoBehaviour {
 
 	public void DrawBow(){
 		if ((arrowPotentialSpeed < arrowMaxSpeed)) {
-			arrowPotentialSpeed += drawBackSpeed * Time.deltaTime;
+			arrowPotentialSpeed += drawSpeed * Time.deltaTime;
 		}
 	}
 
 	public void Release(){
 		if (arrowPotentialSpeed >= arrowMinSpeed) {
-			GameObject arrow = PhotonNetwork.Instantiate ("Arrow", transform.position, Quaternion.identity, 0) as GameObject;
-			arrow.GetComponent<Projectile> ().enabled = true;
-			
-			arrow.rigidbody.velocity = narissa.MouseDirection () * arrowPotentialSpeed;
-			
-			Weapon a = arrow.GetComponent<Weapon> ();
-			a.damage = (int)arrowPotentialSpeed;
-			a.wielder = narissa as Actor;
+			Projectile.Create (
+				"Arrow",
+				transform.position,
+				narissa.MouseDirection () * arrowPotentialSpeed,
+				arrowPotentialSpeed,
+				0,
+				narissa.gameObject,
+				true
+				);
 		}
 
 		arrowPotentialSpeed = 0;

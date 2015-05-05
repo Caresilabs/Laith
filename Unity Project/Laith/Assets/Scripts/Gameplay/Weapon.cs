@@ -11,7 +11,7 @@ public class Weapon : Photon.MonoBehaviour {
 	public float damage;
 	public Vector3 knockbackDirection = Vector3.zero;
 	public float knockbackForce;
-	public Actor wielder;
+	public GameObject wielder;
 
 	public virtual void OnTriggerEnter(Collider other){
 		if (other.isTrigger == true) {
@@ -22,8 +22,10 @@ public class Weapon : Photon.MonoBehaviour {
 		if (a == null)
 			return;
 
-		if (wielder == null || 
-		    wielder.gameObject.layer != other.gameObject.layer) {
+		if (wielder == null) {
+			if (gameObject.layer != other.gameObject.layer)
+				DealDamage (a);
+		} else if (wielder.layer != other.gameObject.layer) {
 			DealDamage (a);
 		}
 	}
@@ -32,7 +34,8 @@ public class Weapon : Photon.MonoBehaviour {
 		if (wielder == null || knockbackDirection != Vector3.zero) {
 			a.TakeDamage (damage, knockbackForce * knockbackDirection);
 		} else {
-			a.TakeDamage (damage, knockbackForce * new Vector3 ((int)wielder.faceDirection, 0, 0));
+			Vector3 kbDir = (a.transform.position - wielder.transform.position).normalized;
+			a.TakeDamage (damage, knockbackForce * kbDir);
 		}
 	}
 }

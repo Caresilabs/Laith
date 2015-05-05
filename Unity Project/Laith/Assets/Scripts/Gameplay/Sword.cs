@@ -9,6 +9,7 @@ public class Sword : Weapon {
 	/// </summary>
 
 	public static Object prefab = Resources.Load ("Sword");
+	public Actor actor;
 
 	private GameObject pivot;
 	private Vector3 swordOffset = new Vector3 (0.6f, 0, 0);
@@ -19,17 +20,18 @@ public class Sword : Weapon {
 	private bool attacking;
 
 	//Basically a constructor.
-	public static Sword Create(Actor wielder){
+	public static Sword Create(Actor actor){
 		GameObject newSword = PhotonNetwork.Instantiate (prefab.name,  Vector3.zero, Quaternion.identity, 0) as GameObject;
+		newSword.layer = actor.gameObject.layer;
 		Sword sword = newSword.GetComponent<Sword> ();
-		sword.wielder = wielder;
-		sword.damage = wielder.attackDamage;
+		sword.actor = actor;
+		sword.damage = actor.attackDamage;
 		sword.knockbackForce = 100;
 		sword.enabled = true;
 		
 		//Pivot sets origin point so that the sword rotates around this point instead of around its center.
 		sword.pivot = new GameObject ("SwordPivot");
-		sword.pivot.transform.parent = wielder.transform;
+		sword.pivot.transform.parent = actor.transform;
 		sword.pivot.transform.rotation = Quaternion.Euler(0,90,0);
 		
 		sword.transform.parent = sword.pivot.transform;
@@ -42,7 +44,7 @@ public class Sword : Weapon {
 	public void Attack(){
 		if (!attacking) {
 			attacking = true;
-			attackDirection = (int)wielder.faceDirection;
+			attackDirection = (int)actor.faceDirection;
 			collider.enabled = true;
 			currentAttackTime = 0;
 		}
@@ -62,7 +64,7 @@ public class Sword : Weapon {
 		
 		if(!attacking) {
 			pivot.transform.localPosition = new Vector3(
-				(int)wielder.faceDirection * swordOffset.x,
+				(int)actor.faceDirection * swordOffset.x,
 				swordOffset.y,
 				swordOffset.z);
 		}

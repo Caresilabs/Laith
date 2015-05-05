@@ -21,7 +21,7 @@ public class Gareth : BasePlayerController {
 	public override void Start() {
 		attackDamage = 20;
 		acceleration = 25f;
-		maxSpeed = 6f;
+		maxSpeed = 9f;
 		jumpSpeed = 10f;
 		
 		MaxJumps = 1;
@@ -64,7 +64,7 @@ public class Gareth : BasePlayerController {
 
 	private void Charge() {
 		if (Input.GetKeyDown (KeyCode.LeftShift) && !cooldown) {
-			if(base.IsGrounded() && rigidbody.velocity.x != 0) {
+			if(base.isGrounded && rigidbody.velocity.x != 0) {
 				cooldown = true;
 				sprint = true;
 				maxSpeed = sprintSpeed;
@@ -84,7 +84,7 @@ public class Gareth : BasePlayerController {
 			}
 			
 			currentSprintTime += Time.deltaTime;
-			if(currentSprintTime > sprintTime && base.IsGrounded()) {
+			if(currentSprintTime > sprintTime && base.isGrounded) {
 				currentSprintTime = 0;
 				sprint = false;
 				maxSpeed = defaultMaxSpeed;

@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public abstract class BaseEnemy :  Actor {
+public class BaseEnemy :  Actor {
 
 	private GameObject healthBar;
 	public Vector3 posOffSet;

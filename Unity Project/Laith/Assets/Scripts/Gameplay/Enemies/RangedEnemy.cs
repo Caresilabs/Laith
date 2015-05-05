@@ -65,17 +65,15 @@ public class RangedEnemy : BaseEnemy {
 
 	public void FireProjectile(Vector3 direction){
 		direction.Normalize ();
-		GameObject projectile = PhotonNetwork.Instantiate ("Arrow", transform.position, Quaternion.LookRotation(direction), 0) as GameObject;
-		projectile.layer = 1;
-		projectile.GetComponent<Projectile> ().enabled = true;
-		Physics.IgnoreCollision (collider, projectile.collider);
-
-		projectile.rigidbody.velocity = direction * projectileSpeed;
-		projectile.rigidbody.useGravity = false;
-		
-		Weapon p = projectile.GetComponent<Weapon> ();
-		p.damage = attackDamage;
-		p.wielder = this as Actor;
+		Projectile.Create (
+			"Arrow",
+			transform.position,
+			direction * projectileSpeed,
+			attackDamage,
+			0,
+			gameObject,
+			false
+			);
 
 		attackTimer = attackCooldown;
 	}

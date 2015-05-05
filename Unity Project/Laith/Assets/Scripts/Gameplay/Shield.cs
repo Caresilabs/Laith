@@ -15,6 +15,7 @@ public class Shield : MonoBehaviour {
 
 	public static Shield Create(Gareth gareth){
 		GameObject newShield = PhotonNetwork.Instantiate (prefab.name,  Vector3.zero, Quaternion.identity, 0) as GameObject;
+		newShield.layer = gareth.gameObject.layer;
 		Shield shield = newShield.GetComponent<Shield> ();
 		shield.transform.parent = gareth.transform;
 		shield.gareth = gareth;
@@ -41,12 +42,21 @@ public class Shield : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		Projectile p = other.gameObject.GetComponent<Projectile> ();
-		if (p != null && p.wielder.gameObject.layer == 10) {
-			Physics.IgnoreCollision (p.wielder.collider, p.collider, false);
+		if (p != null && p.wielder.gameObject.layer != 8) {
+			if(!p.deflectable){
+				p.maxLifeTime = 0;
+				return;
+			}
 			p.rigidbody.velocity = p.rigidbody.velocity.magnitude * gareth.MouseDirection();
-			p.wielder = gareth as Actor;
-			p.gameObject.layer = 9;
+			p.damage = 20;
+			p.wielder = gareth.gameObject;
+			p.gameObject.layer = 8;
 			p.maxLifeTime = 20;
+			try{
+				Physics.IgnoreCollision (p.wielder.collider, p.collider, false);
+			} catch(MissingComponentException){
+				Debug.Log ("Object does not have collider.");
+			}
 			return;
 		}
 

@@ -21,6 +21,8 @@ public abstract class Actor : MonoBehaviour {
 	private float invulnerabilityTimer = 0;
 	public bool invulnerable;
 
+	protected bool isGrounded;
+
 	public enum Direction{left = -1, none, right}
 	public Direction faceDirection = Direction.right;
 
@@ -51,7 +53,11 @@ public abstract class Actor : MonoBehaviour {
 		//rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);
 	}
 
-	protected bool IsGrounded() {
-		return Physics.Raycast (transform.position, -Vector3.up, collider.bounds.extents.y);
+	protected void CheckIfGrounded() {
+		if (Physics.Raycast (transform.position, -Vector3.up, collider.bounds.extents.y-0.2f)) {
+			isGrounded = true;
+		} else {
+			isGrounded = false;
+		}
 	}
 }
