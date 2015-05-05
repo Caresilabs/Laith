@@ -15,14 +15,26 @@ public class NavScriptAI : MonoBehaviour {
 		agent = GetComponent<NavMeshAgent> ();
 	}
 	private void FindPlayers (){
+		bool found = false;
+		float bestDistance = float.MaxValue;
 		GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
-		float distance = 1000;
 		for (int i = 0; i < players.Length; ++i) {
-			float testDistance = Vector3.Distance(players[i].transform.position, transform.position);
-			if(testDistance < distance){
-				target = players[i].transform;
+			RaycastHit test;
+			if(Physics.Raycast(transform.position, players[i].transform.position - transform.position, out test, 1000)){
+				if(test.collider.tag == "Player"){
+					float distance = Vector3.Distance (test.transform.position, transform.position);
+					if(bestDistance > distance){
+						bestDistance = distance;
+						target = players[i].transform;
+						found = true;
+					}
+				}
 			}
 		}
+		if (found) {
+			return;
+		}
+		target = null;
 	}
 	private void Bounderies(){
 		if (transform.position.z > 0 ||
@@ -34,7 +46,7 @@ public class NavScriptAI : MonoBehaviour {
 	void Update () {
 		FindPlayers ();
 		Bounderies ();
-		if (target != null) {
+		if (target != null && agent.isOnOffMeshLink) {
 			agent.SetDestination (target.position);
 		}
 	}

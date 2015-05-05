@@ -22,6 +22,7 @@ public class Spawner : MonoBehaviour {
 	}
 
 	void Spawn(){
-		GameObject boulder = PhotonNetwork.Instantiate (objectToSpawn.name,  spawnPosition, Quaternion.identity, 0) as GameObject;
+		//GameObject boulder = PhotonNetwork.Instantiate (objectToSpawn.name,  spawnPosition, Quaternion.identity, 0) as GameObject;
+		PhotonNetwork.Instantiate (objectToSpawn.name, spawnPosition, Quaternion.identity, 0);
 	}
 }

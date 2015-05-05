@@ -7,13 +7,13 @@ public class GameManager : MonoBehaviour {
 	private GameObject narissa;
 
 	private GameObject lastCheckpoint;
-	public int start = 1;
+	public int? start;
 
 	// Use this for initialization
 	//void Awake () {
 	void OnLevelWasLoaded(int level) {
 		Vector3 startPos;
-		if (start == null) {
+		if (!start.HasValue) {
 			startPos = GameObject.Find ("Checkpoint 1") == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint 1").transform.position;
 		} else {
 			startPos = GameObject.Find ("Checkpoint " + start) == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint " + start).transform.position;//start.transform.position;
