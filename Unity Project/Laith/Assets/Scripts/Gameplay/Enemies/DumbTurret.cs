@@ -37,7 +37,7 @@ public class DumbTurret : MonoBehaviour {
 		GameObject test = PhotonNetwork.Instantiate (projectile.name , transform.position, transform.rotation, 0) as GameObject;
 		test.layer = 1;
 		test.transform.parent = transform;
-		test.transform.parent = GameObject.Find ("_EnemyProjectiles").transform;
+		//test.transform.parent = GameObject.Find ("_EnemyProjectiles").transform;
 		//Physics.IgnoreCollision (collider, test.collider);
 
 		test.GetComponent<Projectile>().enabled = true;
