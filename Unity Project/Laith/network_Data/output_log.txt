@@ -2,9 +2,9 @@ Initialize engine version: 4.6.3f1 (4753d8b6ef2b)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: AMD Radeon HD 6700 Series (ID=0x673e)
-    Vendor:   ATI
-    VRAM:     1011 MB
+    Renderer: NVIDIA GeForce 840M              (ID=0x1341)
+    Vendor:   NVIDIA
+    VRAM:     1993 MB
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -18,82 +18,115 @@ Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\net
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.103 seconds
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+- Completed reload, in  0.123 seconds
+desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.dll (this message is harmless)
 WARNING: Shader Unsupported: 'Hidden/Nature/Tree Creator Leaves Optimized' - Pass '' shader state not supported
 WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
-UnloadTime: 7.058974 ms
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 6.178356 ms
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 634)
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1133.
-Total: 1.749665 ms (FindLiveObjects: 0.065410 ms CreateObjectMapping: 0.022936 ms MarkObjects: 0.383686 ms  DeleteObjects: 0.485058 ms)
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1225.
+Total: 1.793780 ms (FindLiveObjects: 0.147244 ms CreateObjectMapping: 0.058029 ms MarkObjects: 0.496210 ms  DeleteObjects: 0.626875 ms)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at SoftWall.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
 WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -101,795 +134,795 @@ Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -898,22 +931,14 @@ Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored t
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
 Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -925,11 +950,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -941,11 +966,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -957,11 +982,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -973,11 +998,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -989,11 +1014,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -1005,11 +1030,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -1021,11 +1046,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -1037,11 +1062,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -1053,11 +1078,11 @@ Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored t
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
@@ -1066,282 +1091,278 @@ Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored t
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
 Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1005. Sent by actorNr: 1
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1002. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 
-Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1006. Sent by actorNr: 1
  
 (Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
 

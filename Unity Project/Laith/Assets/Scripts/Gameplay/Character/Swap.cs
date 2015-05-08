@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Swap : MonoBehaviour {
+public class Swap : Photon.MonoBehaviour {
 	/// <summary>
 	/// Script for the Swap ability. Switches position, velocity and rotation between the attached object and the target object.
 	/// Author: Andreas Karlsson.
@@ -16,6 +16,7 @@ public class Swap : MonoBehaviour {
 		tempCooldown = cooldown;
 	}
 
+	[RPC]
 	void SwitchPos(){
 		// Finds a game-object with the desired name
 		GameObject target = GameObject.Find(targetName);
@@ -40,7 +41,8 @@ public class Swap : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Q) && !isOnCooldown){
-			SwitchPos();
+			//SwitchPos();
+			photonView.RPC( "SwitchPos", PhotonTargets.All);
 		}
 
 		// Timer for the cooldown
