@@ -7,6 +7,7 @@ public class Swap : MonoBehaviour {
 	/// Author: Andreas Karlsson.
 	/// </summary>
 
+	public string targetName;
 	public float cooldown;
 	public bool isOnCooldown;
 	private float tempCooldown;
@@ -17,7 +18,7 @@ public class Swap : MonoBehaviour {
 
 	void SwitchPos(){
 		// Finds a game-object with the desired name
-		GameObject target = GameObject.Find("Gareth(Clone)");
+		GameObject target = GameObject.Find(targetName);
 
 		// Stores the position, velocity and rotation of this object as temporary variables
 		Vector3 tempPosition = transform.position;
