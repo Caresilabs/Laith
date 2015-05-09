@@ -9,7 +9,7 @@ class EditorScrips : EditorWindow
 	public static void RunMainScene()
 	{
 		EditorApplication.SaveScene ();
-		EditorApplication.OpenScene("Assets/Scenes/MainMenu.unity");
+		EditorApplication.OpenScene("Assets/Scenes/StartUp.unity");
 		EditorApplication.isPlaying = true;
 	}
 }
