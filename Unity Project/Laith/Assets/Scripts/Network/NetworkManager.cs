@@ -26,6 +26,12 @@ public class NetworkManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyUp(KeyCode.Escape) ){
 			PhotonNetwork.LeaveRoom();
+
+			Destroy(GameObject.FindGameObjectWithTag("Narissa"));
+			Destroy(GameObject.FindGameObjectWithTag("Gareth"));
+			Destroy(GameObject.Find("_SCRIPTS"));
+
+			Application.LoadLevel("MainMenu");
 		}
 	}
 
@@ -74,10 +80,15 @@ public class NetworkManager : MonoBehaviour {
 	private GameObject narissa;
 	private GameObject gareth; 
 
+
 	void OnJoinedRoom()
 	{
+		Application.LoadLevel ("Level0" + levelInput);
+
 		// Spawn player
 		GameObject player;
+
+		//Debug.Log(PhotonNetwork.room.playerCount);
 
 		if (PhotonNetwork.room.playerCount == 1) {
 			// Find the first Checkpoint, else just spawn at Zero
@@ -85,21 +96,21 @@ public class NetworkManager : MonoBehaviour {
 
 			if (GameObject.Find("ToggleNarrisa").GetComponent<Toggle>().isOn) {
 				player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);
-				player.name = "Narissa";
+				//player.name = "Narissa";
 			} else {
 				player = PhotonNetwork.Instantiate(gareth.name, start, Quaternion.identity, 0);
-				player.name = "Gareth";
+				//player.name = "Gareth";
 			}
 
 		} else {
-			// TODO GameObject.Find("Narissa(Clone)").transform.position + 
-	
-			if (GameObject.Find("Gareth") != null) {
+			if (GameObject.FindGameObjectWithTag("Gareth") == null) {
+				//Vector3 start = GameObject.FindGameObjectWithTag("Narissa").transform.position + Vector3.up * 5;
 				player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);
-				player.name = "Gareth";
+				//player.name = "Gareth";
 			} else {
+				//Vector3 start = GameObject.FindWithTag("Gareth").transform.position + Vector3.up * 5;
 				player = PhotonNetwork.Instantiate(narissa.name, Vector3.up * 5, Quaternion.identity, 0);
-				player.name = "Narissa";
+				//player.name = "Narissa";
 			}
 		}
 		
@@ -111,8 +122,11 @@ public class NetworkManager : MonoBehaviour {
 		player.transform.FindChild ("Camera").GetComponent<AudioListener> ().enabled = true;
 
 
-		Application.LoadLevel ("Level0" + levelInput);
+
 		//Application.LoadLevel ("PlaygroundLevel");
 
 	}
+
+
+
 }
