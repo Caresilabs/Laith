@@ -17,8 +17,7 @@ public class Weapon : Photon.MonoBehaviour {
 		if (other.isTrigger == true) {
 			return;
 		}
-		Actor a;
-		a = other.GetComponent<Actor>();
+		Actor a = other.GetComponent<Actor>();
 		if (a == null)
 			return;
 

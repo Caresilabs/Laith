@@ -69,7 +69,7 @@ public class Narissa : BasePlayerController {
 		hp.shooter = gameObject;
 		
 		Rigidbody rb = hook.GetComponent<Rigidbody> ();
-		rb.velocity = MouseDirection() * hookSpeed;
+		rb.velocity = mouseDirection * hookSpeed;
 		
 		joint = gameObject.AddComponent<SpringJoint> ();
 		joint.connectedBody = rb;

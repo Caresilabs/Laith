@@ -2,11 +2,12 @@
 using System.Collections;
 
 public class Gareth : BasePlayerController {
-	
+
+	private Direction sprintDirection;
 	public float sprintSpeed = 10f;
 	public float sprintTime = 2f;
 	public float sprintCooldown = 4f;
-	private float currentSprintTime = 0f;
+	public float currentSprintTime = 0f;
 	private float currentCooldownTime = 0f;
 	private float defaultMaxSpeed;
 	
@@ -37,9 +38,11 @@ public class Gareth : BasePlayerController {
 		Attack ();
 		Block ();
 		Charge ();
-		Sprint ();
 		Cooldown ();
 		base.Update ();
+		if (sprint) {
+			faceDirection = sprintDirection;
+		}
 	}
 
 	private void Attack(){
@@ -53,7 +56,7 @@ public class Gareth : BasePlayerController {
 			if(!sprint){
 			maxSpeed = shieldMoveSpeed;
 			}
-			shield.ShieldUp(MouseDirection());
+			shield.ShieldUp(mouseDirection);
 		} else {
 			if(!sprint){
 			maxSpeed = defaultMaxSpeed;
@@ -64,27 +67,20 @@ public class Gareth : BasePlayerController {
 
 	private void Charge() {
 		if (Input.GetKeyDown (KeyCode.LeftShift) && !cooldown) {
-			if(base.isGrounded && rigidbody.velocity.x != 0) {
+			if(base.isGrounded) {
+				sprintDirection = faceDirection;
 				cooldown = true;
 				sprint = true;
 				maxSpeed = sprintSpeed;
 			}
 		}
-	}
 
-	private void Sprint() {
 		if (sprint) {
-			
-			float dirr = rigidbody.velocity.x;
-			if(dirr > 0) {
-				rigidbody.velocity = new Vector3(sprintSpeed, rigidbody.velocity.y);
-			}
-			else if(dirr < 0) {
-				rigidbody.velocity = new Vector3(-sprintSpeed, rigidbody.velocity.y);
-			}
-			
+			rigidbody.velocity = new Vector3((int)sprintDirection * sprintSpeed, rigidbody.velocity.y);
+			shield.ShieldUp (new Vector3((int)sprintDirection, 0));
+
 			currentSprintTime += Time.deltaTime;
-			if(currentSprintTime > sprintTime && base.isGrounded) {
+			if(currentSprintTime > sprintTime) {
 				currentSprintTime = 0;
 				sprint = false;
 				maxSpeed = defaultMaxSpeed;
@@ -93,7 +89,7 @@ public class Gareth : BasePlayerController {
 			//lastPos = transform.position.x;
 		}
 	}
-
+	
 	private void Cooldown() {
 		if (cooldown) {
 			currentCooldownTime += Time.deltaTime;

@@ -19,6 +19,8 @@ public class BasePlayerController :  Actor {
 	public bool use;
 	public bool dead;
 
+	public Vector3 mouseDirection;
+
 	public virtual void Start(){
 
 	}
@@ -65,7 +67,8 @@ public class BasePlayerController :  Actor {
 	protected void UpdateInput ()
 	{
 		CheckIfGrounded ();
-		UpdateDirection();
+		UpdateMouseDirection ();
+		UpdateDirection ();
 		Movement ();
 
 		if (isGrounded) {
@@ -117,13 +120,12 @@ public class BasePlayerController :  Actor {
 	}
 
 	protected void UpdateDirection(){
-		faceDirection = (Direction)(MouseDirection ().x/Mathf.Abs (MouseDirection ().x));
+		faceDirection = (Direction)(mouseDirection.x/Mathf.Abs (mouseDirection.x));
 	}
 
-	public Vector3 MouseDirection() {
-		Vector3 mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+	public void UpdateMouseDirection() {
+		mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
 		mouseDirection.Normalize ();
-		return mouseDirection;
 	}
 	
 }

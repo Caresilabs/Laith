@@ -15,6 +15,8 @@ public class Bow : MonoBehaviour {
 	private Narissa narissa;
 	private Vector3 offset = new Vector3(0,0.5f,0);
 	private float distanceOffset = 1;
+
+	private Projectile arrow;
 	
 	public static Bow Create(Narissa narissa){
 		GameObject newBow = PhotonNetwork.Instantiate ("Bow",  Vector3.zero, Quaternion.identity, 0) as GameObject;
@@ -32,9 +34,9 @@ public class Bow : MonoBehaviour {
 	}
 
 	public void FollowMouse(){
-		Vector3 bowDirection = narissa.MouseDirection ();
+		Vector3 bowDirection = narissa.mouseDirection;
 		transform.LookAt(transform.position + bowDirection * 10);
-		transform.Rotate(90,0,0);
+		transform.Rotate(0,-90,0);
 		transform.localPosition = offset + bowDirection * distanceOffset;
 	}
 
@@ -42,19 +44,32 @@ public class Bow : MonoBehaviour {
 		if ((arrowPotentialSpeed < arrowMaxSpeed)) {
 			arrowPotentialSpeed += drawSpeed * Time.deltaTime;
 		}
-	}
 
-	public void Release(){
-		if (arrowPotentialSpeed >= arrowMinSpeed) {
-			Projectile.Create (
+		if (arrow == null) {
+			arrow = Projectile.Create (
 				"Arrow",
-				transform.position,
-				narissa.MouseDirection () * arrowPotentialSpeed,
+				transform.position + narissa.mouseDirection * 1,
+				narissa.mouseDirection,
 				arrowPotentialSpeed,
 				0,
 				narissa.gameObject,
 				true
-				);
+			);
+			arrow.collider.enabled = false;
+		} else {
+			arrow.rigidbody.velocity = narissa.mouseDirection;
+			arrow.transform.position = transform.position + narissa.mouseDirection * (1 + arrowPotentialSpeed/arrowMaxSpeed * -1.4f);
+		}
+	}
+
+	public void Release(){
+		if (arrowPotentialSpeed >= arrowMinSpeed) {
+			arrow.collider.enabled = true;
+			arrow.rigidbody.velocity = narissa.mouseDirection * arrowPotentialSpeed;
+			arrow.damage = arrowPotentialSpeed;
+			arrow = null;
+		} else {
+			Destroy(arrow.gameObject);
 		}
 
 		arrowPotentialSpeed = 0;

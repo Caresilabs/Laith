@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Shield : MonoBehaviour {
+public class Shield : Weapon {
 
 	/// <summary>
 	/// Script bound to the shield prefab. Contains all shield logic.
@@ -10,7 +10,7 @@ public class Shield : MonoBehaviour {
 
 	public static Object prefab = Resources.Load ("Shield");
 	private Vector3 shieldOffset = new Vector3(0, 0.5f, 0);
-	private float shieldDistance = 1;
+	private float shieldDistance = 1.5f;
 	private Gareth gareth;
 
 	public static Shield Create(Gareth gareth){
@@ -20,15 +20,16 @@ public class Shield : MonoBehaviour {
 		shield.transform.parent = gareth.transform;
 		shield.gareth = gareth;
 		shield.enabled = true;
+		shield.wielder = gareth.gameObject;
+
+		shield.damage = 50;
+		shield.knockbackForce = 100000;
 
 		return shield;
 	}
 
 	public void ShieldUp(Vector3 direction){
 		Vector3 shieldDirection = direction;
-		if(Input.mousePosition.y <= Camera.main.WorldToScreenPoint(transform.position).y){
-			shieldDirection = new Vector3((int)gareth.faceDirection,0,0);
-		}
 
 		transform.LookAt(transform.position + shieldDirection * 10);
 		transform.Rotate(90,0,0);
@@ -40,16 +41,14 @@ public class Shield : MonoBehaviour {
 		transform.position = transform.parent.position + new Vector3(0, 0, 1) * shieldDistance;
 	}
 
-	void OnTriggerEnter(Collider other){
-		Projectile p = other.gameObject.GetComponent<Projectile> ();
-		if (p != null && p.wielder.gameObject.layer != 8) {
+	void DeflectProjectile(Projectile p){
+
 			if(!p.deflectable){
 				p.maxLifeTime = 0;
 				return;
 			}
-			p.rigidbody.velocity = p.rigidbody.velocity.magnitude * gareth.MouseDirection();
+			p.rigidbody.velocity = p.rigidbody.velocity.magnitude * gareth.mouseDirection;
 			p.damage = 20;
-			p.wielder = gareth.gameObject;
 			p.gameObject.layer = 8;
 			p.maxLifeTime = 20;
 			try{
@@ -57,8 +56,26 @@ public class Shield : MonoBehaviour {
 			} catch(MissingComponentException){
 				Debug.Log ("Object does not have collider.");
 			}
+			p.wielder = gareth.gameObject;
 			return;
+	}
+
+	public override void OnTriggerEnter(Collider other){
+		Projectile p = other.gameObject.GetComponent<Projectile> ();
+		if (p != null && p.wielder.gameObject.layer != 8) {
+			DeflectProjectile (p);
 		}
 
+		if (gareth.sprint) {
+			Actor a = other.gameObject.GetComponent<Actor> ();
+			if (a == null)
+				return;
+			
+			if (gameObject.layer != other.gameObject.layer){
+				DealDamage (a);
+				gareth.currentSprintTime = gareth.sprintTime;
+			}
+		}
 	}
+
 }
