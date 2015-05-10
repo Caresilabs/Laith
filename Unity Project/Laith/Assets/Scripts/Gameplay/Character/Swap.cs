@@ -2,12 +2,13 @@
 using System.Collections;
 
 public class Swap : Photon.MonoBehaviour {
+
 	/// <summary>
 	/// Script for the Swap ability. Switches position, velocity and rotation between the attached object and the target object.
 	/// Author: Andreas Karlsson.
 	/// </summary>
 
-	public string targetName;
+	public string targetTag;
 	public float cooldown;
 	public bool isOnCooldown;
 	private float tempCooldown;
@@ -19,7 +20,7 @@ public class Swap : Photon.MonoBehaviour {
 	[RPC]
 	void SwitchPos(){
 		// Finds a game-object with the desired name
-		GameObject target = GameObject.Find(targetName);
+		GameObject target = GameObject.FindWithTag(targetTag);
 
 		// Stores the position, velocity and rotation of this object as temporary variables
 		Vector3 tempPosition = transform.position;
@@ -42,7 +43,7 @@ public class Swap : Photon.MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Q) && !isOnCooldown){
 			//SwitchPos();
-			photonView.RPC( "SwitchPos", PhotonTargets.All);
+			photonView.RPC("SwitchPos", PhotonTargets.All);
 		}
 
 		// Timer for the cooldown
