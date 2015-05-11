@@ -23,6 +23,19 @@ public class GameManager : MonoBehaviour {
 		} else {
 			startPos = GameObject.Find ("Checkpoint " + start) == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint " + start).transform.position;//start.transform.position;
 		}
+		if (GameObject.FindGameObjectsWithTag ("Player") != null) {
+			GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+			for(int i = 0; i < players.Length; ++i){
+				if(players[i].GetComponent<Gareth>() != null){
+					gareth = players[i];
+				}
+				if(players[i].GetComponent<Narissa>() != null){
+					narissa = players[i];
+				}
+				players[i].transform.position = startPos;
+			}
+		}
+		/*
 		if (GameObject.Find ("Gareth") != null) {
 			gareth = GameObject.Find ("Gareth");
 			gareth.transform.position = startPos;
@@ -31,6 +44,7 @@ public class GameManager : MonoBehaviour {
 			narissa = GameObject.Find ("Narissa");
 			narissa.transform.position = startPos;
 		}
+		*/
 	}
 
 	public void SetLastCheckpoint(GameObject checkpoint){
@@ -96,9 +110,28 @@ public class GameManager : MonoBehaviour {
 		}
 		
 	}
+	private void FindNewPlayers(){
+		if (!PhotonNetwork.inRoom) {
+			return;
+		}
+		if (PhotonNetwork.room.playerCount != GameObject.FindGameObjectsWithTag ("Player").Length) {
+			if (GameObject.FindGameObjectsWithTag ("Player") != null) {
+				GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+				for(int i = 0; i < players.Length; ++i){
+					if(players[i].GetComponent<Gareth>() != null){
+						gareth = players[i];
+					}
+					if(players[i].GetComponent<Narissa>() != null){
+						narissa = players[i];
+					}
+				}
+			}
+		}
+	}
 	// Update is called once per frame
 	void Update () {
 		DeadState ();
+		FindNewPlayers ();
 
 		if (PhotonNetwork.inRoom)
 			ChangeChar ();

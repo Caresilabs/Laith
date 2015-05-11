@@ -26,14 +26,17 @@ public class RangedEnemy : BaseEnemy {
 	
 	// Update is called once per frame
 	public override void Update () {
+		if (!PhotonNetwork.isMasterClient) {
+			return;
+		}
 		attackTimer -= Time.deltaTime;
-
+		
 		target = FindTarget();
-
+		
 		if (target != null && attackTimer <= 0) {
 			FireProjectile (target.transform.position - transform.position);
 		}
-
+		
 		base.Update ();
 	}
 

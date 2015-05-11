@@ -34,7 +34,7 @@ public class DumbTurret : Triggerable {
 		Projectile p = Projectile.Create (
 			projectile.name,
 			transform.position,
-			projectileSpeed * transform.forward,
+			projectileSpeed * transform.up,
 			projectileDamage,
 			projectileLifeTime,
 			gameObject,
