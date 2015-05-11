@@ -80,7 +80,7 @@ public class Gareth : BasePlayerController {
 			shield.ShieldUp (new Vector3((int)sprintDirection, 0));
 
 			currentSprintTime += Time.deltaTime;
-			if(currentSprintTime > sprintTime) {
+			if(currentSprintTime > sprintTime || CheckForWall()) {
 				currentSprintTime = 0;
 				sprint = false;
 				maxSpeed = defaultMaxSpeed;
@@ -88,6 +88,17 @@ public class Gareth : BasePlayerController {
 			//Debug.Log (lastPos + "  :  " + transform.position.x);
 			//lastPos = transform.position.x;
 		}
+	}
+	protected bool CheckForWall(){
+
+		RaycastHit hit;
+		if (Physics.Raycast (transform.position, new Vector3 ((int)sprintDirection, 0, 0), out hit, collider.bounds.extents.x + 0.2f)) {
+			Component test = hit.collider.gameObject.GetComponent<SoftWall>();
+			if(test == null && hit.collider.gameObject.tag != "Player"){
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	private void Cooldown() {

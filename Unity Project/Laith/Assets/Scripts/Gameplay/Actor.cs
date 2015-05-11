@@ -54,8 +54,11 @@ public abstract class Actor : MonoBehaviour {
 	}
 
 	protected void CheckIfGrounded() {
-		if (Physics.Raycast (transform.position, -Vector3.up, collider.bounds.extents.y-0.2f)) {
-			isGrounded = true;
+		RaycastHit hit;
+		if (Physics.Raycast (transform.position, -Vector3.up, out hit, collider.bounds.extents.y-0.2f)) {
+			if(hit.collider.gameObject.tag != "Player"){
+				isGrounded = true;
+			}
 		} else {
 			isGrounded = false;
 		}
