@@ -23,8 +23,8 @@ public class GameManager : MonoBehaviour {
 		} else {
 			startPos = GameObject.Find ("Checkpoint " + start) == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint " + start).transform.position;//start.transform.position;
 		}
-		if (GameObject.FindGameObjectsWithTag ("Player") != null) {
-			GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+		if (Layer.FindGameObjectsWithLayer(Layer.players) != null) {
+			GameObject[] players = Layer.FindGameObjectsWithLayer(Layer.players);
 			for(int i = 0; i < players.Length; ++i){
 				if(players[i].GetComponent<Gareth>() != null){
 					gareth = players[i];
