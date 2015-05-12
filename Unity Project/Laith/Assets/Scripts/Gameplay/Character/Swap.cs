@@ -43,6 +43,7 @@ public class Swap : Photon.MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Q) && !isOnCooldown){
 			//SwitchPos();
+			GameObject.FindWithTag("Narissa").GetComponent<Narissa>().DestroyHook();
 			photonView.RPC("SwitchPos", PhotonTargets.All);
 		}
 
