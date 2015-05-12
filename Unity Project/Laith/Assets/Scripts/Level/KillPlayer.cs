@@ -24,7 +24,11 @@ public class KillPlayer : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider hit) {
+<<<<<<< HEAD
 		if (hit.tag == "Gareth" || hit.tag == "Narissa") 
+=======
+		if (Layer.IsPlayer(hit.gameObject)) 
+>>>>>>> origin/master
 		{
 			Actor a = hit.gameObject.GetComponent<Actor>();
 			a.currentHealth = 0;

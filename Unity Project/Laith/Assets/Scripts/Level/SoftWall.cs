@@ -30,7 +30,6 @@ public class SoftWall : Photon.MonoBehaviour {
 
 	[RPC]
 	public void DestroyOnNetwork() {
-		Debug.Log ("halla");
 		//if( GetComponent<PhotonView>().instantiationId==0 ) {
 			Destroy(this.gameObject);
 		//}

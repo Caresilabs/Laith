@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Linq;
 
 public class ActivateButton : MonoBehaviour {
 	
@@ -27,9 +28,7 @@ public class ActivateButton : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player") {
-			Debug.Log ("Asshat");
-
+		if (Layer.FindGameObjectsWithLayer(Layer.players).AsQueryable().Any(x => x.layer == Layer.players && hit.gameObject == x)) {//hit.tag == "Player") {
 
 			toMove.transform.position = new Vector3(Xval, Yval, Zval);
 			Destroy(toKill);

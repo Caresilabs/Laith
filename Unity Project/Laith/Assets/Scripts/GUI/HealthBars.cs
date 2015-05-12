@@ -43,7 +43,6 @@ public class HealthBars : MonoBehaviour {
 		if (PhotonNetwork.inRoom) {
 			if (players == null || players.Length != PhotonNetwork.room.playerCount) {
 				playersObject = Layer.FindGameObjectsWithLayer(Layer.players);
-				//playersObject = GameObject.FindGameObjectsWithTag("Player");
 				if(playersObject == null){
 					return;
 				}

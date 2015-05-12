@@ -56,7 +56,7 @@ public abstract class Actor : Photon.MonoBehaviour {
 	protected void CheckIfGrounded() {
 		RaycastHit hit;
 		if (Physics.Raycast (transform.position, -Vector3.up, out hit, collider.bounds.extents.y-0.2f)) {
-			if(hit.collider.gameObject.tag != "Player"){
+			if(hit.collider.gameObject.tag != "Gareth" || hit.collider.gameObject.tag != "Narissa"){
 				isGrounded = true;
 			}
 		} else {

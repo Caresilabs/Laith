@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Layer : MonoBehaviour {
+public class Layer {
 
 	public static int players = 8;
 	public static GameObject[] FindGameObjectsWithLayer (int layer)  {
@@ -18,5 +18,8 @@ public class Layer : MonoBehaviour {
 			return null;
 		}
 		return goList.ToArray();
+	}
+	public static bool IsPlayer(GameObject tester){
+		return tester.layer == players && tester.transform.parent == null;
 	}
 }
