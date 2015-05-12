@@ -124,6 +124,7 @@
      <Compile Include="Assets\Scripts\Gameplay\Shield.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Sword.cs" />
      <Compile Include="Assets\Scripts\Gameplay\Weapon.cs" />
+     <Compile Include="Assets\Scripts\Layer.cs" />
      <Compile Include="Assets\Scripts\Level\ActivateButton.cs" />
      <Compile Include="Assets\Scripts\Level\Boulder.cs" />
      <Compile Include="Assets\Scripts\Level\Checkpoint.cs" />
