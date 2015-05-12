@@ -76,12 +76,10 @@ public class DumbTurret : Triggerable {
 		if (!activated)
 			return;
 
-		if (GameObject.FindGameObjectWithTag("Player") != null) {
-			if (!waitForNextVolley || !fireInVolleys) {
-				FireRateTimer ();
-			} else {
-				DelayTimer ();
-			}
+		if (!waitForNextVolley || !fireInVolleys) {
+			FireRateTimer ();
+		} else {
+			DelayTimer ();
 		}
 	}
 }
