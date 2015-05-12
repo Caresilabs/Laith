@@ -24,10 +24,10 @@ public class KillPlayer : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player") 
+		if (hit.tag == "Gareth" || hit.tag == "Narissa") 
 		{
-
-			hit.rigidbody.position = new Vector3(Xvalue,Yvalue,Zvalue);
+			Actor a = hit.gameObject.GetComponent<Actor>();
+			a.currentHealth = 0;
 
 
 		}	
