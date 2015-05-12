@@ -46,7 +46,6 @@ public class HealthBars : MonoBehaviour {
 				//playersObject = GameObject.FindGameObjectsWithTag("Player");
 				players = new Actor[playersObject.Length];
 				for(int i = 0; i < playersObject.Length; ++i){
-					Debug.LogError(Layer.FindGameObjectsWithLayer(Layer.players).Length);
 					players[i] = playersObject[i].GetComponent<Actor> ();
 				}
 			}
