@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour {
 
 	void OnLevelWasLoaded(int level) {
 		Vector3 startPos;
+
 		if (!start.HasValue) {
 			startPos = GameObject.Find ("Checkpoint 1") == null ? Vector3.up * 5 : GameObject.Find ("Checkpoint 1").transform.position;
 		} else {
