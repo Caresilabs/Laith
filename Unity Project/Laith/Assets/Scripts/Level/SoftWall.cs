@@ -20,17 +20,19 @@ public class SoftWall : Photon.MonoBehaviour {
 		Gareth gareth = entity.gameObject.GetComponent<Gareth> ();
 		if(gareth == null)
 			return;
+
 		if(gareth.sprint){
-			GetComponent<PhotonView>().RPC ("DestroyOnNetwork", PhotonTargets.All, entity.gameObject);	
+			GetComponent<PhotonView>().RPC ("DestroyOnNetwork", PhotonTargets.AllBuffered);	
 
 			//PhotonNetwork.Destroy (this.gameObject);
 		}	
 	}
 
 	[RPC]
-	public void DestroyOnNetwork(GameObject ob) {
+	public void DestroyOnNetwork() {
+		Debug.Log ("halla");
 		//if( GetComponent<PhotonView>().instantiationId==0 ) {
-			Destroy(ob);
+			Destroy(this.gameObject);
 		//}
 		//else {
 			//if(GetComponent<PhotonView>().isMine) {

@@ -133,7 +133,7 @@ public class GameManager : MonoBehaviour {
 		DeadState ();
 		FindNewPlayers ();
 
-		if (PhotonNetwork.inRoom)
-			ChangeChar ();
+		//if (PhotonNetwork.inRoom)
+			//ChangeChar ();
 	}
 }

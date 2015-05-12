@@ -9,6 +9,9 @@ public class BaseEnemy :  Actor {
 	public BasePlayerController target;
 
 	public virtual void Start(){
+		if (!PhotonNetwork.isMasterClient)
+			this.enabled = false;
+
 		maxHealth = 100.0f;
 		currentHealth = maxHealth;
 		posOffSet = new Vector3 (0, 2, 0);
@@ -35,6 +38,9 @@ public class BaseEnemy :  Actor {
 	}
 	
 	public override void Update() {
+		if (!PhotonNetwork.isMasterClient)
+			return;
+
 		HealthBar ();
 		CheckForDestroy ();
 		base.Update ();
