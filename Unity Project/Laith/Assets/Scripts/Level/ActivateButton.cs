@@ -29,8 +29,6 @@ public class ActivateButton : MonoBehaviour {
 
 	void OnTriggerEnter(Collider hit) {
 		if (Layer.FindGameObjectsWithLayer(Layer.players).AsQueryable().Any(x => x.layer == Layer.players && hit.gameObject == x)) {//hit.tag == "Player") {
-			Debug.Log ("Asshat");
-
 
 			toMove.transform.position = new Vector3(Xval, Yval, Zval);
 			Destroy(toKill);
