@@ -19,4 +19,7 @@ public class Layer : MonoBehaviour {
 		}
 		return goList.ToArray();
 	}
+	public static bool IsPlayer(GameObject tester){
+		return tester.layer == players && tester.transform.parent == null;
+	}
 }

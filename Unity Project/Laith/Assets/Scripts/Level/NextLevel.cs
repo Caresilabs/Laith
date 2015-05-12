@@ -8,7 +8,7 @@ using System.Collections;
 /// 
 public class NextLevel : MonoBehaviour {
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player") {
+		if (Layer.IsPlayer(hit.gameObject)) {
 			int currentLevel =  int.Parse(Application.loadedLevelName.Substring(Application.loadedLevelName.Length - 2, 2 ));
 			PhotonNetwork.LoadLevel ("Level0" + (currentLevel+1));
 		}

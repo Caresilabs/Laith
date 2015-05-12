@@ -24,7 +24,7 @@ public class KillPlayer : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player") 
+		if (Layer.IsPlayer(hit.gameObject)) 
 		{
 
 			hit.rigidbody.position = new Vector3(Xvalue,Yvalue,Zvalue);

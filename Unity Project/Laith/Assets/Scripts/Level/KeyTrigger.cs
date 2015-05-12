@@ -22,7 +22,7 @@ public class KeyTrigger : MonoBehaviour {
 	}
 	//Key Enabler & remover
 	void OnTriggerEnter(Collider hit) {
-		if (hit.tag == "Player" && hit.GetComponent<BasePlayerController>().HasKey == false) {
+		if (Layer.IsPlayer(hit.gameObject) && hit.GetComponent<BasePlayerController>().HasKey == false) {
 			hit.GetComponent<BasePlayerController>().HasKey = true;
 			Destroy (gameObject);
 			Destroy(toDestroy);

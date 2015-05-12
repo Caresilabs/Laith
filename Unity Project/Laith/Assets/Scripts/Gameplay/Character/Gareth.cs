@@ -99,7 +99,7 @@ public class Gareth : BasePlayerController {
 		RaycastHit hit;
 		if (Physics.Raycast (transform.position, new Vector3 ((int)sprintDirection, 0, 0), out hit, collider.bounds.extents.x + 0.2f)) {
 			Component test = hit.collider.gameObject.GetComponent<SoftWall>();
-			if(test == null && hit.collider.gameObject.tag != "Player"){
+			if(test == null && hit.collider.gameObject.tag != "Gareth"){
 				return true;
 			}
 		}

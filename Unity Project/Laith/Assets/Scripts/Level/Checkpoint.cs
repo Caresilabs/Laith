@@ -19,7 +19,7 @@ public class Checkpoint : MonoBehaviour {
 	
 	}
 	void OnTriggerEnter(Collider entity){
-		if (entity.tag == "Gareth" || entity.tag == "Narissa" && !entered) {
+		if (Layer.IsPlayer(entity.gameObject) && !entered) {
 			entered = true;
 			GameObject test = GameObject.Find("_SCRIPTS");
 			test.GetComponent<GameManager>().SetLastCheckpoint(this.gameObject);
