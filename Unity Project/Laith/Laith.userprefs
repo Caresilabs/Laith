@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Character\Swap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level\SoftWall.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gameplay\Character\Swap.cs" Line="35" Column="3" />
-      <File FileName="Assets\Scripts\Network\NetworkManager.cs" Line="137" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Bow.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Character\Swap.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Network\NetworkManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\LoadbalancingPeer.cs" Line="1" Column="1" />
       <File FileName="Assets\Editor\EditorScripts.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="1" Column="1" />
@@ -14,6 +15,8 @@
       <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Level\Boulder.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\HealthBars.cs" Line="23" Column="58" />
+      <File FileName="Assets\Scripts\Level\SoftWall.cs" Line="37" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

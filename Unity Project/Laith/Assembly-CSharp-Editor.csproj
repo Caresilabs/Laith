@@ -79,7 +79,6 @@
      <None Include="Assets\Assets\Textures\replace me.txt" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
-     <None Include="Assets\Scripts\GUI\replace me.txt" />
      <None Include="Assets\Assets\Models\Dynamic\replace me.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="UnityEngine.UI">
