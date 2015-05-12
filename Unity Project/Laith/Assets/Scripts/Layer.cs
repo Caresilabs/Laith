@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Layer : MonoBehaviour {
+public class Layer {
 
 	public static int players = 8;
 	public static GameObject[] FindGameObjectsWithLayer (int layer)  {
