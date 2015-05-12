@@ -28,6 +28,14 @@ public class Shield : Weapon {
 		return shield;
 	}
 
+	void Start(){
+		gareth = transform.parent.gameObject.GetComponent<Gareth> ();
+		wielder = gareth.gameObject;
+
+		damage = 50;
+		knockbackForce = 100000;
+	}
+
 	public void ShieldUp(Vector3 direction){
 		Vector3 shieldDirection = direction;
 

@@ -29,6 +29,11 @@ public class Bow : MonoBehaviour {
 		return bow;
 	}
 
+	void Start(){
+		narissa = transform.parent.gameObject.GetComponent<Narissa> ();
+		
+	}
+
 	void Update(){
 		FollowMouse ();
 	}

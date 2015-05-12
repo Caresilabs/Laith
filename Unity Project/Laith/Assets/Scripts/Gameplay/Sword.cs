@@ -26,7 +26,7 @@ public class Sword : Weapon {
 		Sword sword = newSword.GetComponent<Sword> ();
 		sword.actor = actor;
 		sword.damage = actor.attackDamage;
-		sword.knockbackForce = 100;
+		sword.knockbackForce = 5000;
 		sword.enabled = true;
 		
 		//Pivot sets origin point so that the sword rotates around this point instead of around its center.
@@ -41,13 +41,11 @@ public class Sword : Weapon {
 		return sword;
 	}
 
-	public void Attack(){
-		if (!attacking) {
-			attacking = true;
-			attackDirection = (int)actor.faceDirection;
-			collider.enabled = true;
-			currentAttackTime = 0;
-		}
+	void Start(){
+		pivot = transform.parent.gameObject;
+		actor = pivot.transform.parent.gameObject.GetComponent<Actor> ();
+		damage = actor.attackDamage;
+		knockbackForce = 5000;
 	}
 
 	void Update () {
@@ -69,4 +67,14 @@ public class Sword : Weapon {
 				swordOffset.z);
 		}
 	}
+
+	public void Attack(){
+		if (!attacking) {
+			attacking = true;
+			attackDirection = (int)actor.faceDirection;
+			collider.enabled = true;
+			currentAttackTime = 0;
+		}
+	}
+
 }
