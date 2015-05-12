@@ -36,16 +36,6 @@ public class GameManager : MonoBehaviour {
 				players[i].transform.position = startPos;
 			}
 		}
-		/*
-		if (GameObject.Find ("Gareth") != null) {
-			gareth = GameObject.Find ("Gareth");
-			gareth.transform.position = startPos;
-		}
-		if (GameObject.Find ("Narissa") != null) {
-			narissa = GameObject.Find ("Narissa");
-			narissa.transform.position = startPos;
-		}
-		*/
 	}
 
 	public void SetLastCheckpoint(GameObject checkpoint){
@@ -135,7 +125,7 @@ public class GameManager : MonoBehaviour {
 		DeadState ();
 		FindNewPlayers ();
 
-		//if (PhotonNetwork.inRoom)
-			//ChangeChar ();
+		if (PhotonNetwork.inRoom)
+			ChangeChar ();
 	}
 }
