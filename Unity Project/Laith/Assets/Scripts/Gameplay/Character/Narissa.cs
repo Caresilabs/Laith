@@ -32,7 +32,9 @@ public class Narissa : BasePlayerController {
 		jumpSpeed = 10f;
 		AirJumps = 1;
 
-		bow = Bow.Create (this);
+		bow = transform.FindChild ("Bow").GetComponent<Bow>();
+		bow.enabled = true;
+//		bow = Bow.Create (this);
 
 		base.Start ();
 	}

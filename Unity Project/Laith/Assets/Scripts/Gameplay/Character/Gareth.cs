@@ -28,8 +28,13 @@ public class Gareth : BasePlayerController {
 		AirJumps = 0;
 		defaultMaxSpeed = maxSpeed;
 
-		sword = Sword.Create (this as Actor);
-		shield = Shield.Create (this);
+		sword = transform.FindChild ("SwordPivot").FindChild ("Sword").GetComponent<Sword>();
+		shield = transform.FindChild ("Shield").GetComponent<Shield>();
+		sword.enabled = true;
+		shield.enabled = true;
+
+//		sword = Sword.Create (this as Actor);
+//		shield = Shield.Create (this);
 
 		base.Start ();
 	}
