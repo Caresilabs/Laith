@@ -43,9 +43,20 @@ public abstract class Actor : Photon.MonoBehaviour {
 	public void TakeDamage(float damage, Vector3 knockback){
 		if (invulnerable)
 			return;
+
+		if (PhotonNetwork.isMasterClient) {
+			Damage (damage, knockback);
+		} else {
+			photonView.RPC("Damage", PhotonTargets.MasterClient, damage, knockback);
+		}
+	}
+
+	[RPC]
+	private void Damage (float damage, Vector3 knockback)
+	{
 		invulnerable = true;
 		currentHealth -= damage;
-		rigidbody.AddForce (knockback + new Vector3(0,1,0));
+		rigidbody.AddForce (knockback + new Vector3 (0, 1, 0));
 	}
 
 	protected void Jump(){

@@ -30,7 +30,7 @@ public class MeleeEnemy : BaseEnemy {
 		RaycastHit rch;
 		int layerMask = 1 << 8;
 		if(Physics.Raycast(transform.position, new Vector3((int)faceDirection, 0, 0), out rch, 2f, layerMask)){
-			if(rch.collider.gameObject.tag == "Player"){
+			if(Layer.IsPlayer(rch.collider.gameObject)){
 				weapon.Attack ();
 			}
 		}

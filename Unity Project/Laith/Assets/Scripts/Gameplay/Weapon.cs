@@ -17,6 +17,7 @@ public class Weapon : Photon.MonoBehaviour {
 		if (other.isTrigger == true) {
 			return;
 		}
+
 		Actor a = other.GetComponent<Actor>();
 		if (a == null)
 			return;
@@ -30,6 +31,7 @@ public class Weapon : Photon.MonoBehaviour {
 	}
 
 	public virtual void DealDamage(Actor a){
+		Debug.Log ("I GIT");
 		if (wielder == null || knockbackDirection != Vector3.zero) {
 			a.TakeDamage (damage, knockbackForce * knockbackDirection);
 		} else {
