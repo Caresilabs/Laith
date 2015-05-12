@@ -25,7 +25,7 @@ public class Gareth : BasePlayerController {
 		maxSpeed = 9f;
 		jumpSpeed = 10f;
 		
-		MaxJumps = 1;
+		AirJumps = 0;
 		defaultMaxSpeed = maxSpeed;
 
 		sword = Sword.Create (this as Actor);

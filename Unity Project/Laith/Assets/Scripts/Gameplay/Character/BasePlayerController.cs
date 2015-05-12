@@ -11,7 +11,7 @@ public class BasePlayerController :  Actor {
 	// the amount of jumps
 	//public int JumpCount { get; set;}
 	public int JumpCount;
-	protected int MaxJumps { get; set;}
+	protected int AirJumps { get; set;}
 
 	private float brakeModifier = 3.6f;
 
@@ -27,10 +27,10 @@ public class BasePlayerController :  Actor {
 
 	public override void Update() {
 		if (!dead) {
-			UpdateInput();
 			CheckForDead();
+			Movement ();
+			UpdateState();
 		}
-		base.Update ();
 	}
 
 	protected bool CheckForDead(){
@@ -64,34 +64,32 @@ public class BasePlayerController :  Actor {
 		currentHealth = maxHealth;
 	}
 
-	protected void UpdateInput ()
+	protected void UpdateState ()
 	{
 		CheckIfGrounded ();
 		UpdateMouseDirection ();
 		UpdateDirection ();
-		Movement ();
 
 		if (isGrounded) {
 			JumpCount = 0;
 			AutoBrake ();
 		}
 		use = false;
-
-		// Clamp to max velocity
-		//rigidbody.velocity = new Vector3(Mathf.Clamp(rigidbody.velocity.x, -maxSpeed, maxSpeed), rigidbody.velocity.y, 0);
-
-		if (Input.GetKeyDown ("space") && JumpCount + 1 <= MaxJumps) {
-			Jump();
-			transform.position = new Vector3(transform.position.x, transform.position.y + 0.1f, transform.position.z);	//Fixes bug where jump count resets after jumping
-			JumpCount++;
-		}
+		base.Invulnerability ();
 	}
 
-	private void Movement(){
+	protected void Movement(){
 		if (Input.GetKey (KeyCode.D) && rigidbody.velocity.x < maxSpeed) 
 			rigidbody.velocity += (Vector3.right * acceleration * Time.deltaTime);
 		if (Input.GetKey (KeyCode.A) && rigidbody.velocity.x > -maxSpeed) 
 			rigidbody.velocity += (Vector3.left * acceleration * Time.deltaTime);
+
+		if (Input.GetKeyDown ("space") && isGrounded) {
+			Jump ();
+		} else if (Input.GetKeyDown ("space") && JumpCount < AirJumps){
+			Jump();
+			JumpCount++;
+		}
 	}
 
 	//Characters stop themselves when no input is given

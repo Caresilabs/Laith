@@ -30,7 +30,7 @@ public class Narissa : BasePlayerController {
 		acceleration = 25f;
 		maxSpeed = 10f;
 		jumpSpeed = 10f;
-		MaxJumps = 1;
+		AirJumps = 1;
 
 		bow = Bow.Create (this);
 
@@ -53,12 +53,14 @@ public class Narissa : BasePlayerController {
 		} else if (climbing) {
 			Climbing ();
 		} else if (!dead){
-			UpdateInput ();
+			Movement();
 		}
+
 		if (CheckForDead() && hook != null) {
-				DestroyHook();
+			DestroyHook();
 		}
-		Invulnerability ();
+
+		UpdateState ();
 	}
 
 	private void FireHook(){
@@ -114,7 +116,7 @@ public class Narissa : BasePlayerController {
 		}
 		
 		if (isGrounded) {
-			UpdateInput ();
+			UpdateState ();
 		}
 		climbing = false;
 		rigidbody.useGravity = true;
