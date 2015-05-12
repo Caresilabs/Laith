@@ -58,8 +58,9 @@ public class Bow : MonoBehaviour {
 				arrowPotentialSpeed,
 				0,
 				narissa.gameObject,
-				true
+				false
 			);
+
 			arrow.collider.enabled = false;
 		} else {
 			arrow.rigidbody.velocity = narissa.mouseDirection;
@@ -72,9 +73,10 @@ public class Bow : MonoBehaviour {
 			arrow.collider.enabled = true;
 			arrow.rigidbody.velocity = narissa.mouseDirection * arrowPotentialSpeed;
 			arrow.damage = arrowPotentialSpeed;
+			arrow.rigidbody.useGravity = (true);
 			arrow = null;
 		} else {
-			Destroy(arrow.gameObject);
+			PhotonNetwork.Destroy(arrow.gameObject);
 		}
 
 		arrowPotentialSpeed = 0;

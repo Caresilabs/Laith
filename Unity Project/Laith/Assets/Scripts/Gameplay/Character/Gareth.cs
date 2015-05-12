@@ -51,7 +51,7 @@ public class Gareth : BasePlayerController {
 	}
 
 	private void Attack(){
-		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+		if (Input.GetKeyDown (KeyCode.Mouse0) && !Input.GetKey (KeyCode.Mouse1)) {
 			sword.Attack();
 		}
 	}

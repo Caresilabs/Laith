@@ -69,6 +69,9 @@ public class Shield : Weapon {
 	}
 
 	public override void OnTriggerEnter(Collider other){
+		if (!photonView.isMine)
+			return;
+
 		Projectile p = other.gameObject.GetComponent<Projectile> ();
 		if (p != null && p.wielder.gameObject.layer != 8) {
 			DeflectProjectile (p);
@@ -76,10 +79,10 @@ public class Shield : Weapon {
 
 		if (gareth.sprint) {
 			Actor a = other.gameObject.GetComponent<Actor> ();
-			if (a == null)
+			if (a == null || gameObject.layer != other.gameObject.layer)  {
 				return;
 			
-			if (gameObject.layer != other.gameObject.layer){
+		} else {
 				DealDamage (a);
 				gareth.currentSprintTime = gareth.sprintTime;
 			}
