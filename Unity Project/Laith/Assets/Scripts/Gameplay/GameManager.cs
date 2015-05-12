@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 	private GameObject narissa;
 
 	private GameObject lastCheckpoint;
+	private int? numberOfPlayers;
 	public int? start;
 
 	// Use this for initialization
@@ -114,9 +115,9 @@ public class GameManager : MonoBehaviour {
 		if (!PhotonNetwork.inRoom) {
 			return;
 		}
-		if (PhotonNetwork.room.playerCount != GameObject.FindGameObjectsWithTag ("Player").Length) {
-			if (GameObject.FindGameObjectsWithTag ("Player") != null) {
-				GameObject[] players = GameObject.FindGameObjectsWithTag ("Player");
+		if (PhotonNetwork.room.playerCount != numberOfPlayers || !numberOfPlayers.HasValue) {
+			if (Layer.FindGameObjectsWithLayer(Layer.players) != null) {
+				GameObject[] players = Layer.FindGameObjectsWithLayer(Layer.players);
 				for(int i = 0; i < players.Length; ++i){
 					if(players[i].GetComponent<Gareth>() != null){
 						gareth = players[i];
@@ -125,6 +126,7 @@ public class GameManager : MonoBehaviour {
 						narissa = players[i];
 					}
 				}
+				numberOfPlayers = players.Length;
 			}
 		}
 	}
