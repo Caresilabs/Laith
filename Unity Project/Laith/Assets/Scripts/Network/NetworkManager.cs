@@ -12,6 +12,7 @@ using UnityEngine.UI;
 public class NetworkManager : MonoBehaviour {
 
 	private string levelInput = "1";
+	private bool createAsNarissa;
 
 	// Use this for initialization
 	void Start()
@@ -33,6 +34,13 @@ public class NetworkManager : MonoBehaviour {
 
 			Application.LoadLevel("MainMenu");
 		}
+
+		if (GameObject.Find ("ToggleNarrisa") != null)
+			if (GameObject.Find ("ToggleNarrisa").GetComponent<Toggle> ().isOn) {
+				createAsNarissa = true;	
+			} else {
+				createAsNarissa = false;	
+			}
 	}
 
 	private RoomInfo[] roomsList;
@@ -95,11 +103,12 @@ public class NetworkManager : MonoBehaviour {
 		//Debug.Log(PhotonNetwork.room.playerCount);
 
 		if (PhotonNetwork.room.playerCount == 1) {
-			Debug.LogError("haj");
+			//Debug.LogError("haj");
+
 			// Find the first Checkpoint, else just spawn at Zero
 			Vector3 start = GameObject.Find("Checkpoint 1") == null ? (Vector3.up * 5) : GameObject.Find("Checkpoint 1").transform.position;
 
-			if (GameObject.Find("ToggleNarrisa").GetComponent<Toggle>().isOn) {
+			if (createAsNarissa) {
 				player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);
 				//player.name = "Narissa";
 			} else {
