@@ -44,6 +44,9 @@ public class HealthBars : MonoBehaviour {
 			if (players == null || players.Length != PhotonNetwork.room.playerCount) {
 				playersObject = Layer.FindGameObjectsWithLayer(Layer.players);
 				//playersObject = GameObject.FindGameObjectsWithTag("Player");
+				if(playersObject == null){
+					return;
+				}
 				players = new Actor[playersObject.Length];
 				for(int i = 0; i < playersObject.Length; ++i){
 					Debug.Log(Layer.FindGameObjectsWithLayer(Layer.players).Length);
