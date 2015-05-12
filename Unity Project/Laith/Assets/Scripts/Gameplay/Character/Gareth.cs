@@ -97,7 +97,7 @@ public class Gareth : BasePlayerController {
 	protected bool CheckForWall(){
 
 		RaycastHit hit;
-		if (Physics.Raycast (transform.position, new Vector3 ((int)sprintDirection, 0, 0), out hit, collider.bounds.extents.x + 0.2f)) {
+		if (Physics.Raycast (transform.position + new Vector3(0,1,0), new Vector3 ((int)sprintDirection, 0, 0), out hit, collider.bounds.extents.x + 0.2f)) {
 			Component test = hit.collider.gameObject.GetComponent<SoftWall>();
 			if(test == null && hit.collider.gameObject.tag != "Player"){
 				return true;
