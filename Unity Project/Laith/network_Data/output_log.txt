@@ -18,26 +18,9 @@ Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\net
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.141 seconds
+- Completed reload, in  0.120 seconds
 desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.dll (this message is harmless)
-WARNING: Shader Unsupported: 'Hidden/Nature/Tree Creator Leaves Optimized' - Pass '' shader state not supported
-WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
-UnloadTime: 4.311940 ms
-Failed to create agent because there is no valid NavMesh
- 
-(Filename:  Line: 634)
-
-Unloading 7 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 1478.
-Total: 1.292832 ms (FindLiveObjects: 0.042633 ms CreateObjectMapping: 0.016579 ms MarkObjects: 0.332780 ms  DeleteObjects: 0.472920 ms)
-
-1
- 
-(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
-
-WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
