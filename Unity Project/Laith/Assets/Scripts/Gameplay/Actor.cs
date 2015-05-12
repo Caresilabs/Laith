@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class Actor : MonoBehaviour {
+public abstract class Actor : Photon.MonoBehaviour {
 
 	/// <summary>
 	/// Includes basic info such as health, acceleration and methods for taking damage and jumping.
