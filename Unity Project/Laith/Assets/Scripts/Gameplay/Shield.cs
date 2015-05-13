@@ -79,9 +79,8 @@ public class Shield : Weapon {
 
 		if (gareth.sprint) {
 			Actor a = other.gameObject.GetComponent<Actor> ();
-			if (a == null || gameObject.layer != other.gameObject.layer)  {
+			if (a == null || gameObject.layer == other.gameObject.layer)  {
 				return;
-			
 		} else {
 				DealDamage (a);
 				gareth.currentSprintTime = gareth.sprintTime;

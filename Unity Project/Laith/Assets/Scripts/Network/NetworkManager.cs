@@ -89,10 +89,13 @@ public class NetworkManager : MonoBehaviour {
 	private GameObject gareth; 
 
 
-	void OnJoinedRoom()
+	IEnumerable OnJoinedRoom()
 	{
 
 		Application.LoadLevel ("Level0" + levelInput);
+
+		while (Application.isLoadingLevel)
+			yield return 1;
 
 		// Spawn player
 		GameObject player;

@@ -59,6 +59,10 @@ public abstract class Actor : Photon.MonoBehaviour {
 		rigidbody.AddForce (knockback + new Vector3 (0, 1, 0));
 	}
 
+	public void Kill() {
+		currentHealth = 0;
+	}
+
 	protected void Jump(){
 		rigidbody.velocity = new Vector3(rigidbody.velocity.x, jumpSpeed, rigidbody.velocity.z);
 		//rigidbody.AddForce(0, jumpAcceleration * rigidbody.mass, 0);

@@ -26,7 +26,7 @@ public class HealthBars : MonoBehaviour {
 	
 	//Shows on the Screen for the Player
 	void OnGUI(){
-		if (players != null) {
+		if (players != null && PhotonNetwork.inRoom) {
 			for (int i = 0; i < players.Length; ++i) {
 				GUI.DrawTexture (new Rect (healthbarPosition.x, healthbarPosition.y + healthbarsDistance * i, (int)(healthBar.width * healthScale.x), (int)(healthBar.height * healthScale.y)), healthBar,ScaleMode.StretchToFill, false);
 				float diff = players [i].currentHealth / players [i].maxHealth;

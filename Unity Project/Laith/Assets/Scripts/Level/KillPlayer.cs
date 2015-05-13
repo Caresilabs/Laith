@@ -26,10 +26,7 @@ public class KillPlayer : MonoBehaviour {
 	void OnTriggerEnter(Collider hit) {
 		if (Layer.IsPlayer(hit.gameObject)) 
 		{
-			Actor a = hit.gameObject.GetComponent<Actor>();
-			a.currentHealth = 0;
-
-
+			hit.gameObject.GetComponent<Actor>().Kill();
 		}	
 	}
 }
