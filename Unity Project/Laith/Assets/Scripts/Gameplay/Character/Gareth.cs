@@ -13,6 +13,7 @@ public class Gareth : BasePlayerController {
 	
 	public bool sprint = false;
 	public bool cooldown = false;
+	public bool upgraded = false;
 
 	private Sword sword;
 	private Shield shield;

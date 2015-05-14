@@ -12,9 +12,11 @@ public class Bow : MonoBehaviour {
 	public float arrowMinSpeed = 10;
 	public float drawSpeed = 40;
 	public float arrowPotentialSpeed = 0;
+	public float arrowDamageModifier = 1;
 	private Narissa narissa;
 	private Vector3 offset = new Vector3(0,0.5f,0);
 	private float distanceOffset = 1;
+
 
 	private Projectile arrow;
 	
@@ -55,7 +57,7 @@ public class Bow : MonoBehaviour {
 				"Arrow",
 				transform.position + narissa.mouseDirection * 1,
 				narissa.mouseDirection,
-				arrowPotentialSpeed,
+				arrowPotentialSpeed ,
 				0,
 				narissa.gameObject,
 				false
@@ -72,7 +74,7 @@ public class Bow : MonoBehaviour {
 		if (arrowPotentialSpeed >= arrowMinSpeed) {
 			arrow.collider.enabled = true;
 			arrow.rigidbody.velocity = narissa.mouseDirection * arrowPotentialSpeed;
-			arrow.damage = arrowPotentialSpeed;
+			arrow.damage = arrowPotentialSpeed * arrowDamageModifier;
 			arrow.rigidbody.useGravity = (true);
 			arrow = null;
 		} else {

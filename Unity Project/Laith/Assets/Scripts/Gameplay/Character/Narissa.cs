@@ -21,7 +21,7 @@ public class Narissa : BasePlayerController {
 	private GameObject hook;
 	private Bow bow;
 
-	public bool hooked, climbing;
+	public bool hooked, climbing, upgraded;
 
 	public SpringJoint joint;
 
