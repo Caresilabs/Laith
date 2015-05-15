@@ -23,7 +23,7 @@ public class PowerupWeapon : MonoBehaviour {
 				hit.GetComponentInChildren<Sword>().rotationSpeed = 5.0f;
 				hit.GetComponentInChildren<Sword>().attackTime = 0.4f;
 				hit.GetComponent<Gareth>().upgraded = true;
-				GetComponent<PhotonView>().RPC ("DestroyOnNetwork", PhotonTargets.AllBuffered);
+				GetComponent<PhotonView>().RPC ("RemovePowerup", PhotonTargets.AllBuffered);
 			}
 
 			else if (hit.gameObject.tag == "Narissa" && hit.GetComponent<Narissa>().upgraded != true){
