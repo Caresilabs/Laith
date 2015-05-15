@@ -1,23 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Network\NetworkManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\PowerupWeapon.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gameplay\Shield.cs" Line="83" Column="12" />
-      <File FileName="Assets\Scripts\Level\KillPlayer.cs" Line="29" Column="48" />
-      <File FileName="Assets\Scripts\GUI\HealthBars.cs" Line="29" Column="46" />
-      <File FileName="Assets\Scripts\Gameplay\GameManager.cs" Line="51" Column="54" />
-      <File FileName="Assets\Editor\EditorScripts.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level\SoftWall.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Network\NetworkManager.cs" Line="98" Column="19" />
-      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="49" Column="80" />
-      <File FileName="Assets\Scripts\Level\Checkpoint.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Gareth.cs" Line="54" Column="74" />
-      <File FileName="Assets\Scripts\Gameplay\Bow.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="63" Column="21" />
-      <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="36" Column="16" />
-      <File FileName="Assets\Scripts\Gameplay\Sword.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Layer.cs" Line="9" Column="54" />
+      <File FileName="Assets\Scripts\Gameplay\PowerupWeapon.cs" Line="32" Column="39" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\PowerupEffects.cs" Line="8" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

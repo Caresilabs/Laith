@@ -14,8 +14,8 @@ public class Sword : Weapon {
 	private GameObject pivot;
 	private Vector3 swordOffset = new Vector3 (0.6f, 0, 0);
 	private int attackDirection;
-	private float attackTime = 0.6f;
-	private float rotationSpeed = 3;
+	public float attackTime = 0.6f;
+	public float rotationSpeed = 3;
 	private float currentAttackTime = 0f;
 	private bool attacking;
 
