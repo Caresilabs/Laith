@@ -72,10 +72,11 @@ public class Bow : MonoBehaviour {
 
 	public void Release(){
 		if (arrowPotentialSpeed >= arrowMinSpeed) {
-			arrow.collider.enabled = true;
-			arrow.rigidbody.velocity = narissa.mouseDirection * arrowPotentialSpeed;
-			arrow.damage = arrowPotentialSpeed * arrowDamageModifier;
-			arrow.rigidbody.useGravity = (true);
+			arrow.SetNetworkValues(narissa.gameObject.layer, narissa.mouseDirection, arrowPotentialSpeed, arrowDamageModifier, true);
+			//arrow.collider.enabled = true;
+			//arrow.rigidbody.velocity = narissa.mouseDirection * arrowPotentialSpeed;
+			//arrow.damage = arrowPotentialSpeed * arrowDamageModifier;
+			//arrow.rigidbody.useGravity = (true);
 			arrow = null;
 		} else {
 			PhotonNetwork.Destroy(arrow.gameObject);
@@ -83,5 +84,4 @@ public class Bow : MonoBehaviour {
 
 		arrowPotentialSpeed = 0;
 	}
-
 }

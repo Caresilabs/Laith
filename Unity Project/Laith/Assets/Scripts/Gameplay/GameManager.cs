@@ -2,6 +2,10 @@ using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
+	/// <summary>
+	/// Keeps count of Last Checkpoint and character deadStates
+	/// Author: Simon J.
+	/// </summary>
 	
 	private GameObject gareth;
 	private GameObject narissa;
@@ -73,7 +77,6 @@ public class GameManager : MonoBehaviour {
 				if(narissa != null){
 					GameObject tempGareth = Resources.Load ("Gareth") as GameObject;
 					player = PhotonNetwork.Instantiate(tempGareth.name, narissa.transform.position, Quaternion.identity, 0);
-					player.transform.name = "Gareth";
 					
 					player.GetComponent<BasePlayerController> ().enabled = true;
 					Camera c = player.transform.FindChild ("Camera").camera;
@@ -82,11 +85,10 @@ public class GameManager : MonoBehaviour {
 					player.transform.FindChild("Camera").gameObject.SetActive(true);
 					player.transform.FindChild ("Camera").GetComponent<AudioListener> ().enabled = true;
 					PhotonNetwork.Destroy(narissa);
-					gareth = GameObject.Find ("Gareth");
+					gareth = player;
 				} else if(gareth != null){
 					GameObject tempNarissa = Resources.Load ("Narissa") as GameObject;
 					player = PhotonNetwork.Instantiate(tempNarissa.name, gareth.transform.position, Quaternion.identity, 0);
-					player.transform.name = "Narissa";
 					
 					player.GetComponent<BasePlayerController> ().enabled = true;
 					Camera c = player.transform.FindChild ("Camera").camera;
@@ -95,14 +97,14 @@ public class GameManager : MonoBehaviour {
 					player.transform.FindChild("Camera").gameObject.SetActive(true);
 					player.transform.FindChild ("Camera").GetComponent<AudioListener> ().enabled = true;
 					PhotonNetwork.Destroy(gareth);
-					narissa = GameObject.Find ("Narissa");
+					narissa = player;
 					
 				}
 			}
 		}
 		
 	}
-	private void FindNewPlayers(){
+	private void FindNewPlayer(){
 		if (!PhotonNetwork.inRoom) {
 			return;
 		}
@@ -110,10 +112,10 @@ public class GameManager : MonoBehaviour {
 			if (Layer.FindGameObjectsWithLayer(Layer.players) != null) {
 				GameObject[] players = Layer.FindGameObjectsWithLayer(Layer.players);
 				for(int i = 0; i < players.Length; ++i){
-					if(players[i].GetComponent<Gareth>() != null){
+					if(players[i].tag == "Gareth"){
 						gareth = players[i];
 					}
-					if(players[i].GetComponent<Narissa>() != null){
+					if(players[i].tag == "Narissa"){
 						narissa = players[i];
 					}
 				}
@@ -124,7 +126,7 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		DeadState ();
-		FindNewPlayers ();
+		FindNewPlayer ();
 
 		if (PhotonNetwork.inRoom)
 			ChangeChar ();

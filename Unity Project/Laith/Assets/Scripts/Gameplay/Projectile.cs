@@ -57,4 +57,26 @@ public class Projectile : Weapon {
 	public override void DealDamage(Actor a){
 		a.TakeDamage (damage, knockbackForce * rigidbody.velocity/20f);
 	}
+	public void SetNetworkValues(int layerID, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity){
+		if (ArrowSpeed == 0)
+			ArrowSpeed = Vector3.Magnitude(rigidbody.velocity);
+		gameObject.GetComponent<PhotonView> ().RPC ("ReleaseArrow", PhotonTargets.All, layerID, velocity, ArrowSpeed, arrowDamage, Gravity);
+	}
+	[RPC]
+	public void ReleaseArrow(int layerID, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity){
+		collider.enabled = true;
+		gameObject.layer = layerID;
+		rigidbody.velocity = velocity * ArrowSpeed;
+		if (layerID == Layer.players) {
+			wielder = Layer.FindGameObjectsWithLayer (Layer.players) [0].gameObject;
+		} else {
+			wielder = GameObject.FindGameObjectWithTag("Enemy").gameObject;
+		}
+		if (Gravity) {
+			damage = ArrowSpeed * arrowDamage;
+		} else {
+			damage = arrowDamage;
+		}
+		rigidbody.useGravity = Gravity;
+	}
 }

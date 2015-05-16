@@ -51,21 +51,21 @@ public class Shield : Weapon {
 
 	void DeflectProjectile(Projectile p){
 
-			if(!p.deflectable){
-				p.maxLifeTime = 0;
-				return;
-			}
-			p.rigidbody.velocity = p.rigidbody.velocity.magnitude * gareth.mouseDirection;
-			p.damage = 20;
-			p.gameObject.layer = 8;
-			p.maxLifeTime = 20;
-			try{
-				Physics.IgnoreCollision (p.wielder.collider, p.collider, false);
-			} catch(MissingComponentException){
-				Debug.Log ("Object does not have collider.");
-			}
-			p.wielder = gareth.gameObject;
+		if(!p.deflectable){
+			p.maxLifeTime = 0;
 			return;
+		}
+		p.rigidbody.velocity = p.rigidbody.velocity.magnitude * gareth.mouseDirection;
+		p.damage = 20;
+		p.gameObject.layer = Layer.players;
+		p.maxLifeTime = 20;
+		try{
+			Physics.IgnoreCollision (p.wielder.collider, p.collider, false);
+		} catch(MissingComponentException){
+			Debug.Log ("Object does not have collider.");
+		}
+		p.wielder = gareth.gameObject;
+		return;
 	}
 
 	public override void OnTriggerEnter(Collider other){
@@ -73,7 +73,7 @@ public class Shield : Weapon {
 			return;
 
 		Projectile p = other.gameObject.GetComponent<Projectile> ();
-		if (p != null && p.wielder.gameObject.layer != 8) {
+		if (p != null && other.gameObject.layer != Layer.players) {
 			DeflectProjectile (p);
 		}
 

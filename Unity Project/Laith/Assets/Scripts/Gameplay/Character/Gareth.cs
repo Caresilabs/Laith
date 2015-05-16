@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class Gareth : BasePlayerController {
+	
+	//NOTE: Charge requiers Softwall component to be destroyed.
 
 	private Direction sprintDirection;
 	public float sprintSpeed = 10f;
@@ -21,10 +23,6 @@ public class Gareth : BasePlayerController {
 
 
 	public override void Start() {
-		attackDamage = 20;
-		acceleration = 25f;
-		maxSpeed = 9f;
-		jumpSpeed = 10f;
 		
 		AirJumps = 0;
 		defaultMaxSpeed = maxSpeed;
@@ -41,13 +39,15 @@ public class Gareth : BasePlayerController {
 	}
 
 	public override void Update () {
-		Attack ();
-		Block ();
-		Charge ();
-		Cooldown ();
-		base.Update ();
-		if (sprint) {
-			faceDirection = sprintDirection;
+		if (!dead) {
+			Attack ();
+			Block ();
+			Charge ();
+			Cooldown ();
+			base.Update ();
+			if (sprint) {
+				faceDirection = sprintDirection;
+			}
 		}
 	}
 

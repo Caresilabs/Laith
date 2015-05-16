@@ -3,10 +3,10 @@ using System.Collections;
 
 public class DumbTurret : Triggerable {
 
-	//Summary
-	//Class used to Fire Projectiles in interval
-	//Author: Simon J
-	//
+	// <summary>
+	// Class used to Fire Projectiles in interval
+	// Author: Simon J
+	// <summary>
 
 	public bool fireInVolleys;
 	public int shotsPerVolley;
@@ -29,6 +29,7 @@ public class DumbTurret : Triggerable {
 		remainingShotsInVolley = 0;
 		secondsToNextShot = 0;
 		secondsToNextVolley = 0;
+		tag = "Enemy";
 	}
 	private void ShootProjectile(){
 		Projectile p = Projectile.Create (
@@ -40,6 +41,7 @@ public class DumbTurret : Triggerable {
 			gameObject,
 			false
 			);
+		p.SetNetworkValues (gameObject.layer, transform.up, projectileSpeed, projectileDamage, false);
 		p.transform.parent = gameObject.transform;
 		p.gameObject.name = "Trap Arrow";
 		if (fireInVolleys) {
