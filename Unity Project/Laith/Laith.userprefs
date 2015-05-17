@@ -1,24 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\GameManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Actor.cs">
     <Files>
-      <File FileName="Assets\Scripts\Gameplay\Bow.cs" Line="75" Column="26" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\RangedEnemy.cs" Line="81" Column="25" />
-      <File FileName="Assets\Scripts\Network\NetworkManager.cs" Line="127" Column="59" />
-      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="38" Column="11" />
-      <File FileName="Assets\Scripts\Gameplay\GameManager.cs" Line="100" Column="22" />
-      <File FileName="Assets\Scripts\Gameplay\PowerupWeapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\PowerupEffects.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="36" Column="31" />
-      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="60" Column="30" />
-      <File FileName="Assets\Scripts\Gameplay\Shield.cs" Line="61" Column="22" />
-      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="67" Column="53" />
-      <File FileName="Assets\Scripts\GUI\HealthBars.cs" Line="32" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Narissa.cs" Line="5" Column="2" />
-      <File FileName="Assets\Scripts\Gameplay\Character\Gareth.cs" Line="6" Column="60" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\DumbTurret.cs" Line="7" Column="5" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\BaseEnemy.cs" Line="7" Column="5" />
-      <File FileName="Assets\Scripts\Gameplay\Sword.cs" Line="6" Column="6" />
+      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="71" Column="3" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\DumbTurret.cs" Line="54" Column="4" />
+      <File FileName="Assets\Scripts\Gameplay\Shield.cs" Line="76" Column="3" />
+      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="45" Column="17" />
+      <File FileName="Assets\Scripts\Gameplay\GameManager.cs" Line="55" Column="50" />
+      <File FileName="Assets\Scripts\Network\Client\NetworkRigidBody.cs" Line="36" Column="41" />
+      <File FileName="Assets\Scripts\Gameplay\Sword.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="38" Column="11" />
+      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="49" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

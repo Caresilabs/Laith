@@ -49,6 +49,7 @@ public class Shield : Weapon {
 		transform.position = transform.parent.position + new Vector3(0, 0, 1) * shieldDistance;
 	}
 
+	[RPC]
 	void DeflectProjectile(Projectile p){
 
 		if(!p.deflectable){
@@ -74,7 +75,8 @@ public class Shield : Weapon {
 
 		Projectile p = other.gameObject.GetComponent<Projectile> ();
 		if (p != null && other.gameObject.layer != Layer.players) {
-			DeflectProjectile (p);
+			//DeflectProjectile (p);
+			photonView.RPC("DeflectProjectile", PhotonTargets.MasterClient, p);
 		}
 
 		if (gareth.sprint) {

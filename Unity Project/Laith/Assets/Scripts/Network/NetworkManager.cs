@@ -135,6 +135,8 @@ public class NetworkManager : MonoBehaviour {
 
 		if (player.tag == "Narissa") {
 			player.GetComponent<Swap> ().enabled = true;
+		} else {
+			player.GetComponentInChildren<Shield>().enabled = true;
 		}
 	
 		player.transform.FindChild("Camera").gameObject.SetActive(true);

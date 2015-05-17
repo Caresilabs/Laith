@@ -33,7 +33,7 @@ public class Weapon : Photon.MonoBehaviour {
 	}
 
 	public virtual void DealDamage(Actor a){
-		Debug.Log ("I GIT " + damage);
+		//Debug.Log ("I GIT " + damage);
 		if (wielder == null || knockbackDirection != Vector3.zero) {
 			a.TakeDamage (damage, knockbackForce * knockbackDirection);
 		} else {

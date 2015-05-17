@@ -2,9 +2,9 @@ Initialize engine version: 4.6.3f1 (4753d8b6ef2b)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce 840M              (ID=0x1341)
-    Vendor:   NVIDIA
-    VRAM:     1993 MB
+    Renderer: AMD Radeon HD 6700 Series (ID=0x673e)
+    Vendor:   ATI
+    VRAM:     1011 MB
 Begin MonoManager ReloadAssembly
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.dll into Unity Child Domain
@@ -18,9 +18,450 @@ Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\net
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll (this message is harmless)
 Loading C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
-- Completed reload, in  0.145 seconds
-desktop: 3200x1800 60Hz; virtual: 3200x1800 at 0,0
+- Completed reload, in  0.082 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Simon\Documents\GitHub\Laith\Unity Project\Laith\network_Data\Managed\System.dll (this message is harmless)
+NullReferenceException: Object reference not set to an instance of an object
+  at Projectile.ReleaseArrow (Int32 layerID, Vector3 pos, Vector3 velocity, Single ArrowSpeed, Single arrowDamage, Boolean Gravity) [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.ExecuteRPC (ExitGames.Client.Photon.Hashtable rpcData, .PhotonPlayer sender) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnEvent (ExitGames.Client.Photon.EventData photonEvent) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at PhotonHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+WARNING: Shader Unsupported: 'Hidden/Nature/Tree Creator Leaves Optimized' - Pass '' shader state not supported
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+UnloadTime: 8.408391 ms
+Failed to create agent because there is no valid NavMesh
+ 
+(Filename:  Line: 634)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 1726.
+Total: 2.267250 ms (FindLiveObjects: 0.066259 ms CreateObjectMapping: 0.024634 ms MarkObjects: 0.422472 ms  DeleteObjects: 0.892515 ms)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+WARNING: Shader Unsupported: 'Hidden/TerrainEngine/Details/BillboardWavingDoublePass' - Pass '' shader state not supported
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1003. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1003. Sent by actorNr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1004. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1004. Sent by actorNr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1005. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1005. Sent by actorNr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1006. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1006. Sent by actorNr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1007. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1007. Sent by actorNr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 1008. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Ev Destroy Failed. Could not find PhotonView with instantiationId 1008. Sent by actorNr: 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Received OnSerialization for view ID 13. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 56)
+
+Exception: cannot serialize(): Projectile
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeObjectArray (System.IO.MemoryStream dout, System.Object[] objects, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeHashTable (System.IO.MemoryStream dout, ExitGames.Client.Photon.Hashtable serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeParameterTable (System.IO.MemoryStream memStream, System.Collections.Generic.Dictionary`2 parameters) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeOperationRequest (System.IO.MemoryStream memStream, Byte operationCode, System.Collections.Generic.Dictionary`2 parameters, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.SerializeOperationToMessage (Byte opc, System.Collections.Generic.Dictionary`2 parameters, EgMessageType messageType, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypt, EgMessageType messageType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypted) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.OpCustom (Byte customOpCode, System.Collections.Generic.Dictionary`2 customOpParameters, Boolean sendReliable, Byte channelId, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.LoadbalancingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonNetwork.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RpcSecure (System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RPC (System.String methodName, PhotonTargets target, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at Shield.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: cannot serialize(): Projectile
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeObjectArray (System.IO.MemoryStream dout, System.Object[] objects, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeHashTable (System.IO.MemoryStream dout, ExitGames.Client.Photon.Hashtable serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeParameterTable (System.IO.MemoryStream memStream, System.Collections.Generic.Dictionary`2 parameters) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeOperationRequest (System.IO.MemoryStream memStream, Byte operationCode, System.Collections.Generic.Dictionary`2 parameters, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.SerializeOperationToMessage (Byte opc, System.Collections.Generic.Dictionary`2 parameters, EgMessageType messageType, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypt, EgMessageType messageType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypted) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.OpCustom (Byte customOpCode, System.Collections.Generic.Dictionary`2 customOpParameters, Boolean sendReliable, Byte channelId, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.LoadbalancingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonNetwork.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RpcSecure (System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RPC (System.String methodName, PhotonTargets target, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at Shield.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: cannot serialize(): Projectile
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeObjectArray (System.IO.MemoryStream dout, System.Object[] objects, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeHashTable (System.IO.MemoryStream dout, ExitGames.Client.Photon.Hashtable serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeParameterTable (System.IO.MemoryStream memStream, System.Collections.Generic.Dictionary`2 parameters) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeOperationRequest (System.IO.MemoryStream memStream, Byte operationCode, System.Collections.Generic.Dictionary`2 parameters, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.SerializeOperationToMessage (Byte opc, System.Collections.Generic.Dictionary`2 parameters, EgMessageType messageType, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypt, EgMessageType messageType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypted) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.OpCustom (Byte customOpCode, System.Collections.Generic.Dictionary`2 customOpParameters, Boolean sendReliable, Byte channelId, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.LoadbalancingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonNetwork.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RpcSecure (System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RPC (System.String methodName, PhotonTargets target, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at Shield.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: cannot serialize(): Projectile
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeObjectArray (System.IO.MemoryStream dout, System.Object[] objects, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeHashTable (System.IO.MemoryStream dout, ExitGames.Client.Photon.Hashtable serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeParameterTable (System.IO.MemoryStream memStream, System.Collections.Generic.Dictionary`2 parameters) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeOperationRequest (System.IO.MemoryStream memStream, Byte operationCode, System.Collections.Generic.Dictionary`2 parameters, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.SerializeOperationToMessage (Byte opc, System.Collections.Generic.Dictionary`2 parameters, EgMessageType messageType, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypt, EgMessageType messageType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypted) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.OpCustom (Byte customOpCode, System.Collections.Generic.Dictionary`2 customOpParameters, Boolean sendReliable, Byte channelId, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.LoadbalancingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonNetwork.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RpcSecure (System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RPC (System.String methodName, PhotonTargets target, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at Shield.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: cannot serialize(): Projectile
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeObjectArray (System.IO.MemoryStream dout, System.Object[] objects, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeHashTable (System.IO.MemoryStream dout, ExitGames.Client.Photon.Hashtable serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeParameterTable (System.IO.MemoryStream memStream, System.Collections.Generic.Dictionary`2 parameters) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeOperationRequest (System.IO.MemoryStream memStream, Byte operationCode, System.Collections.Generic.Dictionary`2 parameters, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.SerializeOperationToMessage (Byte opc, System.Collections.Generic.Dictionary`2 parameters, EgMessageType messageType, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypt, EgMessageType messageType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypted) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.OpCustom (Byte customOpCode, System.Collections.Generic.Dictionary`2 customOpParameters, Boolean sendReliable, Byte channelId, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.LoadbalancingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonNetwork.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RpcSecure (System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RPC (System.String methodName, PhotonTargets target, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at Shield.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: cannot serialize(): Projectile
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeObjectArray (System.IO.MemoryStream dout, System.Object[] objects, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeHashTable (System.IO.MemoryStream dout, ExitGames.Client.Photon.Hashtable serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.Serialize (System.IO.MemoryStream dout, System.Object serObject, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeParameterTable (System.IO.MemoryStream memStream, System.Collections.Generic.Dictionary`2 parameters) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.Protocol.SerializeOperationRequest (System.IO.MemoryStream memStream, Byte operationCode, System.Collections.Generic.Dictionary`2 parameters, Boolean setType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.SerializeOperationToMessage (Byte opc, System.Collections.Generic.Dictionary`2 parameters, EgMessageType messageType, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypt, EgMessageType messageType) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.EnqueueOperation (System.Collections.Generic.Dictionary`2 parameters, Byte opCode, Boolean sendReliable, Byte channelId, Boolean encrypted) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.OpCustom (Byte customOpCode, System.Collections.Generic.Dictionary`2 customOpParameters, Boolean sendReliable, Byte channelId, Boolean encrypt) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.LoadbalancingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OpRaiseEvent (Byte eventCode, System.Object customEventContent, Boolean sendReliable, .RaiseEventOptions raiseEventOptions) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonNetwork.RPC (.PhotonView view, System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RpcSecure (System.String methodName, PhotonTargets target, Boolean encrypt, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.RPC (System.String methodName, PhotonTargets target, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at Shield.OnTriggerEnter (UnityEngine.Collider other) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+

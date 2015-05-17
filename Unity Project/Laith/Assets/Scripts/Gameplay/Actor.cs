@@ -44,7 +44,7 @@ public abstract class Actor : Photon.MonoBehaviour {
 		if (invulnerable)
 			return;
 		
-		photonView.RPC("Damage", PhotonTargets.All, damage, knockback);
+		photonView.RPC("Damage", PhotonTargets.MasterClient, damage, knockback);
 		/*
 		if (PhotonNetwork.isMasterClient) {
 			photonView.RPC("Damage", PhotonTargets.All, damage, knockback);
