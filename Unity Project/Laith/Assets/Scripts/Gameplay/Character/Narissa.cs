@@ -26,10 +26,7 @@ public class Narissa : BasePlayerController {
 	public SpringJoint joint;
 
 	public override void Start() {
-	    attackDamage = 1f;
-		acceleration = 25f;
-		maxSpeed = 10f;
-		jumpSpeed = 10f;
+
 		AirJumps = 1;
 
 		bow = transform.FindChild ("Bow").GetComponent<Bow>();
@@ -40,29 +37,31 @@ public class Narissa : BasePlayerController {
 	}
 
 	public override void Update () {
-		if (Input.GetKey (KeyCode.Mouse0)) {
-			bow.DrawBow();
-		} else if (Input.GetKeyUp (KeyCode.Mouse0)) {
-			bow.Release();
-		}
+		if (!dead) {
+			if (Input.GetKey (KeyCode.Mouse0)) {
+				bow.DrawBow();
+			} else if (Input.GetKeyUp (KeyCode.Mouse0)) {
+				bow.Release();
+			}
 			
-		if (Input.GetKeyDown (KeyCode.Mouse1) && !hooked && hook == null) {
-			FireHook ();
+			if (Input.GetKeyDown (KeyCode.Mouse1) && !hooked && hook == null) {
+				FireHook ();
+			}
+			
+			if (hooked) {
+				HangingOnHook ();
+			} else if (climbing) {
+				Climbing ();
+			} else if (!dead){
+				Movement();
+			}
+			
+			if (CheckForDead() && hook != null) {
+				DestroyHook();
+			}
+			
+			UpdateState ();
 		}
-
-		if (hooked) {
-			HangingOnHook ();
-		} else if (climbing) {
-			Climbing ();
-		} else if (!dead){
-			Movement();
-		}
-
-		if (CheckForDead() && hook != null) {
-			DestroyHook();
-		}
-
-		UpdateState ();
 	}
 
 	private void FireHook(){

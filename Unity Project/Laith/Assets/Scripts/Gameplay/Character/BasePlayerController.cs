@@ -35,7 +35,7 @@ public class BasePlayerController :  Actor {
 
 	protected bool CheckForDead(){
 		if(currentHealth <= 0){
-			GetComponent<PhotonView>().RPC ("SendDeadInfo", PhotonTargets.All, null); 
+			GetComponent<PhotonView>().RPC ("SendDeadInfo", PhotonTargets.All); 
 			//dead = true;
 			return true;
 		}
@@ -43,24 +43,30 @@ public class BasePlayerController :  Actor {
 	}
 
 	public void Respawn(Vector3 lastCheckpoint){
-
-		transform.position = lastCheckpoint;
-		rigidbody.velocity = Vector3.zero;
-		GetComponent<PhotonView> ().RPC ("SendRespawnInfo", PhotonTargets.All, null);
+		GetComponent<PhotonView> ().RPC ("SendRespawnInfo", PhotonTargets.All, lastCheckpoint);
 	}
 
 	[RPC]
 	public void SendDeadInfo(){
-
 		dead = true;
-		GetComponentInChildren<MeshRenderer>().enabled = false;
+		MeshRenderer[] test = GetComponentsInChildren<MeshRenderer>();
+		for (int i = 0; i < test.Length; ++i) {
+			test[i].enabled = false;
+		}
+		GetComponent<CapsuleCollider> ().isTrigger = true;
+		currentHealth = 0;
 	}
 
 	[RPC]
-	public void SendRespawnInfo (){
-
+	public void SendRespawnInfo (Vector3 lastCheckpoint){
 		dead = false;
-		GetComponentInChildren<MeshRenderer>().enabled = true;
+		MeshRenderer[] test = GetComponentsInChildren<MeshRenderer>();
+		for (int i = 0; i < test.Length; ++i) {
+			test[i].enabled = true;
+		}
+		GetComponent<CapsuleCollider> ().isTrigger = false;
+		rigidbody.velocity = Vector3.zero;
+		transform.position = lastCheckpoint;
 		currentHealth = maxHealth;
 	}
 

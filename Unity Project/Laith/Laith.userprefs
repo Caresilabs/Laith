@@ -1,12 +1,16 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\PowerupWeapon.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay\Actor.cs">
     <Files>
-      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs" Line="2190" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\PowerupWeapon.cs" Line="43" Column="2" />
-      <File FileName="Assets\Scripts\Gameplay\Enemies\PowerupEffects.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="86" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Projectile.cs" Line="71" Column="3" />
+      <File FileName="Assets\Scripts\Gameplay\Enemies\DumbTurret.cs" Line="54" Column="4" />
+      <File FileName="Assets\Scripts\Gameplay\Shield.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Character\BasePlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Network\Client\NetworkRigidBody.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay\Sword.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Gameplay\Weapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gameplay\Actor.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

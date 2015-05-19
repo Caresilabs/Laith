@@ -32,7 +32,11 @@ public class NetworkRigidBody : Photon.MonoBehaviour {
 	private void SyncedMovement()
 	{
 		syncTime += Time.deltaTime;
-		rigidbody.position = Vector3.Lerp(syncStartPosition, syncEndPosition, syncTime / syncDelay);
+		if ((syncStartPosition - syncEndPosition).magnitude > 3) {
+			rigidbody.position = syncEndPosition;
+		} else {
+			rigidbody.position = Vector3.Lerp (syncStartPosition, syncEndPosition, syncTime / syncDelay);
+		}
 		rigidbody.rotation = Quaternion.Lerp(rigidbody.rotation, syncEndRotation, syncTime / syncDelay);
 	}
 	

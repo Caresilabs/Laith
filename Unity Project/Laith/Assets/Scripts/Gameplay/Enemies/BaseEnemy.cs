@@ -4,6 +4,11 @@ using System.Collections;
 
 public class BaseEnemy :  Actor {
 
+	// <summary>
+	// Keeps track of the enemys health and destroys if dead
+	// Author: Simon J
+	// <summary>
+
 	private GameObject healthBar;
 	public Vector3 posOffSet;
 	public BasePlayerController target;
@@ -33,8 +38,12 @@ public class BaseEnemy :  Actor {
 	public void CheckForDestroy(){
 		if (currentHealth <= 0) {
 			PhotonNetwork.Destroy (healthBar);
-			Destroy(this.gameObject);
+			GetComponent<PhotonView>().RPC ("DestroyEnemy", PhotonTargets.All);
 		}
+	}
+	[RPC]
+	public void DestroyEnemy(){
+		Destroy (this.gameObject);
 	}
 	
 	public override void Update() {

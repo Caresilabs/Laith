@@ -24,7 +24,7 @@ public class Projectile : Weapon {
 		p.rigidbody.useGravity = useGravity;
 
 		try{
-		Physics.IgnoreCollision (p.wielder.collider, p.collider);
+			Physics.IgnoreCollision (p.wielder.collider, p.collider);
 		} catch (MissingComponentException){
 			Debug.Log ("Object does not have collider.");
 		}
@@ -56,5 +56,29 @@ public class Projectile : Weapon {
 
 	public override void DealDamage(Actor a){
 		a.TakeDamage (damage, knockbackForce * rigidbody.velocity/20f);
+	}
+	public void SetNetworkValues(int layerID, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity){
+		if (ArrowSpeed == 0)
+			ArrowSpeed = Vector3.Magnitude(rigidbody.velocity);
+		gameObject.GetComponent<PhotonView> ().RPC ("ReleaseArrow", PhotonTargets.All, layerID, gameObject.transform.position, velocity, ArrowSpeed, arrowDamage, Gravity);
+	}
+	[RPC]
+	public void ReleaseArrow(int layerID, Vector3 pos, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity){
+		collider.enabled = true;
+		gameObject.layer = layerID;
+		rigidbody.velocity = velocity * ArrowSpeed;
+		rigidbody.position = pos;
+
+		if (layerID == Layer.players) {
+			wielder = Layer.FindGameObjectsWithLayer (Layer.players) [0].gameObject;
+		} else {
+			wielder = GameObject.FindGameObjectWithTag("Enemy").gameObject;
+		}
+		if (Gravity) {
+			damage = ArrowSpeed * arrowDamage;
+		} else {
+			damage = arrowDamage;
+		}
+		rigidbody.useGravity = Gravity;
 	}
 }

@@ -89,24 +89,24 @@ public class NetworkManager : MonoBehaviour {
 	private GameObject gareth; 
 
 
-	void OnJoinedRoom()
+	IEnumerator OnJoinedRoom()
 	{
 
 		Application.LoadLevel ("Level0" + levelInput);
 
-		//while (Application.isLoadingLevel)
-		//	yield return 1;
+		while (Application.isLoadingLevel)
+			yield return 1;
 
 		// Spawn player
 		GameObject player;
 
 		//Debug.Log(PhotonNetwork.room.playerCount);
-
+		
+		// Find the first Checkpoint, else just spawn at Zero
+		Vector3 start = GameObject.Find("Checkpoint 1") == null ? (Vector3.up * 5) : GameObject.Find("Checkpoint 1").transform.position;
 		if (PhotonNetwork.room.playerCount == 1) {
 			//Debug.LogError("haj");
 
-			// Find the first Checkpoint, else just spawn at Zero
-			Vector3 start = GameObject.Find("Checkpoint 1") == null ? (Vector3.up * 5) : GameObject.Find("Checkpoint 1").transform.position;
 
 			if (createAsNarissa) {
 				player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);
@@ -120,11 +120,11 @@ public class NetworkManager : MonoBehaviour {
 			//Debug.Log(GameObject.FindGameObjectWithTag("Gareth").transform + " a");
 			if (GameObject.FindGameObjectWithTag("Gareth") == null) {
 				//Vector3 start = GameObject.FindGameObjectWithTag("Narissa").transform.position + Vector3.up * 5;
-				player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);
+				player = PhotonNetwork.Instantiate(gareth.name, start, Quaternion.identity, 0);
 				//player.name = "Gareth";
 			} else {
 				//Vector3 start = GameObject.FindWithTag("Gareth").transform.position + Vector3.up * 5;
-				player = PhotonNetwork.Instantiate(narissa.name, Vector3.up * 5, Quaternion.identity, 0);
+				player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);
 				//player.name = "Narissa";
 			}
 		}
@@ -135,6 +135,8 @@ public class NetworkManager : MonoBehaviour {
 
 		if (player.tag == "Narissa") {
 			player.GetComponent<Swap> ().enabled = true;
+		} else {
+			player.GetComponentInChildren<Shield>().enabled = true;
 		}
 	
 		player.transform.FindChild("Camera").gameObject.SetActive(true);

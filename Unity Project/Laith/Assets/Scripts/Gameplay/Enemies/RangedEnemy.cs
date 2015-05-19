@@ -68,7 +68,7 @@ public class RangedEnemy : BaseEnemy {
 
 	public void FireProjectile(Vector3 direction){
 		direction.Normalize ();
-		Projectile.Create (
+		Projectile arrow = Projectile.Create (
 			"Arrow",
 			transform.position,
 			direction * projectileSpeed,
@@ -77,7 +77,7 @@ public class RangedEnemy : BaseEnemy {
 			gameObject,
 			false
 			);
-
 		attackTimer = attackCooldown;
+		arrow.SetNetworkValues (gameObject.layer, direction, projectileSpeed, attackDamage, false);
 	}
 }
