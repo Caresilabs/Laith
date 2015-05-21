@@ -112,46 +112,49 @@ $(document).ready(function(){initNavTree('_weapon_8cs_source.html','');});
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">knockbackForce</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">   13</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_actor.html">Actor</a> <a class="code" href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">wielder</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="comment">// Use this for initialization</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> Start () {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> Update () {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">OnTriggerEnter</a>(Collider other){</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">if</span> (other.isTrigger == <span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (wielder == null || </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            wielder.gameObject.layer == 8 &amp;&amp; other.gameObject.layer == 10 || </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            wielder.gameObject.layer == 10 &amp;&amp; other.gameObject.layer == 8) {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="class_actor.html">Actor</a> a;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            a = other.GetComponent&lt;<a class="code" href="class_actor.html">Actor</a>&gt;();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <a class="code" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">DealDamage</a> (a);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">   38</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">DealDamage</a>(<a class="code" href="class_actor.html">Actor</a> a){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        a.<a class="code" href="class_actor.html#acc6fb2c84c16bd2753eaac60efd12d87">TakeDamage</a> (damage, knockbackForce * <span class="keyword">new</span> Vector3((<span class="keywordtype">int</span>)wielder.<a class="code" href="class_actor.html#ab7a199acbce4a22ddd5b3125280780b7">faceDirection</a>,0,0));</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="ttc" id="class_weapon_html_a6248e3eb83e44291711e4ee21e6bc7e5"><div class="ttname"><a href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">Weapon.wielder</a></div><div class="ttdeci">Actor wielder</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00013">Weapon.cs:13</a></div></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">   12</a></span>&#160;    <span class="keyword">public</span> Vector3 <a class="code" href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">knockbackDirection</a> = Vector3.zero;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">knockbackForce</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">   14</a></span>&#160;    <span class="keyword">public</span> GameObject <a class="code" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">wielder</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">OnTriggerEnter</a>(Collider other){</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> (other.isTrigger == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (!PhotonNetwork.isMasterClient)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="class_actor.html">Actor</a> a = other.GetComponent&lt;<a class="code" href="class_actor.html">Actor</a>&gt;();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (a == null)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (wielder == null) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (gameObject.layer != other.gameObject.layer)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <a class="code" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">DealDamage</a> (a);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wielder.layer != other.gameObject.layer) {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">DealDamage</a> (a);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">DealDamage</a>(<a class="code" href="class_actor.html">Actor</a> a){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="comment">//Debug.Log (&quot;I GIT &quot; + damage);</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">if</span> (wielder == null || knockbackDirection != Vector3.zero) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            a.<a class="code" href="class_actor.html#acc6fb2c84c16bd2753eaac60efd12d87">TakeDamage</a> (damage, knockbackForce * knockbackDirection);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            Vector3 kbDir = (a.transform.position - wielder.transform.position).normalized;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            a.<a class="code" href="class_actor.html#acc6fb2c84c16bd2753eaac60efd12d87">TakeDamage</a> (damage, knockbackForce * kbDir);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="class_weapon_html"><div class="ttname"><a href="class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00004">Weapon.cs:4</a></div></div>
+<div class="ttc" id="class_weapon_html_af64c72d17c522cd5e5ba9fac264fe909"><div class="ttname"><a href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">Weapon.wielder</a></div><div class="ttdeci">GameObject wielder</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00014">Weapon.cs:14</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="class_weapon_html_afd216cd432260bae23cd8b27865682ad"><div class="ttname"><a href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">Weapon.DealDamage</a></div><div class="ttdeci">virtual void DealDamage(Actor a)</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00038">Weapon.cs:38</a></div></div>
-<div class="ttc" id="class_weapon_html_a7d7fc8e86f8d00df456fb4f7f78081de"><div class="ttname"><a href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">Weapon.knockbackForce</a></div><div class="ttdeci">float knockbackForce</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00012">Weapon.cs:12</a></div></div>
-<div class="ttc" id="class_actor_html_acc6fb2c84c16bd2753eaac60efd12d87"><div class="ttname"><a href="class_actor.html#acc6fb2c84c16bd2753eaac60efd12d87">Actor.TakeDamage</a></div><div class="ttdeci">void TakeDamage(float damage, Vector3 knockback)</div><div class="ttdef"><b>Definition:</b> <a href="_actor_8cs_source.html#l00042">Actor.cs:42</a></div></div>
+<div class="ttc" id="class_weapon_html_afd216cd432260bae23cd8b27865682ad"><div class="ttname"><a href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">Weapon.DealDamage</a></div><div class="ttdeci">virtual void DealDamage(Actor a)</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00035">Weapon.cs:35</a></div></div>
+<div class="ttc" id="class_weapon_html_a7d7fc8e86f8d00df456fb4f7f78081de"><div class="ttname"><a href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">Weapon.knockbackForce</a></div><div class="ttdeci">float knockbackForce</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00013">Weapon.cs:13</a></div></div>
+<div class="ttc" id="class_actor_html_acc6fb2c84c16bd2753eaac60efd12d87"><div class="ttname"><a href="class_actor.html#acc6fb2c84c16bd2753eaac60efd12d87">Actor.TakeDamage</a></div><div class="ttdeci">void TakeDamage(float damage, Vector3 knockback)</div><div class="ttdef"><b>Definition:</b> <a href="_actor_8cs_source.html#l00043">Actor.cs:43</a></div></div>
 <div class="ttc" id="class_weapon_html_a67d637088f248dd13048b89e592ea63a"><div class="ttname"><a href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">Weapon.damage</a></div><div class="ttdeci">float damage</div><div class="ttdoc">Checks for collision and deals damage if appropriate. Extend this class for anything that deals damag...</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00011">Weapon.cs:11</a></div></div>
 <div class="ttc" id="class_actor_html"><div class="ttname"><a href="class_actor.html">Actor</a></div><div class="ttdef"><b>Definition:</b> <a href="_actor_8cs_source.html#l00004">Actor.cs:4</a></div></div>
-<div class="ttc" id="class_actor_html_ab7a199acbce4a22ddd5b3125280780b7"><div class="ttname"><a href="class_actor.html#ab7a199acbce4a22ddd5b3125280780b7">Actor.faceDirection</a></div><div class="ttdeci">Direction faceDirection</div><div class="ttdef"><b>Definition:</b> <a href="_actor_8cs_source.html#l00025">Actor.cs:25</a></div></div>
-<div class="ttc" id="class_weapon_html_a22a3f58380d2652885167cbacd20b426"><div class="ttname"><a href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">Weapon.OnTriggerEnter</a></div><div class="ttdeci">virtual void OnTriggerEnter(Collider other)</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00024">Weapon.cs:24</a></div></div>
+<div class="ttc" id="class_weapon_html_ad3c71e74f056473994f0a1fdd78c08d2"><div class="ttname"><a href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">Weapon.knockbackDirection</a></div><div class="ttdeci">Vector3 knockbackDirection</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00012">Weapon.cs:12</a></div></div>
+<div class="ttc" id="class_weapon_html_a22a3f58380d2652885167cbacd20b426"><div class="ttname"><a href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">Weapon.OnTriggerEnter</a></div><div class="ttdeci">virtual void OnTriggerEnter(Collider other)</div><div class="ttdef"><b>Definition:</b> <a href="_weapon_8cs_source.html#l00016">Weapon.cs:16</a></div></div>
 <div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -159,7 +162,7 @@ $(document).ready(function(){initNavTree('_weapon_8cs_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4469ff4ed964cea2638f05b6086cc6cb.html">Unity Project</a></li><li class="navelem"><a class="el" href="dir_646139fdd519250feb2395bf687dd027.html">Laith</a></li><li class="navelem"><a class="el" href="dir_e640ae4f520fd635da3862d32b87c31e.html">Assets</a></li><li class="navelem"><a class="el" href="dir_b8070e7d4eae247375b6c41c4c86d888.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_79d39297aae075d4e5b02b89624f2f48.html">Gameplay</a></li><li class="navelem"><a class="el" href="_weapon_8cs.html">Weapon.cs</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:12 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:13 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -106,6 +106,7 @@ $(document).ready(function(){initNavTree('class_projectile.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_projectile-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -128,25 +129,106 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7811267b4405093c60cc7a928830e90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a213e724366eb4e8940f8662e1e3abe81"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#a213e724366eb4e8940f8662e1e3abe81">DealDamage</a> (<a class="el" href="class_actor.html">Actor</a> a)</td></tr>
 <tr class="separator:a213e724366eb4e8940f8662e1e3abe81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a696a2048bf942f01d832bbc8f238f0d1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#a696a2048bf942f01d832bbc8f238f0d1">SetNetworkValues</a> (int layerID, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity)</td></tr>
+<tr class="separator:a696a2048bf942f01d832bbc8f238f0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39a3cfdd9ad817a85f17e1974a432685"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#a39a3cfdd9ad817a85f17e1974a432685">ReleaseArrow</a> (int layerID, Vector3 pos, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity)</td></tr>
+<tr class="separator:a39a3cfdd9ad817a85f17e1974a432685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:aee96a72cf984341c4882b920d3613f72"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_projectile.html">Projectile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#aee96a72cf984341c4882b920d3613f72">Create</a> (string name, Vector3 position, Vector3 velocity, float <a class="el" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a>, float lifeTime, GameObject <a class="el" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">wielder</a>, bool useGravity)</td></tr>
+<tr class="memdesc:aee96a72cf984341c4882b920d3613f72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates body to look at the velocity direction. Knockback scales depending on velocity. Author: Henrik P.  <a href="#aee96a72cf984341c4882b920d3613f72">More...</a><br /></td></tr>
+<tr class="separator:aee96a72cf984341c4882b920d3613f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a0c0f651fd31e9b8836856fc06845c9a8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#a0c0f651fd31e9b8836856fc06845c9a8">maxLifeTime</a> = 20</td></tr>
-<tr class="memdesc:a0c0f651fd31e9b8836856fc06845c9a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotates body to look at the velocity direction. Knockback scales depending on velocity. Author: Henrik P.  <a href="#a0c0f651fd31e9b8836856fc06845c9a8">More...</a><br /></td></tr>
 <tr class="separator:a0c0f651fd31e9b8836856fc06845c9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a594ce753f694fb8ea60daa92da2a0d2a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_projectile.html#a594ce753f694fb8ea60daa92da2a0d2a">deflectable</a> = true</td></tr>
+<tr class="separator:a594ce753f694fb8ea60daa92da2a0d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_weapon"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_weapon')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_weapon.html">Weapon</a></td></tr>
 <tr class="memitem:a67d637088f248dd13048b89e592ea63a inherit pub_attribs_class_weapon"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a></td></tr>
 <tr class="memdesc:a67d637088f248dd13048b89e592ea63a inherit pub_attribs_class_weapon"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collision and deals damage if appropriate. Extend this class for anything that deals damage upon contact. Author: Henrik P.  <a href="#a67d637088f248dd13048b89e592ea63a">More...</a><br /></td></tr>
 <tr class="separator:a67d637088f248dd13048b89e592ea63a inherit pub_attribs_class_weapon"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c71e74f056473994f0a1fdd78c08d2 inherit pub_attribs_class_weapon"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">knockbackDirection</a> = Vector3.zero</td></tr>
+<tr class="separator:ad3c71e74f056473994f0a1fdd78c08d2 inherit pub_attribs_class_weapon"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d7fc8e86f8d00df456fb4f7f78081de inherit pub_attribs_class_weapon"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">knockbackForce</a></td></tr>
 <tr class="separator:a7d7fc8e86f8d00df456fb4f7f78081de inherit pub_attribs_class_weapon"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6248e3eb83e44291711e4ee21e6bc7e5 inherit pub_attribs_class_weapon"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">wielder</a></td></tr>
-<tr class="separator:a6248e3eb83e44291711e4ee21e6bc7e5 inherit pub_attribs_class_weapon"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64c72d17c522cd5e5ba9fac264fe909 inherit pub_attribs_class_weapon"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">wielder</a></td></tr>
+<tr class="separator:af64c72d17c522cd5e5ba9fac264fe909 inherit pub_attribs_class_weapon"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00004">4</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aee96a72cf984341c4882b920d3613f72"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_projectile.html">Projectile</a> Projectile.Create </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>position</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>damage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>lifeTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GameObject&#160;</td>
+          <td class="paramname"><em>wielder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>useGravity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rotates body to look at the velocity direction. Knockback scales depending on velocity. Author: Henrik P. </p>
+
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00011">11</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a213e724366eb4e8940f8662e1e3abe81"></a>
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +253,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">Weapon</a>.</p>
 
-<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00032">32</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00057">57</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
 
 </div>
 </div>
@@ -199,11 +281,123 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">Weapon</a>.</p>
 
-<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00022">22</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00047">47</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a39a3cfdd9ad817a85f17e1974a432685"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Projectile.ReleaseArrow </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ArrowSpeed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>arrowDamage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>Gravity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00066">66</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a696a2048bf942f01d832bbc8f238f0d1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Projectile.SetNetworkValues </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>layerID</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3&#160;</td>
+          <td class="paramname"><em>velocity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ArrowSpeed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>arrowDamage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>Gravity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00060">60</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a594ce753f694fb8ea60daa92da2a0d2a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Projectile.deflectable = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00036">36</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0c0f651fd31e9b8836856fc06845c9a8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -214,9 +408,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rotates body to look at the velocity direction. Knockback scales depending on velocity. Author: Henrik P. </p>
-
-<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00011">11</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
+<p>Definition at line <a class="el" href="_projectile_8cs_source.html#l00035">35</a> of file <a class="el" href="_projectile_8cs_source.html">Projectile.cs</a>.</p>
 
 </div>
 </div>
@@ -229,7 +421,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_projectile.html">Projectile</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:13 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:14 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

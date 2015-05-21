@@ -114,30 +114,31 @@ $(document).ready(function(){initNavTree('_triggerable_8cs_source.html','');});
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_triggerable.html#ab8b938278ce3620891cddbc90b50cdaa">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_triggerable.html#ab8b938278ce3620891cddbc90b50cdaa">playerActivated</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_triggerable.html#af3cc8991b2c507077603f6d68d49fb17">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_triggerable.html#af3cc8991b2c507077603f6d68d49fb17">activated</a>;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">Trigger</a> (){</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">if</span> (activated) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <a class="code" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Deactivate</a> ();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Activate</a>();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Activate</a> (){</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        activated = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Deactivate</a>(){</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        activated = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">//This method is called when the player activates the object.</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">Trigger</a> (){</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span> (activated) {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Deactivate</a> ();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Activate</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">   23</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Activate</a> (){</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        activated = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Deactivate</a>(){</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        activated = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
 <div class="ttc" id="class_triggerable_html"><div class="ttname"><a href="class_triggerable.html">Triggerable</a></div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00004">Triggerable.cs:4</a></div></div>
 <div class="ttc" id="class_triggerable_html_af3cc8991b2c507077603f6d68d49fb17"><div class="ttname"><a href="class_triggerable.html#af3cc8991b2c507077603f6d68d49fb17">Triggerable.activated</a></div><div class="ttdeci">bool activated</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00012">Triggerable.cs:12</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="class_triggerable_html_a554f8ab5407113319420a0753f19eb47"><div class="ttname"><a href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Triggerable.Activate</a></div><div class="ttdeci">virtual void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00022">Triggerable.cs:22</a></div></div>
+<div class="ttc" id="class_triggerable_html_a554f8ab5407113319420a0753f19eb47"><div class="ttname"><a href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Triggerable.Activate</a></div><div class="ttdeci">virtual void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00023">Triggerable.cs:23</a></div></div>
 <div class="ttc" id="class_triggerable_html_ab8b938278ce3620891cddbc90b50cdaa"><div class="ttname"><a href="class_triggerable.html#ab8b938278ce3620891cddbc90b50cdaa">Triggerable.playerActivated</a></div><div class="ttdeci">bool playerActivated</div><div class="ttdoc">Extend this class for anything with an on/off state. Author: Henrik P. </div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00011">Triggerable.cs:11</a></div></div>
-<div class="ttc" id="class_triggerable_html_ac3410c73ae0ceb0ae81d4ba47c3beac5"><div class="ttname"><a href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Triggerable.Deactivate</a></div><div class="ttdeci">virtual void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00026">Triggerable.cs:26</a></div></div>
-<div class="ttc" id="class_triggerable_html_ab75ebc461c6bcaef4d1daf1f44d75054"><div class="ttname"><a href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">Triggerable.Trigger</a></div><div class="ttdeci">virtual void Trigger()</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00014">Triggerable.cs:14</a></div></div>
+<div class="ttc" id="class_triggerable_html_ac3410c73ae0ceb0ae81d4ba47c3beac5"><div class="ttname"><a href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Triggerable.Deactivate</a></div><div class="ttdeci">virtual void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00027">Triggerable.cs:27</a></div></div>
+<div class="ttc" id="class_triggerable_html_ab75ebc461c6bcaef4d1daf1f44d75054"><div class="ttname"><a href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">Triggerable.Trigger</a></div><div class="ttdeci">virtual void Trigger()</div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00015">Triggerable.cs:15</a></div></div>
 <div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -145,7 +146,7 @@ $(document).ready(function(){initNavTree('_triggerable_8cs_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4469ff4ed964cea2638f05b6086cc6cb.html">Unity Project</a></li><li class="navelem"><a class="el" href="dir_646139fdd519250feb2395bf687dd027.html">Laith</a></li><li class="navelem"><a class="el" href="dir_e640ae4f520fd635da3862d32b87c31e.html">Assets</a></li><li class="navelem"><a class="el" href="dir_b8070e7d4eae247375b6c41c4c86d888.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_948649b10aec98ecb41c0fe1c1a8f446.html">Level</a></li><li class="navelem"><a class="el" href="_triggerable_8cs.html">Triggerable.cs</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:12 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:13 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -100,6 +100,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_n"><span>n</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
       <li><a href="#index_u"><span>u</span></a></li>
@@ -148,17 +149,29 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>activated
 : <a class="el" href="class_triggerable.html#af3cc8991b2c507077603f6d68d49fb17">Triggerable</a>
 </li>
+<li>actor
+: <a class="el" href="class_sword.html#a9d117f0af95c53a115cb50693598a426">Sword</a>
+</li>
+<li>arrowDamageModifier
+: <a class="el" href="class_bow.html#a1cdcabd06f8d9647ea9270c0d11f2112">Bow</a>
+</li>
 <li>arrowMaxSpeed
-: <a class="el" href="class_narissa.html#a17c30409a050b4f1592f3aa5bd4c084a">Narissa</a>
+: <a class="el" href="class_bow.html#a7f2e7d941cf1cd6272a13086f2d74279">Bow</a>
+</li>
+<li>arrowMinSpeed
+: <a class="el" href="class_bow.html#aac99d5520881bd2621eeb6b53d573619">Bow</a>
 </li>
 <li>arrowPotentialSpeed
-: <a class="el" href="class_narissa.html#a6fc5e81e5b0501ba976572914228cdc6">Narissa</a>
+: <a class="el" href="class_bow.html#a7509635dbb1da7d719643f951edaf576">Bow</a>
 </li>
 <li>attackDamage
 : <a class="el" href="class_actor.html#a66999486ef676d0955184cdae528b706">Actor</a>
 </li>
 <li>attacksPerSecond
 : <a class="el" href="class_ranged_enemy.html#acc1354b88e064ccfb8ef0d13657b0601">RangedEnemy</a>
+</li>
+<li>attackTime
+: <a class="el" href="class_sword.html#a9bb5cdcf6f0f2de00e088187951d8c23">Sword</a>
 </li>
 </ul>
 
@@ -170,11 +183,21 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>connectedTrigger
 : <a class="el" href="class_switch.html#addd4af280a05c84c8f23bfc316d713eb">Switch</a>
 </li>
+<li>connectedTrigger1
+: <a class="el" href="class_twin_pressure_plate.html#a1751264c91cc454d4f2f0a19ba658344">TwinPressurePlate</a>
+</li>
+<li>connectedTrigger2
+: <a class="el" href="class_twin_pressure_plate.html#ad7129fa0bdb654ca2669e45d1426fad9">TwinPressurePlate</a>
+</li>
 <li>cooldown
 : <a class="el" href="class_gareth.html#aa64b8dc86e7e39a5cefdaca1ef23d3e0">Gareth</a>
+, <a class="el" href="class_swap.html#aa7be19a2f33c9ba04b4433d1ea915f33">Swap</a>
 </li>
 <li>currentHealth
 : <a class="el" href="class_actor.html#a9c82b9c1aba54ec2d3d95e6df45835b5">Actor</a>
+</li>
+<li>currentSprintTime
+: <a class="el" href="class_gareth.html#a75de6974971195904a039bb3a919ac17">Gareth</a>
 </li>
 </ul>
 
@@ -186,11 +209,14 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>dead
 : <a class="el" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">BasePlayerController</a>
 </li>
-<li>delayTime
-: <a class="el" href="class_dumb_turret.html#acb65866103c9a8081c6c16262af6083f">DumbTurret</a>
+<li>deflectable
+: <a class="el" href="class_projectile.html#a594ce753f694fb8ea60daa92da2a0d2a">Projectile</a>
 </li>
-<li>drawBackSpeed
-: <a class="el" href="class_narissa.html#a99bd1f1c27b5753ab50da2f1778ed1cf">Narissa</a>
+<li>distanceMoved
+: <a class="el" href="class_gate.html#a09816bb0f86985ba22e40dc5b3cfd95a">Gate</a>
+</li>
+<li>drawSpeed
+: <a class="el" href="class_bow.html#ab346f8d374e3298f53d869e7370d7f7b">Bow</a>
 </li>
 </ul>
 
@@ -199,15 +225,15 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>faceDirection
 : <a class="el" href="class_actor.html#ab7a199acbce4a22ddd5b3125280780b7">Actor</a>
 </li>
-<li>fireRate
-: <a class="el" href="class_dumb_turret.html#acee518fed26cc23b08d0af9a55b176ee">DumbTurret</a>
+<li>fireInVolleys
+: <a class="el" href="class_dumb_turret.html#a569c25b616b86021e22b4664e50f5306">DumbTurret</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
-<li>gareth
-: <a class="el" href="class_game_manager.html#a5d1d72835e04567228236483e2c00536">GameManager</a>
+<li>garethDamageModifier
+: <a class="el" href="class_powerup_weapon.html#ad8107fa1c88b12cabe7b147eed32b620">PowerupWeapon</a>
 </li>
 </ul>
 
@@ -215,6 +241,15 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>HasKey
 : <a class="el" href="class_base_player_controller.html#a0f00a93d59577af56d29d0a205bec955">BasePlayerController</a>
+</li>
+<li>healthbarPosition
+: <a class="el" href="class_health_bars.html#abdd8f3826f1df7dc8445f57d6bbbc054">HealthBars</a>
+</li>
+<li>healthbarsDistance
+: <a class="el" href="class_health_bars.html#a791994d6a919f8bfff6590bbba0c4cc5">HealthBars</a>
+</li>
+<li>healthScale
+: <a class="el" href="class_health_bars.html#a8493976ac8dc9b81a80f060903cd87bf">HealthBars</a>
 </li>
 <li>hookChangeSpeed
 : <a class="el" href="class_narissa.html#a14be574abd0d8a44aad912f1a2bc9af3">Narissa</a>
@@ -238,17 +273,17 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>instagibs
 : <a class="el" href="class_kill_player.html#a67c2afa0820234b652109470ea3d7e1b">KillPlayer</a>
 </li>
-<li>interval
-: <a class="el" href="class_dumb_turret.html#a49b1fdc547d5cd199aafb4375979cd2d">DumbTurret</a>
-</li>
-<li>intervalTime
-: <a class="el" href="class_dumb_turret.html#a1103745c3c65ba8e37022ba51c8b60be">DumbTurret</a>
-</li>
 <li>invulnerabilityFrames
 : <a class="el" href="class_actor.html#ab9a7fcbf7b1bbd9638af0327f1a83093">Actor</a>
 </li>
 <li>invulnerable
 : <a class="el" href="class_actor.html#ae8369ad2d57ca345dcadbaf6e37d3bf8">Actor</a>
+</li>
+<li>isGrounded
+: <a class="el" href="class_actor.html#a30725ffa3c48721af690493296b9cc84">Actor</a>
+</li>
+<li>isOnCooldown
+: <a class="el" href="class_swap.html#a35d5af849a8a4c24a533fc4b6a243af9">Swap</a>
 </li>
 </ul>
 
@@ -257,6 +292,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>joint
 : <a class="el" href="class_narissa.html#a5c20a14cf15ac78edb44c18c698c1544">Narissa</a>
 </li>
+<li>JumpCount
+: <a class="el" href="class_base_player_controller.html#ac5ff7472ba9f7d9a2bcc6fd389d05956">BasePlayerController</a>
+</li>
 <li>jumpSpeed
 : <a class="el" href="class_actor.html#a331f93dc17798a740da106a59067bec6">Actor</a>
 </li>
@@ -264,6 +302,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
+<li>knockbackDirection
+: <a class="el" href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">Weapon</a>
+</li>
 <li>knockbackForce
 : <a class="el" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">Weapon</a>
 </li>
@@ -271,9 +312,6 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
-<li>lastCheckpoint
-: <a class="el" href="class_game_manager.html#aa7acf95cdafc9e56103ea452bb5bbcdf">GameManager</a>
-</li>
 <li>line
 : <a class="el" href="class_hook_projectile.html#a4cef7821499bde49aa9e84b0c513be51">HookProjectile</a>
 </li>
@@ -296,22 +334,37 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>maxSwingSpeed
 : <a class="el" href="class_narissa.html#a2f8b20e74fff8da1d47998f28a56a33f">Narissa</a>
 </li>
+<li>mouseDirection
+: <a class="el" href="class_base_player_controller.html#a7cc838f4ab39b1095a9a3999f2ed121f">BasePlayerController</a>
+</li>
+<li>moveSpeedModifier
+: <a class="el" href="class_powerup_effects.html#a0c436db0dba8fffb0f9b9292a6a08712">PowerupEffects</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
-<li>narissa
-: <a class="el" href="class_game_manager.html#a391dd6d4e67be098c3d4b4cf6048f7fd">GameManager</a>
+<li>narissaDamageModifier
+: <a class="el" href="class_powerup_weapon.html#a233f79b7cf01bfd91c21faecffe7e055">PowerupWeapon</a>
+</li>
+<li>narissaDrawSpeed
+: <a class="el" href="class_powerup_weapon.html#aa3f70b8ad5512d661d2a7e938ea61cf9">PowerupWeapon</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
-<li>objectToTrigger
-: <a class="el" href="class_dumb_turret.html#a4b5c4be5cbb914abb1040c967ae8d976">DumbTurret</a>
+<li>objectToSpawn
+: <a class="el" href="class_spawner.html#a2accf5a83e38acb642152825fc678af9">Spawner</a>
+</li>
+<li>offset
+: <a class="el" href="class_health_bars.html#aab280e87ad6e57c2e7f014566aade810">HealthBars</a>
 </li>
 <li>opening
 : <a class="el" href="class_gate.html#a9c39a7c9b786b26d81bfb105575ce547">Gate</a>
+</li>
+<li>other
+: <a class="el" href="class_twin_pressure_plate.html#a2ea415c8cbe19ea6f48d5f5d1edd989b">TwinPressurePlate</a>
 </li>
 </ul>
 
@@ -320,8 +373,15 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>playerActivated
 : <a class="el" href="class_triggerable.html#ab8b938278ce3620891cddbc90b50cdaa">Triggerable</a>
 </li>
+<li>players
+: <a class="el" href="class_layer.html#a4e0b12c0aa1707fa55e01065f0a93d94">Layer</a>
+</li>
 <li>posOffSet
 : <a class="el" href="class_base_enemy.html#a3109bf1ee80921a1a15497432af91c2d">BaseEnemy</a>
+</li>
+<li>prefab
+: <a class="el" href="class_shield.html#af4bdb481bf19015b3b12f18253b2d51e">Shield</a>
+, <a class="el" href="class_sword.html#addcac54e03df97dc0b92bb1b38005ebd">Sword</a>
 </li>
 <li>projectile
 : <a class="el" href="class_dumb_turret.html#a13235f18cb5e6846d8b8c51cc996e9ab">DumbTurret</a>
@@ -336,21 +396,40 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 : <a class="el" href="class_dumb_turret.html#a78841a6e7aa3ac4ad6434b84d29a1b7e">DumbTurret</a>
 , <a class="el" href="class_ranged_enemy.html#a7cabed897fcfd1bc394889435dc3238d">RangedEnemy</a>
 </li>
+<li>pushed
+: <a class="el" href="class_twin_pressure_plate.html#a85e590b1b0ed5a750da4755c7bee759c">TwinPressurePlate</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>rotationSpeed
+: <a class="el" href="class_sword.html#a122ee7b7740c98579d7af415137232d4">Sword</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
-<li>shieldDistance
-: <a class="el" href="class_gareth.html#a27390c30ff292318836de0643542ba4c">Gareth</a>
+<li>secondsBetweenShots
+: <a class="el" href="class_dumb_turret.html#a6ef2b25fcdbe24a69e430c60c6dce3b7">DumbTurret</a>
+</li>
+<li>secondsBetweenVolleys
+: <a class="el" href="class_dumb_turret.html#acb3266f6e4437b022d99176cad085f9d">DumbTurret</a>
 </li>
 <li>shieldMoveSpeed
 : <a class="el" href="class_gareth.html#a5628ca8dc6133235ca769021616d3d80">Gareth</a>
 </li>
-<li>shieldOffset
-: <a class="el" href="class_gareth.html#aa303c7879680ce54aed856c2ee88f807">Gareth</a>
-</li>
 <li>shooter
 : <a class="el" href="class_hook_projectile.html#a27e2c9117b13d0d815c58c9c07c82ade">HookProjectile</a>
+</li>
+<li>shotsPerVolley
+: <a class="el" href="class_dumb_turret.html#ab0b34fe92f811614946ede1a56156446">DumbTurret</a>
+</li>
+<li>spawnInterval
+: <a class="el" href="class_spawner.html#af7732ef6a6c51a47a864fd444cbe60db">Spawner</a>
+</li>
+<li>spawnPosition
+: <a class="el" href="class_spawner.html#ac1d7e6332267d009c655bbed9090fad9">Spawner</a>
 </li>
 <li>spring
 : <a class="el" href="class_narissa.html#aff3f59b36d1be5848d0efee3c53b8316">Narissa</a>
@@ -367,11 +446,11 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>sprintTime
 : <a class="el" href="class_gareth.html#a4f128673ce3d4d87397bb81e7240e905">Gareth</a>
 </li>
+<li>start
+: <a class="el" href="class_game_manager.html#a14ad24d12ab1f512bf01f0e21b583bce">GameManager</a>
+</li>
 <li>swingAcceleration
 : <a class="el" href="class_narissa.html#a6f079a787cd4a02a948a88f04031a954">Narissa</a>
-</li>
-<li>swordOffset
-: <a class="el" href="class_gareth.html#a49b8a762bdfdecec8dc2cbfdae7986c2">Gareth</a>
 </li>
 </ul>
 
@@ -379,27 +458,31 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>target
 : <a class="el" href="class_base_enemy.html#a6aed9ed7b2d84706033e13bb92fffec7">BaseEnemy</a>
+, <a class="el" href="class_nav_script_a_i.html#a2395011931385313cde8b727bc42fecd">NavScriptAI</a>
 </li>
-<li>timer
-: <a class="el" href="class_gate.html#a922e9a90d8c9c815d45e3e31c5b611df">Gate</a>
-</li>
-<li>toActivate
-: <a class="el" href="class_activate_button.html#ad5434849f27a0a7725640c77103f4394">ActivateButton</a>
+<li>targetTag
+: <a class="el" href="class_swap.html#a7dc4c869b2114e8ea49060ec9fdb71c0">Swap</a>
 </li>
 <li>toDestroy
 : <a class="el" href="class_destroy_trigger.html#abb201de66f944d904bcf426bac9a507e">DestroyTrigger</a>
 , <a class="el" href="class_key_trigger.html#ac4bb159aeb480251651999e4b001d7e0">KeyTrigger</a>
 </li>
+<li>toKill
+: <a class="el" href="class_activate_button.html#a9952cd6e4a8c22a0775426f4ef700302">ActivateButton</a>
+</li>
 <li>toMove
 : <a class="el" href="class_activate_button.html#a1fd3ed97f7d7799eb65e1a4064de7356">ActivateButton</a>
 </li>
-<li>triggerable
-: <a class="el" href="class_dumb_turret.html#a4a1933c79e9604d1c57f1d74fe95a527">DumbTurret</a>
+<li>turnSpeed
+: <a class="el" href="class_powerup_effects.html#a6dc3cdb07a96e3aaf781ef2a6eb704ca">PowerupEffects</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>upgraded
+: <a class="el" href="class_gareth.html#a175cc8d7feec5aedad2090120abaa416">Gareth</a>
+</li>
 <li>use
 : <a class="el" href="class_base_player_controller.html#a96b8ab62e31383c5469c3714aa5328d4">BasePlayerController</a>
 </li>
@@ -407,14 +490,8 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
-<li>weapon
-: <a class="el" href="class_melee_enemy.html#a71ff52d8097870c867ef6bab5816c2ad">MeleeEnemy</a>
-</li>
-<li>weaponOffset
-: <a class="el" href="class_melee_enemy.html#a0afbe41292aa6e658cfcf1648ad0a56b">MeleeEnemy</a>
-</li>
 <li>wielder
-: <a class="el" href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">Weapon</a>
+: <a class="el" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">Weapon</a>
 </li>
 </ul>
 
@@ -452,7 +529,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:13 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:14 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

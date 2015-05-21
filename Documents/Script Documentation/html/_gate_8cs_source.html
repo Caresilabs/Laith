@@ -112,51 +112,55 @@ $(document).ready(function(){initNavTree('_gate_8cs_source.html','');});
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_gate.html#a9c39a7c9b786b26d81bfb105575ce547">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_gate.html#a9c39a7c9b786b26d81bfb105575ce547">opening</a>, closing;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_gate.html#a922e9a90d8c9c815d45e3e31c5b611df">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_gate.html#a922e9a90d8c9c815d45e3e31c5b611df">timer</a> = 1;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> Start () {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> Update(){</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> (opening) {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            transform.Translate (<span class="keyword">new</span> Vector3 (0, 5, 0) * Time.deltaTime);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            timer -= Time.deltaTime;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">if</span> (timer &lt;= 0) {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                opening = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                timer = 1;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (closing) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            transform.Translate (<span class="keyword">new</span> Vector3 (0, -5, 0) * Time.deltaTime);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            timer -= Time.deltaTime;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (timer &lt;= 0) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                closing = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                timer = 1;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_gate.html#a0363c8f2ceb3918e76943400093e39f4">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_gate.html#a0363c8f2ceb3918e76943400093e39f4">Activate</a> (){</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (closing || opening)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        opening = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        base.Activate ();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">Deactivate</a> (){</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (opening || closing)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        closing = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        base.Deactivate ();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_gate.html#a09816bb0f86985ba22e40dc5b3cfd95a">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_gate.html#a09816bb0f86985ba22e40dc5b3cfd95a">distanceMoved</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">float</span> time;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">float</span> timer;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> Start () {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        time = distanceMoved / 5f;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        timer = time;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> Update(){</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (opening) {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            transform.Translate (<span class="keyword">new</span> Vector3 (0, 5, 0) * Time.deltaTime);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            timer -= Time.deltaTime;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keywordflow">if</span> (timer &lt;= 0) {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                opening = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                timer = time;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (closing) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            transform.Translate (<span class="keyword">new</span> Vector3 (0, -5, 0) * Time.deltaTime);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            timer -= Time.deltaTime;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (timer &lt;= 0) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                closing = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                timer = time;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_gate.html#a0363c8f2ceb3918e76943400093e39f4">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_gate.html#a0363c8f2ceb3918e76943400093e39f4">Activate</a> (){</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">if</span> (closing || opening)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        opening = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        base.Activate ();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">Deactivate</a> (){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span> (opening || closing)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        closing = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        base.Deactivate ();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="ttc" id="class_triggerable_html"><div class="ttname"><a href="class_triggerable.html">Triggerable</a></div><div class="ttdef"><b>Definition:</b> <a href="_triggerable_8cs_source.html#l00004">Triggerable.cs:4</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="class_gate_html_a922e9a90d8c9c815d45e3e31c5b611df"><div class="ttname"><a href="class_gate.html#a922e9a90d8c9c815d45e3e31c5b611df">Gate.timer</a></div><div class="ttdeci">float timer</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00012">Gate.cs:12</a></div></div>
+<div class="ttc" id="class_gate_html_a09816bb0f86985ba22e40dc5b3cfd95a"><div class="ttname"><a href="class_gate.html#a09816bb0f86985ba22e40dc5b3cfd95a">Gate.distanceMoved</a></div><div class="ttdeci">float distanceMoved</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00012">Gate.cs:12</a></div></div>
 <div class="ttc" id="class_gate_html_a9c39a7c9b786b26d81bfb105575ce547"><div class="ttname"><a href="class_gate.html#a9c39a7c9b786b26d81bfb105575ce547">Gate.opening</a></div><div class="ttdeci">bool opening</div><div class="ttdoc">Moves object up when activated, down when deactivated. Author: Henrik P. </div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00011">Gate.cs:11</a></div></div>
 <div class="ttc" id="class_gate_html"><div class="ttname"><a href="class_gate.html">Gate</a></div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00004">Gate.cs:4</a></div></div>
-<div class="ttc" id="class_gate_html_a0363c8f2ceb3918e76943400093e39f4"><div class="ttname"><a href="class_gate.html#a0363c8f2ceb3918e76943400093e39f4">Gate.Activate</a></div><div class="ttdeci">override void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00035">Gate.cs:35</a></div></div>
-<div class="ttc" id="class_gate_html_ad695de24ff9a4c53feb6104092b6729a"><div class="ttname"><a href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">Gate.Deactivate</a></div><div class="ttdeci">override void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00042">Gate.cs:42</a></div></div>
+<div class="ttc" id="class_gate_html_a0363c8f2ceb3918e76943400093e39f4"><div class="ttname"><a href="class_gate.html#a0363c8f2ceb3918e76943400093e39f4">Gate.Activate</a></div><div class="ttdeci">override void Activate()</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00039">Gate.cs:39</a></div></div>
+<div class="ttc" id="class_gate_html_ad695de24ff9a4c53feb6104092b6729a"><div class="ttname"><a href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">Gate.Deactivate</a></div><div class="ttdeci">override void Deactivate()</div><div class="ttdef"><b>Definition:</b> <a href="_gate_8cs_source.html#l00046">Gate.cs:46</a></div></div>
 <div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -164,7 +168,7 @@ $(document).ready(function(){initNavTree('_gate_8cs_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4469ff4ed964cea2638f05b6086cc6cb.html">Unity Project</a></li><li class="navelem"><a class="el" href="dir_646139fdd519250feb2395bf687dd027.html">Laith</a></li><li class="navelem"><a class="el" href="dir_e640ae4f520fd635da3862d32b87c31e.html">Assets</a></li><li class="navelem"><a class="el" href="dir_b8070e7d4eae247375b6c41c4c86d888.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_948649b10aec98ecb41c0fe1c1a8f446.html">Level</a></li><li class="navelem"><a class="el" href="_gate_8cs.html">Gate.cs</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:12 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:13 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

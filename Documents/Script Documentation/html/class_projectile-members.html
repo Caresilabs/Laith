@@ -111,18 +111,23 @@ $(document).ready(function(){initNavTree('class_projectile.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_projectile.html">Projectile</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_projectile.html#a213e724366eb4e8940f8662e1e3abe81">DealDamage</a>(Actor a)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">knockbackForce</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_projectile.html#a0c0f651fd31e9b8836856fc06845c9a8">maxLifeTime</a></td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_projectile.html#a7811267b4405093c60cc7a928830e90a">OnTriggerEnter</a>(Collider other)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">wielder</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_projectile.html#aee96a72cf984341c4882b920d3613f72">Create</a>(string name, Vector3 position, Vector3 velocity, float damage, float lifeTime, GameObject wielder, bool useGravity)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_projectile.html#a213e724366eb4e8940f8662e1e3abe81">DealDamage</a>(Actor a)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_projectile.html#a594ce753f694fb8ea60daa92da2a0d2a">deflectable</a></td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">knockbackDirection</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">knockbackForce</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_projectile.html#a0c0f651fd31e9b8836856fc06845c9a8">maxLifeTime</a></td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_projectile.html#a7811267b4405093c60cc7a928830e90a">OnTriggerEnter</a>(Collider other)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_projectile.html#a39a3cfdd9ad817a85f17e1974a432685">ReleaseArrow</a>(int layerID, Vector3 pos, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_projectile.html#a696a2048bf942f01d832bbc8f238f0d1">SetNetworkValues</a>(int layerID, Vector3 velocity, float ArrowSpeed, float arrowDamage, bool Gravity)</td><td class="entry"><a class="el" href="class_projectile.html">Projectile</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">wielder</a></td><td class="entry"><a class="el" href="class_weapon.html">Weapon</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:13 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:14 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

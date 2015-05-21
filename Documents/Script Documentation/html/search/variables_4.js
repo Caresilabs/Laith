@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gareth',['gareth',['../class_game_manager.html#a5d1d72835e04567228236483e2c00536',1,'GameManager']]]
+  ['garethdamagemodifier',['garethDamageModifier',['../class_powerup_weapon.html#ad8107fa1c88b12cabe7b147eed32b620',1,'PowerupWeapon']]]
 ];

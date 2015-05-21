@@ -109,57 +109,141 @@ $(document).ready(function(){initNavTree('_game_manager_8cs_source.html','');});
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_game_manager.html">    4</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_game_manager.html">GameManager</a> : MonoBehaviour {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_game_manager.html#a5d1d72835e04567228236483e2c00536">    6</a></span>&#160;    <span class="keyword">public</span> GameObject <a class="code" href="class_game_manager.html#a5d1d72835e04567228236483e2c00536">gareth</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_game_manager.html#a391dd6d4e67be098c3d4b4cf6048f7fd">    7</a></span>&#160;    <span class="keyword">public</span> GameObject <a class="code" href="class_game_manager.html#a391dd6d4e67be098c3d4b4cf6048f7fd">narissa</a>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_game_manager.html#aa7acf95cdafc9e56103ea452bb5bbcdf">    8</a></span>&#160;    <span class="keyword">public</span> GameObject <a class="code" href="class_game_manager.html#aa7acf95cdafc9e56103ea452bb5bbcdf">lastCheckpoint</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="comment">// Use this for initialization</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> Start () {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">SetLastCheckpoint</a>(GameObject checkpoint){</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        lastCheckpoint = checkpoint;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> DeadState(){</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">if</span> (GameObject.Find (<span class="stringliteral">&quot;Gareth(Clone)&quot;</span>) != null) {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            gareth = GameObject.Find (<span class="stringliteral">&quot;Gareth(Clone)&quot;</span>);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> (GameObject.Find (<span class="stringliteral">&quot;Narissa(Clone)&quot;</span>) != null) {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            narissa = GameObject.Find (<span class="stringliteral">&quot;Narissa(Clone)&quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span> (gareth != null &amp;&amp; narissa != null) {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keywordflow">if</span> (gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span> &amp;&amp;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().respawn(lastCheckpoint.transform.position);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().respawn(lastCheckpoint.transform.position);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                gareth.transform.position = narissa.transform.position;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>) {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                narissa.transform.position = gareth.transform.position;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gareth == null &amp;&amp; narissa != null) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span>(narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>){</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().respawn(lastCheckpoint.transform.position);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (narissa == null &amp;&amp; gareth != null) {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span>(gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>){</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().respawn(lastCheckpoint.transform.position);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> Update () {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        DeadState ();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="ttc" id="class_game_manager_html_a391dd6d4e67be098c3d4b4cf6048f7fd"><div class="ttname"><a href="class_game_manager.html#a391dd6d4e67be098c3d4b4cf6048f7fd">GameManager.narissa</a></div><div class="ttdeci">GameObject narissa</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00007">GameManager.cs:7</a></div></div>
-<div class="ttc" id="class_game_manager_html_af61f856d328d4779494ae0fd487f5486"><div class="ttname"><a href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">GameManager.SetLastCheckpoint</a></div><div class="ttdeci">void SetLastCheckpoint(GameObject checkpoint)</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00013">GameManager.cs:13</a></div></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">private</span> GameObject gareth;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keyword">private</span> GameObject narissa;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">private</span> GameObject lastCheckpoint;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span>? numberOfPlayers;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_game_manager.html#a14ad24d12ab1f512bf01f0e21b583bce">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span>? <a class="code" href="class_game_manager.html#a14ad24d12ab1f512bf01f0e21b583bce">start</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Use this for initialization</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">//void Awake () {</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> Start(){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        Physics.IgnoreLayerCollision (8, 9);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        Physics.IgnoreLayerCollision (10, 12);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> OnLevelWasLoaded(<span class="keywordtype">int</span> level) {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        Vector3 startPos;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">if</span> (!start.HasValue) {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            startPos = GameObject.Find (<span class="stringliteral">&quot;Checkpoint 1&quot;</span>) == null ? Vector3.up * 5 : GameObject.Find (<span class="stringliteral">&quot;Checkpoint 1&quot;</span>).transform.position;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            startPos = GameObject.Find (<span class="stringliteral">&quot;Checkpoint &quot;</span> + start) == null ? Vector3.up * 5 : GameObject.Find (<span class="stringliteral">&quot;Checkpoint &quot;</span> + start).transform.position;<span class="comment">//start.transform.position;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a0c5650b860c3f43f9d0375cf19289233">FindGameObjectsWithLayer</a>(<a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a4e0b12c0aa1707fa55e01065f0a93d94">players</a>) != null) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            GameObject[] players = <a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a0c5650b860c3f43f9d0375cf19289233">FindGameObjectsWithLayer</a>(<a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a4e0b12c0aa1707fa55e01065f0a93d94">players</a>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; players.Length; ++i){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordflow">if</span>(players[i].GetComponent&lt;Gareth&gt;() != null){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    gareth = players[i];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="keywordflow">if</span>(players[i].GetComponent&lt;Narissa&gt;() != null){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    narissa = players[i];</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                players[i].transform.position = startPos;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">   46</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">SetLastCheckpoint</a>(GameObject checkpoint){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        lastCheckpoint = checkpoint;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> DeadState(){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> (gareth != null &amp;&amp; narissa != null) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">if</span> (gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span> &amp;&amp;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().Respawn(lastCheckpoint.transform.position);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().Respawn(lastCheckpoint.transform.position);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                gareth.transform.position = narissa.transform.position;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>) {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                narissa.transform.position = gareth.transform.position;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (gareth == null &amp;&amp; narissa != null) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">if</span>(narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>){</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                narissa.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().Respawn(lastCheckpoint.transform.position);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (narissa == null &amp;&amp; gareth != null) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">if</span>(gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().<a class="code" href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">dead</a> == <span class="keyword">true</span>){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                gareth.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt;().Respawn(lastCheckpoint.transform.position);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">//Funkar ej Multiplayer!!</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> ChangeChar(){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span>(PhotonNetwork.room.playerCount == 1){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span>(Input.GetKeyDown(KeyCode.Tab)){</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                GameObject player;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span>(narissa != null){</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    GameObject tempGareth = Resources.Load (<span class="stringliteral">&quot;Gareth&quot;</span>) as GameObject;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    player = PhotonNetwork.Instantiate(tempGareth.name, narissa.transform.position, Quaternion.identity, 0);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    player.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    Camera c = player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).camera;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    c.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    player.transform.FindChild(<span class="stringliteral">&quot;Camera&quot;</span>).gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).GetComponent&lt;AudioListener&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    PhotonNetwork.Destroy(narissa);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                    gareth = player;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(gareth != null){</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    GameObject tempNarissa = Resources.Load (<span class="stringliteral">&quot;Narissa&quot;</span>) as GameObject;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    player = PhotonNetwork.Instantiate(tempNarissa.name, gareth.transform.position, Quaternion.identity, 0);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    player.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    Camera c = player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).camera;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    c.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    player.transform.FindChild(<span class="stringliteral">&quot;Camera&quot;</span>).gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).GetComponent&lt;AudioListener&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    PhotonNetwork.Destroy(gareth);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    narissa = player;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> FindNewPlayer(){</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">if</span> (!PhotonNetwork.inRoom) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (PhotonNetwork.room.playerCount != numberOfPlayers || !numberOfPlayers.HasValue) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a0c5650b860c3f43f9d0375cf19289233">FindGameObjectsWithLayer</a>(<a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a4e0b12c0aa1707fa55e01065f0a93d94">players</a>) != null) {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                GameObject[] players = <a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a0c5650b860c3f43f9d0375cf19289233">FindGameObjectsWithLayer</a>(<a class="code" href="class_layer.html">Layer</a>.<a class="code" href="class_layer.html#a4e0b12c0aa1707fa55e01065f0a93d94">players</a>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; players.Length; ++i){</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                    <span class="keywordflow">if</span>(players[i].tag == <span class="stringliteral">&quot;Gareth&quot;</span>){</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                        gareth = players[i];</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                    }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="keywordflow">if</span>(players[i].tag == <span class="stringliteral">&quot;Narissa&quot;</span>){</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        narissa = players[i];</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                numberOfPlayers = players.Length;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> Update () {</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        DeadState ();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        FindNewPlayer ();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">if</span> (PhotonNetwork.inRoom)</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            ChangeChar ();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="ttc" id="class_layer_html_a4e0b12c0aa1707fa55e01065f0a93d94"><div class="ttname"><a href="class_layer.html#a4e0b12c0aa1707fa55e01065f0a93d94">Layer.players</a></div><div class="ttdeci">static int players</div><div class="ttdef"><b>Definition:</b> <a href="_layer_8cs_source.html#l00007">Layer.cs:7</a></div></div>
+<div class="ttc" id="class_game_manager_html_af61f856d328d4779494ae0fd487f5486"><div class="ttname"><a href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">GameManager.SetLastCheckpoint</a></div><div class="ttdeci">void SetLastCheckpoint(GameObject checkpoint)</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00046">GameManager.cs:46</a></div></div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
-<div class="ttc" id="class_base_player_controller_html_a6a21b2bacefe35f6c92f7be7dd1e2c6d"><div class="ttname"><a href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">BasePlayerController.dead</a></div><div class="ttdeci">bool dead</div><div class="ttdef"><b>Definition:</b> <a href="_base_player_controller_8cs_source.html#l00018">BasePlayerController.cs:18</a></div></div>
-<div class="ttc" id="class_game_manager_html_aa7acf95cdafc9e56103ea452bb5bbcdf"><div class="ttname"><a href="class_game_manager.html#aa7acf95cdafc9e56103ea452bb5bbcdf">GameManager.lastCheckpoint</a></div><div class="ttdeci">GameObject lastCheckpoint</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00008">GameManager.cs:8</a></div></div>
+<div class="ttc" id="class_base_player_controller_html_a6a21b2bacefe35f6c92f7be7dd1e2c6d"><div class="ttname"><a href="class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d">BasePlayerController.dead</a></div><div class="ttdeci">bool dead</div><div class="ttdef"><b>Definition:</b> <a href="_base_player_controller_8cs_source.html#l00020">BasePlayerController.cs:20</a></div></div>
+<div class="ttc" id="class_game_manager_html_a14ad24d12ab1f512bf01f0e21b583bce"><div class="ttname"><a href="class_game_manager.html#a14ad24d12ab1f512bf01f0e21b583bce">GameManager.start</a></div><div class="ttdeci">int start</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00015">GameManager.cs:15</a></div></div>
+<div class="ttc" id="class_layer_html"><div class="ttname"><a href="class_layer.html">Layer</a></div><div class="ttdef"><b>Definition:</b> <a href="_layer_8cs_source.html#l00005">Layer.cs:5</a></div></div>
 <div class="ttc" id="class_game_manager_html"><div class="ttname"><a href="class_game_manager.html">GameManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00004">GameManager.cs:4</a></div></div>
+<div class="ttc" id="class_layer_html_a0c5650b860c3f43f9d0375cf19289233"><div class="ttname"><a href="class_layer.html#a0c5650b860c3f43f9d0375cf19289233">Layer.FindGameObjectsWithLayer</a></div><div class="ttdeci">static GameObject[] FindGameObjectsWithLayer(int layer)</div><div class="ttdef"><b>Definition:</b> <a href="_layer_8cs_source.html#l00008">Layer.cs:8</a></div></div>
 <div class="ttc" id="class_base_player_controller_html"><div class="ttname"><a href="class_base_player_controller.html">BasePlayerController</a></div><div class="ttdoc">Base player is the base for player. Extend this class for different player mechanics Author: Simon B ...</div><div class="ttdef"><b>Definition:</b> <a href="_base_player_controller_8cs_source.html#l00009">BasePlayerController.cs:9</a></div></div>
-<div class="ttc" id="class_game_manager_html_a5d1d72835e04567228236483e2c00536"><div class="ttname"><a href="class_game_manager.html#a5d1d72835e04567228236483e2c00536">GameManager.gareth</a></div><div class="ttdeci">GameObject gareth</div><div class="ttdef"><b>Definition:</b> <a href="_game_manager_8cs_source.html#l00006">GameManager.cs:6</a></div></div>
 <div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -167,7 +251,7 @@ $(document).ready(function(){initNavTree('_game_manager_8cs_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4469ff4ed964cea2638f05b6086cc6cb.html">Unity Project</a></li><li class="navelem"><a class="el" href="dir_646139fdd519250feb2395bf687dd027.html">Laith</a></li><li class="navelem"><a class="el" href="dir_e640ae4f520fd635da3862d32b87c31e.html">Assets</a></li><li class="navelem"><a class="el" href="dir_b8070e7d4eae247375b6c41c4c86d888.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_79d39297aae075d4e5b02b89624f2f48.html">Gameplay</a></li><li class="navelem"><a class="el" href="_game_manager_8cs.html">GameManager.cs</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:12 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:13 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

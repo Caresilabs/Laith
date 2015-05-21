@@ -1,15 +1,21 @@
 var searchData=
 [
-  ['damage',['damage',['../class_weapon.html#a67d637088f248dd13048b89e592ea63a',1,'Weapon']]],
+  ['damage',['Damage',['../class_actor.html#a07ff80ead8bcf8be4c438c13c9e8a65b',1,'Actor.Damage()'],['../class_weapon.html#a67d637088f248dd13048b89e592ea63a',1,'Weapon.damage()']]],
   ['deactivate',['Deactivate',['../class_gate.html#ad695de24ff9a4c53feb6104092b6729a',1,'Gate.Deactivate()'],['../class_switch.html#a2ce1d25031739e50f4d8b07dd899ef43',1,'Switch.Deactivate()'],['../class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5',1,'Triggerable.Deactivate()']]],
   ['dead',['dead',['../class_base_player_controller.html#a6a21b2bacefe35f6c92f7be7dd1e2c6d',1,'BasePlayerController']]],
   ['dealdamage',['DealDamage',['../class_projectile.html#a213e724366eb4e8940f8662e1e3abe81',1,'Projectile.DealDamage()'],['../class_weapon.html#afd216cd432260bae23cd8b27865682ad',1,'Weapon.DealDamage()']]],
-  ['delaytime',['delayTime',['../class_dumb_turret.html#acb65866103c9a8081c6c16262af6083f',1,'DumbTurret']]],
+  ['deflectable',['deflectable',['../class_projectile.html#a594ce753f694fb8ea60daa92da2a0d2a',1,'Projectile']]],
+  ['destroyenemy',['DestroyEnemy',['../class_base_enemy.html#afba54a5e4be08e63a1850a0ab41ee0e4',1,'BaseEnemy']]],
   ['destroyhook',['DestroyHook',['../class_narissa.html#a830d07b1d83241ed77020360f19af20a',1,'Narissa']]],
+  ['destroyonnetwork',['DestroyOnNetwork',['../class_soft_wall.html#aa755700ae25273e46cc470da876f4061',1,'SoftWall']]],
   ['destroytrigger',['DestroyTrigger',['../class_destroy_trigger.html',1,'']]],
   ['destroytrigger_2ecs',['DestroyTrigger.cs',['../_destroy_trigger_8cs.html',1,'']]],
   ['direction',['Direction',['../class_actor.html#a71560eee8a033387ba9f0d5c2fd82e54',1,'Actor']]],
-  ['drawbackspeed',['drawBackSpeed',['../class_narissa.html#a99bd1f1c27b5753ab50da2f1778ed1cf',1,'Narissa']]],
+  ['distancemoved',['distanceMoved',['../class_gate.html#a09816bb0f86985ba22e40dc5b3cfd95a',1,'Gate']]],
+  ['dontdestroy',['DontDestroy',['../class_dont_destroy.html',1,'']]],
+  ['dontdestroy_2ecs',['DontDestroy.cs',['../_dont_destroy_8cs.html',1,'']]],
+  ['drawbow',['DrawBow',['../class_bow.html#a59a3a5cc8fa546353564fc4a60df7766',1,'Bow']]],
+  ['drawspeed',['drawSpeed',['../class_bow.html#ab346f8d374e3298f53d869e7370d7f7b',1,'Bow']]],
   ['dumbturret',['DumbTurret',['../class_dumb_turret.html',1,'']]],
   ['dumbturret_2ecs',['DumbTurret.cs',['../_dumb_turret_8cs.html',1,'']]]
 ];

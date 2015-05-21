@@ -137,8 +137,8 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9c39a7c9b786b26d81bfb105575ce547"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a9c39a7c9b786b26d81bfb105575ce547">opening</a></td></tr>
 <tr class="memdesc:a9c39a7c9b786b26d81bfb105575ce547"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves object up when activated, down when deactivated. Author: Henrik P.  <a href="#a9c39a7c9b786b26d81bfb105575ce547">More...</a><br /></td></tr>
 <tr class="separator:a9c39a7c9b786b26d81bfb105575ce547"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a922e9a90d8c9c815d45e3e31c5b611df"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a922e9a90d8c9c815d45e3e31c5b611df">timer</a> = 1</td></tr>
-<tr class="separator:a922e9a90d8c9c815d45e3e31c5b611df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09816bb0f86985ba22e40dc5b3cfd95a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gate.html#a09816bb0f86985ba22e40dc5b3cfd95a">distanceMoved</a></td></tr>
+<tr class="separator:a09816bb0f86985ba22e40dc5b3cfd95a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_class_triggerable"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_triggerable')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_triggerable.html">Triggerable</a></td></tr>
 <tr class="memitem:ab8b938278ce3620891cddbc90b50cdaa inherit pub_attribs_class_triggerable"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triggerable.html#ab8b938278ce3620891cddbc90b50cdaa">playerActivated</a></td></tr>
 <tr class="memdesc:ab8b938278ce3620891cddbc90b50cdaa inherit pub_attribs_class_triggerable"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extend this class for anything with an on/off state. Author: Henrik P.  <a href="#ab8b938278ce3620891cddbc90b50cdaa">More...</a><br /></td></tr>
@@ -173,7 +173,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Triggerable</a>.</p>
 
-<p>Definition at line <a class="el" href="_gate_8cs_source.html#l00035">35</a> of file <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gate_8cs_source.html#l00039">39</a> of file <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
 </div>
 </div>
@@ -200,11 +200,25 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_triggerable.html#ac3410c73ae0ceb0ae81d4ba47c3beac5">Triggerable</a>.</p>
 
-<p>Definition at line <a class="el" href="_gate_8cs_source.html#l00042">42</a> of file <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+<p>Definition at line <a class="el" href="_gate_8cs_source.html#l00046">46</a> of file <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a09816bb0f86985ba22e40dc5b3cfd95a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Gate.distanceMoved</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_gate_8cs_source.html#l00012">12</a> of file <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a9c39a7c9b786b26d81bfb105575ce547"></a>
 <div class="memitem">
 <div class="memproto">
@@ -221,20 +235,6 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a922e9a90d8c9c815d45e3e31c5b611df"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">float Gate.timer = 1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="_gate_8cs_source.html#l00012">12</a> of file <a class="el" href="_gate_8cs_source.html">Gate.cs</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>Unity Project/Laith/Assets/Scripts/Level/<a class="el" href="_gate_8cs_source.html">Gate.cs</a></li>
 </ul>
@@ -244,7 +244,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_gate.html">Gate</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:12 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:13 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

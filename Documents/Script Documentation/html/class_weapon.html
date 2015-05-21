@@ -119,6 +119,8 @@ Inheritance diagram for Weapon:</div>
   <img src="class_weapon.png" usemap="#Weapon_map" alt=""/>
   <map id="Weapon_map" name="Weapon_map">
 <area href="class_projectile.html" alt="Projectile" shape="rect" coords="0,112,102,136"/>
+<area href="class_shield.html" alt="Shield" shape="rect" coords="112,112,214,136"/>
+<area href="class_sword.html" alt="Sword" shape="rect" coords="224,112,326,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -134,10 +136,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a67d637088f248dd13048b89e592ea63a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a67d637088f248dd13048b89e592ea63a">damage</a></td></tr>
 <tr class="memdesc:a67d637088f248dd13048b89e592ea63a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for collision and deals damage if appropriate. Extend this class for anything that deals damage upon contact. Author: Henrik P.  <a href="#a67d637088f248dd13048b89e592ea63a">More...</a><br /></td></tr>
 <tr class="separator:a67d637088f248dd13048b89e592ea63a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c71e74f056473994f0a1fdd78c08d2"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#ad3c71e74f056473994f0a1fdd78c08d2">knockbackDirection</a> = Vector3.zero</td></tr>
+<tr class="separator:ad3c71e74f056473994f0a1fdd78c08d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d7fc8e86f8d00df456fb4f7f78081de"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a7d7fc8e86f8d00df456fb4f7f78081de">knockbackForce</a></td></tr>
 <tr class="separator:a7d7fc8e86f8d00df456fb4f7f78081de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6248e3eb83e44291711e4ee21e6bc7e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_actor.html">Actor</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#a6248e3eb83e44291711e4ee21e6bc7e5">wielder</a></td></tr>
-<tr class="separator:a6248e3eb83e44291711e4ee21e6bc7e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af64c72d17c522cd5e5ba9fac264fe909"><td class="memItemLeft" align="right" valign="top">GameObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_weapon.html#af64c72d17c522cd5e5ba9fac264fe909">wielder</a></td></tr>
+<tr class="separator:af64c72d17c522cd5e5ba9fac264fe909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -167,7 +171,7 @@ Public Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_projectile.html#a213e724366eb4e8940f8662e1e3abe81">Projectile</a>.</p>
 
-<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00038">38</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
+<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00035">35</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
 
 </div>
 </div>
@@ -193,9 +197,9 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="class_projectile.html#a7811267b4405093c60cc7a928830e90a">Projectile</a>.</p>
+<p>Reimplemented in <a class="el" href="class_shield.html#ad01dee8e0292b09dfe8e586aefb80220">Shield</a>, and <a class="el" href="class_projectile.html#a7811267b4405093c60cc7a928830e90a">Projectile</a>.</p>
 
-<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00024">24</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
+<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00016">16</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
 
 </div>
 </div>
@@ -216,6 +220,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad3c71e74f056473994f0a1fdd78c08d2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 Weapon.knockbackDirection = Vector3.zero</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00012">12</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a7d7fc8e86f8d00df456fb4f7f78081de"></a>
 <div class="memitem">
 <div class="memproto">
@@ -226,21 +244,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00012">12</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
+<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00013">13</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a6248e3eb83e44291711e4ee21e6bc7e5"></a>
+<a class="anchor" id="af64c72d17c522cd5e5ba9fac264fe909"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_actor.html">Actor</a> Weapon.wielder</td>
+          <td class="memname">GameObject Weapon.wielder</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00013">13</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
+<p>Definition at line <a class="el" href="_weapon_8cs_source.html#l00014">14</a> of file <a class="el" href="_weapon_8cs_source.html">Weapon.cs</a>.</p>
 
 </div>
 </div>
@@ -253,7 +271,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_weapon.html">Weapon</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:13 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:14 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['zval',['Zval',['../class_activate_button.html#a2dcc0cbd5d465b51410922e1cecc5de5',1,'ActivateButton']]],
-  ['zvalue',['Zvalue',['../class_kill_player.html#a9d89b17f4e590b5762047b2a169f9fef',1,'KillPlayer']]]
+  ['yval',['Yval',['../class_activate_button.html#a7ce092c84c21354dc7c65593a786d2e4',1,'ActivateButton']]],
+  ['yvalue',['Yvalue',['../class_kill_player.html#a5f79dc09133450f694edebc7e18abd69',1,'KillPlayer']]]
 ];

@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_h"><span>h</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_j"><span>j</span></a></li>
+      <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
       <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_r"><span>r</span></a></li>
@@ -140,7 +141,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_triggerable.html#a554f8ab5407113319420a0753f19eb47">Triggerable</a>
 </li>
 <li>Attack()
-: <a class="el" href="class_melee_enemy.html#a7249d827e612b556bf5142884d5bfd12">MeleeEnemy</a>
+: <a class="el" href="class_sword.html#a3027f6661e92ad17511244f59ff8389a">Sword</a>
 </li>
 <li>Awake()
 : <a class="el" href="class_network_rigid_body.html#a6be8ed97c04a545e09df0db36104c251">NetworkRigidBody</a>
@@ -155,10 +156,25 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>CheckForDestroy()
 : <a class="el" href="class_base_enemy.html#a2a61b938db1902b063df906f0552d4ac">BaseEnemy</a>
 </li>
+<li>CheckForWall()
+: <a class="el" href="class_gareth.html#afd261177afdb4b2ff799197015d5a6b0">Gareth</a>
+</li>
+<li>CheckIfGrounded()
+: <a class="el" href="class_actor.html#a3738fd9ebefa5068f4ae3117f863b6a8">Actor</a>
+</li>
+<li>Create()
+: <a class="el" href="class_bow.html#a674fa974ec6a82875df481c16701c955">Bow</a>
+, <a class="el" href="class_projectile.html#aee96a72cf984341c4882b920d3613f72">Projectile</a>
+, <a class="el" href="class_shield.html#a06650632191522410d23bb4ffd981912">Shield</a>
+, <a class="el" href="class_sword.html#a5fd295db7525ac6118c53cf138fef15e">Sword</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>Damage()
+: <a class="el" href="class_actor.html#a07ff80ead8bcf8be4c438c13c9e8a65b">Actor</a>
+</li>
 <li>Deactivate()
 : <a class="el" href="class_gate.html#ad695de24ff9a4c53feb6104092b6729a">Gate</a>
 , <a class="el" href="class_switch.html#a2ce1d25031739e50f4d8b07dd899ef43">Switch</a>
@@ -168,15 +184,30 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_projectile.html#a213e724366eb4e8940f8662e1e3abe81">Projectile</a>
 , <a class="el" href="class_weapon.html#afd216cd432260bae23cd8b27865682ad">Weapon</a>
 </li>
+<li>DestroyEnemy()
+: <a class="el" href="class_base_enemy.html#afba54a5e4be08e63a1850a0ab41ee0e4">BaseEnemy</a>
+</li>
 <li>DestroyHook()
 : <a class="el" href="class_narissa.html#a830d07b1d83241ed77020360f19af20a">Narissa</a>
+</li>
+<li>DestroyOnNetwork()
+: <a class="el" href="class_soft_wall.html#aa755700ae25273e46cc470da876f4061">SoftWall</a>
+</li>
+<li>DrawBow()
+: <a class="el" href="class_bow.html#a59a3a5cc8fa546353564fc4a60df7766">Bow</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_f"></a>- f -</h3><ul>
+<li>FindGameObjectsWithLayer()
+: <a class="el" href="class_layer.html#a0c5650b860c3f43f9d0375cf19289233">Layer</a>
+</li>
 <li>FireProjectile()
 : <a class="el" href="class_ranged_enemy.html#a027666fd5520c30e723871978c6e1fa0">RangedEnemy</a>
+</li>
+<li>FollowMouse()
+: <a class="el" href="class_bow.html#a65bc17ab79fdd7385a26c2ce5565466c">Bow</a>
 </li>
 </ul>
 
@@ -192,8 +223,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>Invulnerability()
 : <a class="el" href="class_actor.html#a853147e55d397b2290d8b5a5955387e0">Actor</a>
 </li>
-<li>IsGrounded()
-: <a class="el" href="class_actor.html#ae7d394b9c9df51b0faf456eb571474fb">Actor</a>
+<li>IsPlayer()
+: <a class="el" href="class_layer.html#aa47f3c7e2e34799f1aa149ae3a4c7548">Layer</a>
 </li>
 </ul>
 
@@ -205,16 +236,30 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </ul>
 
 
+<h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
+<li>Kill()
+: <a class="el" href="class_actor.html#ade3f1f7ffcbafbc2f191fbf3cb34218d">Actor</a>
+</li>
+</ul>
+
+
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
-<li>MouseDirection()
-: <a class="el" href="class_base_player_controller.html#ae78795875133cdd6d9ae1739dba6c896">BasePlayerController</a>
+<li>Movement()
+: <a class="el" href="class_base_player_controller.html#a8c759b2d15173e45ea416f01bbead6f7">BasePlayerController</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>OnCreateRoomClick()
+: <a class="el" href="class_network_manager.html#a56e19d94c2392c1d0731b6d92a84ce58">NetworkManager</a>
+</li>
+<li>OnLevelInput()
+: <a class="el" href="class_network_manager.html#a7ce00e97491fd921bb35ca00853dd453">NetworkManager</a>
+</li>
 <li>OnTriggerEnter()
 : <a class="el" href="class_projectile.html#a7811267b4405093c60cc7a928830e90a">Projectile</a>
+, <a class="el" href="class_shield.html#ad01dee8e0292b09dfe8e586aefb80220">Shield</a>
 , <a class="el" href="class_weapon.html#a22a3f58380d2652885167cbacd20b426">Weapon</a>
 </li>
 <li>OnTriggerStay()
@@ -225,8 +270,17 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
-<li>respawn()
-: <a class="el" href="class_base_player_controller.html#aaf70d90886b9c472dae6588b73ed8681">BasePlayerController</a>
+<li>Release()
+: <a class="el" href="class_bow.html#ad2bddc0b34eb09d5201598caadb814ef">Bow</a>
+</li>
+<li>ReleaseArrow()
+: <a class="el" href="class_projectile.html#a39a3cfdd9ad817a85f17e1974a432685">Projectile</a>
+</li>
+<li>RemovePowerup()
+: <a class="el" href="class_powerup_weapon.html#a130967e53af927f7628282710bc2eb93">PowerupWeapon</a>
+</li>
+<li>Respawn()
+: <a class="el" href="class_base_player_controller.html#abea6bd38e7bb95e518fb17a651f1c87a">BasePlayerController</a>
 </li>
 </ul>
 
@@ -236,10 +290,19 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_base_player_controller.html#a9cc7041a0827c2dd799af397759ad00f">BasePlayerController</a>
 </li>
 <li>SendRespawnInfo()
-: <a class="el" href="class_base_player_controller.html#ade20b6631a1bb42f40a4646746dab478">BasePlayerController</a>
+: <a class="el" href="class_base_player_controller.html#a9005ccd0cc31bb04b169fc906c5f6a8d">BasePlayerController</a>
 </li>
 <li>SetLastCheckpoint()
 : <a class="el" href="class_game_manager.html#af61f856d328d4779494ae0fd487f5486">GameManager</a>
+</li>
+<li>SetNetworkValues()
+: <a class="el" href="class_projectile.html#a696a2048bf942f01d832bbc8f238f0d1">Projectile</a>
+</li>
+<li>ShieldDown()
+: <a class="el" href="class_shield.html#a6f7502d89c69c1d19d9b1623864deed3">Shield</a>
+</li>
+<li>ShieldUp()
+: <a class="el" href="class_shield.html#af2cfdb453cc75178d937ba563284e331">Shield</a>
 </li>
 <li>Start()
 : <a class="el" href="class_base_enemy.html#a607911b4d26a17570c41153766419f3f">BaseEnemy</a>
@@ -257,7 +320,8 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_actor.html#acc6fb2c84c16bd2753eaac60efd12d87">Actor</a>
 </li>
 <li>Trigger()
-: <a class="el" href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">Triggerable</a>
+: <a class="el" href="class_activate_button.html#a87184f8f4c02ac2881b5138ea1b4f266">ActivateButton</a>
+, <a class="el" href="class_triggerable.html#ab75ebc461c6bcaef4d1daf1f44d75054">Triggerable</a>
 </li>
 </ul>
 
@@ -275,8 +339,11 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>UpdateDirection()
 : <a class="el" href="class_base_player_controller.html#af24573f9b8ef7fecd3a1b9b6f5ae200c">BasePlayerController</a>
 </li>
-<li>UpdateInput()
-: <a class="el" href="class_base_player_controller.html#a85cfcf05174d5f946b03b6d92dc80790">BasePlayerController</a>
+<li>UpdateMouseDirection()
+: <a class="el" href="class_base_player_controller.html#a1ba73d22594a283c84bffde3e71e88cf">BasePlayerController</a>
+</li>
+<li>UpdateState()
+: <a class="el" href="class_base_player_controller.html#a8dfae122204ca6bbaeb91dad7f5fef79">BasePlayerController</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -284,7 +351,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:13 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:14 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>

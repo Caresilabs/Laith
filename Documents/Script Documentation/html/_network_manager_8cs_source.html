@@ -109,82 +109,158 @@ $(document).ready(function(){initNavTree('_network_manager_8cs_source.html','');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_unity_engine.html">UnityEngine</a>.UI;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_network_manager.html">   11</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_network_manager.html">NetworkManager</a> : MonoBehaviour {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Use this for initialization</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        PhotonNetwork.ConnectUsingSettings(<span class="stringliteral">&quot;0.1&quot;</span>);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        narissa = Resources.Load (<span class="stringliteral">&quot;Narissa&quot;</span>) as GameObject;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        gareth = Resources.Load (<span class="stringliteral">&quot;Gareth&quot;</span>) as GameObject;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> Update () {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">if</span> (Input.GetKeyUp(KeyCode.Escape) ){</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            PhotonNetwork.LeaveRoom();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span> RoomInfo[] roomsList;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> OnGUI()</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (!PhotonNetwork.connected) {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            GUILayout.Label (PhotonNetwork.connectionStateDetailed.ToString ());</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PhotonNetwork.room == null) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">// Create Room</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span> (GUI.Button (<span class="keyword">new</span> Rect (100, 50, 250, 80), <span class="stringliteral">&quot;Create New Room&quot;</span>))</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                PhotonNetwork.CreateRoom (<span class="stringliteral">&quot;#&quot;</span> + roomsList.Length, <span class="keyword">new</span> RoomOptions () {isVisible = <span class="keyword">true</span>, isOpen = <span class="keyword">true</span>, maxPlayers = 2}, TypedLobby.Default);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">// Join Room</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span> (roomsList != null &amp;&amp; roomsList.Length != 0) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                GUI.Label (<span class="keyword">new</span> Rect (110, 170, 150, 60), <span class="stringliteral">&quot;Open games&quot;</span>);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; roomsList.Length; i++) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="keywordflow">if</span> (GUI.Button (<span class="keyword">new</span> Rect (100, 200 + (110 * i), 250, 80), <span class="stringliteral">&quot;Join Room &quot;</span> + roomsList [i].name))</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        PhotonNetwork.JoinRoom (roomsList [i].name);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            GUILayout.Label(<span class="stringliteral">&quot;Room: &quot;</span> + PhotonNetwork.room.name);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> OnReceivedRoomListUpdate()</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        roomsList = PhotonNetwork.GetRoomList();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">private</span> GameObject narissa;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">private</span> GameObject gareth; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> OnJoinedRoom()</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">// Spawn player</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        GameObject player;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">if</span> (PhotonNetwork.room.playerCount == 1) {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            player = PhotonNetwork.Instantiate(narissa.name, Vector3.up * 5, Quaternion.identity, 0);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            player = PhotonNetwork.Instantiate(gareth.name, Vector3.up * 5, Quaternion.identity, 0);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        player.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        Camera c = player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).camera;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        c.enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        player.transform.FindChild(<span class="stringliteral">&quot;Camera&quot;</span>).gameObject.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).GetComponent&lt;AudioListener&gt; ().enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_network_manager.html">   12</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_network_manager.html">NetworkManager</a> : MonoBehaviour {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">string</span> levelInput = <span class="stringliteral">&quot;1&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> createAsNarissa;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">// Use this for initialization</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        PhotonNetwork.ConnectUsingSettings(<span class="stringliteral">&quot;0.1&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        narissa = Resources.Load (<span class="stringliteral">&quot;Narissa&quot;</span>) as GameObject;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        gareth = Resources.Load (<span class="stringliteral">&quot;Gareth&quot;</span>) as GameObject;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> Update () {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">if</span> (Input.GetKeyUp(KeyCode.Escape) ){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            PhotonNetwork.LeaveRoom();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            Destroy(GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Narissa&quot;</span>));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Destroy(GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Gareth&quot;</span>));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            Destroy(GameObject.Find(<span class="stringliteral">&quot;_SCRIPTS&quot;</span>));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Application.LoadLevel(<span class="stringliteral">&quot;MainMenu&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (GameObject.Find (<span class="stringliteral">&quot;ToggleNarrisa&quot;</span>) != null)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordflow">if</span> (GameObject.Find (<span class="stringliteral">&quot;ToggleNarrisa&quot;</span>).GetComponent&lt;Toggle&gt; ().isOn) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                createAsNarissa = <span class="keyword">true</span>; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                createAsNarissa = <span class="keyword">false</span>;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span> RoomInfo[] roomsList;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> OnGUI()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (!PhotonNetwork.connected) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            GUILayout.Label (PhotonNetwork.connectionStateDetailed.ToString ());</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (PhotonNetwork.room == null) {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="comment">// Create Room</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="comment">//if (GUI.Button (new Rect (100, 50, 250, 80), &quot;Create New Room&quot;))</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">//  PhotonNetwork.CreateRoom (&quot;#&quot; + roomsList.Length, new RoomOptions () {isVisible = true, isOpen = true, maxPlayers = 2}, TypedLobby.Default);</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// Join Room</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">if</span> (roomsList != null &amp;&amp; roomsList.Length != 0) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">//GUI.Label (new Rect (110, 170, 150, 60), &quot;Open games&quot;);</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; roomsList.Length; i++) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keywordflow">if</span> (GUI.Button (<span class="keyword">new</span> Rect (100, 200 + (80 * i), 250, 50), <span class="stringliteral">&quot;Join Room &quot;</span> + roomsList [i].name))</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                        PhotonNetwork.JoinRoom (roomsList [i].name);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            GUILayout.Label(<span class="stringliteral">&quot;Room: &quot;</span> + PhotonNetwork.room.name);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_network_manager.html#a56e19d94c2392c1d0731b6d92a84ce58">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_manager.html#a56e19d94c2392c1d0731b6d92a84ce58">OnCreateRoomClick</a>() {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (PhotonNetwork.room == null &amp;&amp; PhotonNetwork.insideLobby) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">// Create Room</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            PhotonNetwork.CreateRoom (<span class="stringliteral">&quot;#&quot;</span> + roomsList.Length, <span class="keyword">new</span> RoomOptions () {isVisible = <span class="keyword">true</span>, isOpen = <span class="keyword">true</span>, maxPlayers = 2}, TypedLobby.Default);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="class_network_manager.html#a7ce00e97491fd921bb35ca00853dd453">   78</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_network_manager.html#a7ce00e97491fd921bb35ca00853dd453">OnLevelInput</a>(String text) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        this.levelInput = GameObject.Find(<span class="stringliteral">&quot;LevelInput&quot;</span>).transform.FindChild(<span class="stringliteral">&quot;Text&quot;</span>).GetComponent&lt;Text&gt;().text;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Debug.Log (levelInput);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> OnReceivedRoomListUpdate()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        roomsList = PhotonNetwork.GetRoomList();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">private</span> GameObject narissa;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">private</span> GameObject gareth; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    IEnumerator OnJoinedRoom()</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        Application.LoadLevel (<span class="stringliteral">&quot;Level0&quot;</span> + levelInput);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">while</span> (Application.isLoadingLevel)</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            yield <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="comment">// Spawn player</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        GameObject player;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="comment">//Debug.Log(PhotonNetwork.room.playerCount);</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="comment">// Find the first Checkpoint, else just spawn at Zero</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        Vector3 start = GameObject.Find(<span class="stringliteral">&quot;Checkpoint 1&quot;</span>) == null ? (Vector3.up * 5) : GameObject.Find(<span class="stringliteral">&quot;Checkpoint 1&quot;</span>).transform.position;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">if</span> (PhotonNetwork.room.playerCount == 1) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="comment">//Debug.LogError(&quot;haj&quot;);</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">if</span> (createAsNarissa) {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                <span class="comment">//player.name = &quot;Narissa&quot;;</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                player = PhotonNetwork.Instantiate(gareth.name, start, Quaternion.identity, 0);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="comment">//player.name = &quot;Gareth&quot;;</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="comment">//Debug.Log(GameObject.FindGameObjectWithTag(&quot;Gareth&quot;).transform + &quot; a&quot;);</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keywordflow">if</span> (GameObject.FindGameObjectWithTag(<span class="stringliteral">&quot;Gareth&quot;</span>) == null) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                <span class="comment">//Vector3 start = GameObject.FindGameObjectWithTag(&quot;Narissa&quot;).transform.position + Vector3.up * 5;</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                player = PhotonNetwork.Instantiate(gareth.name, start, Quaternion.identity, 0);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="comment">//player.name = &quot;Gareth&quot;;</span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="comment">//Vector3 start = GameObject.FindWithTag(&quot;Gareth&quot;).transform.position + Vector3.up * 5;</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                player = PhotonNetwork.Instantiate(narissa.name, start, Quaternion.identity, 0);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="comment">//player.name = &quot;Narissa&quot;;</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        player.GetComponent&lt;<a class="code" href="class_base_player_controller.html">BasePlayerController</a>&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        Camera c = player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).camera;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        c.enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordflow">if</span> (player.tag == <span class="stringliteral">&quot;Narissa&quot;</span>) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            player.GetComponent&lt;<a class="code" href="class_swap.html">Swap</a>&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            player.GetComponentInChildren&lt;<a class="code" href="class_shield.html">Shield</a>&gt;().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        player.transform.FindChild(<span class="stringliteral">&quot;Camera&quot;</span>).gameObject.SetActive(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        player.transform.FindChild (<span class="stringliteral">&quot;Camera&quot;</span>).GetComponent&lt;AudioListener&gt; ().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="comment">//Application.LoadLevel (&quot;PlaygroundLevel&quot;);</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
 <div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="class_swap_html"><div class="ttname"><a href="class_swap.html">Swap</a></div><div class="ttdef"><b>Definition:</b> <a href="_swap_8cs_source.html#l00004">Swap.cs:4</a></div></div>
 <div class="ttc" id="class_base_player_controller_html"><div class="ttname"><a href="class_base_player_controller.html">BasePlayerController</a></div><div class="ttdoc">Base player is the base for player. Extend this class for different player mechanics Author: Simon B ...</div><div class="ttdef"><b>Definition:</b> <a href="_base_player_controller_8cs_source.html#l00009">BasePlayerController.cs:9</a></div></div>
-<div class="ttc" id="class_network_manager_html"><div class="ttname"><a href="class_network_manager.html">NetworkManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_network_manager_8cs_source.html#l00011">NetworkManager.cs:11</a></div></div>
+<div class="ttc" id="class_network_manager_html_a56e19d94c2392c1d0731b6d92a84ce58"><div class="ttname"><a href="class_network_manager.html#a56e19d94c2392c1d0731b6d92a84ce58">NetworkManager.OnCreateRoomClick</a></div><div class="ttdeci">void OnCreateRoomClick()</div><div class="ttdef"><b>Definition:</b> <a href="_network_manager_8cs_source.html#l00071">NetworkManager.cs:71</a></div></div>
+<div class="ttc" id="class_shield_html"><div class="ttname"><a href="class_shield.html">Shield</a></div><div class="ttdef"><b>Definition:</b> <a href="_shield_8cs_source.html#l00004">Shield.cs:4</a></div></div>
+<div class="ttc" id="class_network_manager_html_a7ce00e97491fd921bb35ca00853dd453"><div class="ttname"><a href="class_network_manager.html#a7ce00e97491fd921bb35ca00853dd453">NetworkManager.OnLevelInput</a></div><div class="ttdeci">void OnLevelInput(String text)</div><div class="ttdef"><b>Definition:</b> <a href="_network_manager_8cs_source.html#l00078">NetworkManager.cs:78</a></div></div>
+<div class="ttc" id="class_network_manager_html"><div class="ttname"><a href="class_network_manager.html">NetworkManager</a></div><div class="ttdef"><b>Definition:</b> <a href="_network_manager_8cs_source.html#l00012">NetworkManager.cs:12</a></div></div>
 <div class="ttc" id="namespace_unity_engine_html"><div class="ttname"><a href="namespace_unity_engine.html">UnityEngine</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -192,7 +268,7 @@ $(document).ready(function(){initNavTree('_network_manager_8cs_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_4469ff4ed964cea2638f05b6086cc6cb.html">Unity Project</a></li><li class="navelem"><a class="el" href="dir_646139fdd519250feb2395bf687dd027.html">Laith</a></li><li class="navelem"><a class="el" href="dir_e640ae4f520fd635da3862d32b87c31e.html">Assets</a></li><li class="navelem"><a class="el" href="dir_b8070e7d4eae247375b6c41c4c86d888.html">Scripts</a></li><li class="navelem"><a class="el" href="dir_c0c86d3b7d287484e1e64c8724ff4619.html">Network</a></li><li class="navelem"><a class="el" href="_network_manager_8cs.html">NetworkManager.cs</a></li>
-    <li class="footer">Generated on Mon Apr 27 2015 13:27:12 for Laith by
+    <li class="footer">Generated on Thu May 21 2015 12:20:13 for Laith by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.9.1 </li>
   </ul>
