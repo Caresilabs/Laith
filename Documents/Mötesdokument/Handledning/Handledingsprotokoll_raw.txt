@@ -1,0 +1,153 @@
+Måndagen den 16 mars 2015
+Protokollförare: Andreas Karlsson
+Närvarande: Andreas Karlsson, Simon Johansson, Simon Bothén, Tim Lindstam, Henrik Phan 
+
+Handledning Vecka 12
+Onsdagen den 18 mars 2015
+Protokollförare: Simon Bothén
+Närvarande: Andreas Karlsson, Simon Johansson, Simon Bothén, Tim Lindstam, Henrik Phan
+
+Vad togs upp:
+Basecamp strulade men vi fixade det.
+Att ny information om hur documentationen skall se ut har updaterats. Måndages föroläsning gav mycket ny information som vi inte visste om innan.
+Gantt-schema ska gå så långt som det går (men inte för långt).  
+
+Vad uppmanades vi till:
+Basecamp måste användas.
+
+***********************
+
+Handledning Vecka 13
+Fredagen den 27 mars 2015
+Protokollförare: Simon Bothén
+Närvarande: Andreas Karlsson, Simon Johansson, Simon Bothén, Tim Lindstam, Henrik Phan
+
+Vad togs upp:
+Tim hade problem med terrängen men han löste det.
+Andreas fixade klart dokumentation och fixade Maya.
+Henrik håller på med hook.
+
+Nästa vecka:
+Fungerande nätverk.
+Vi ligger mellan sprint 1 och 2. Hinner vi?
+Placeholders? Enkla modeller med enkla färgade texturer.
+PoC nivå: Tim arbeterar. Men ska prata med gruppen om oimplementerade features.
+
+Vad ska vi tänka på?
+Om vi inte hinner? Vad är det viktigaste som behövs?
+
+Basecamp: Inviduellt skriva nere lite vad man gjort och sammanställer efter veckan. Övergripligt och ungefär vad man gjort.
+
+Hur ser timmarna ut? Någonstans mellan 16-20h.
+Hur ser fördelning ut? Det ser bra ut!
+Är det problem, TA UPP DET! Kan ge bakslag.
+
+Hur ska vi testa spel? Testa per iteration.
+Måste ha en dokumenterad testning per iteration.
+
+Våra krav är till exempel. Det ska inte lagga, man ska undvika att man kan fuska. Det som ska hända ska hända o.s.v.
+
+Koden ska packas ner och zipas upp på basecamp.
+
+***********************
+
+Handledning Vecka 15
+Onsdagen den 8 april 2015
+Protokollförare: Simon Bothén
+Närvarande: Andreas Karlsson, Simon Johansson, Simon Bothén, Tim Lindstam
+
+Vad togs upp:
+Planneringen höll inte, och fick göras om och är klar!
+Tim gjorce PoC och lite skript till level.
+Simon J började på nätverket men Simon B tog över och Simon J började på gameplay biten.
+Andreas skrev projektplanneringen och placeholder modeller.
+Simon B satt upp server och fixade kommunikation.
+Henrik har jobbat på karaktärsförmågor.
+
+Mer tid behövdes på abilities vilket vi fick från nätverketsbiten.
+
+IGEN BASECAMP MÅSTE ANVÄNDAS!
+
+Kontext och system diagram.
+
+Nästa vecka:
+Se aktivitet dokumentet Sprint 3.
+
+Ta gärna med något som kan visas upp
+
+***********************
+
+Handledning Vecka 16
+Fredagen den 17 april 2015
+Protokollförare: Simon Bothén
+Närvarande: Simon Johansson, Simon Bothén, Tim Lindstam, Henrik Phan
+
+Vad togs upp:
+Kod ska upp på basecamp.
+Henrik har jobbat med karakärsförmågor
+
+Nästa vecka
+Skapa fiender
+Liv
+Respawn
+Triggers
+
+Vad ska vi tänka på:
+Vi ska ha externa speltester på sundsgymnasiet.
+Ett pussel och eller två är bra
+Bara så man kan testa.
+Bara 4 veckor kvar!
+Klassdiagram!
+Kolla på projektguiden.
+Kolla över vad vi har och inte har.
+Planera, tidsrapportera! 
+
+***********************
+
+Handledning Vecka 17
+Torsdagen den 23 april 2015
+Protokollförare: Simon Bothén
+Närvarande: Andreas Karlsson, Simon Johansson, Simon Bothén, Tim Lindstam, Henrik Phan
+
+Vad togs upp:
+Tog upp vad alla har gjort. 
+Tips är att testa externt.
+
+***********************
+
+Handledning Vecka 19
+Onsdagen den 6 maj 2014
+Protokollförare: Simon Bothén
+Närvaro: Simon J, Simon B, Henrik, Tim, Andreas
+
+Vad togs upp:
+Deadline 24/5
+Skulle visa spelet men internet klyddade
+Simon fixa nätverk för softwall och swap
+
+Planera sista veckan, nästan dag för dag
+Updatera dokumenten
+Förbereda testerna
+Reflektera över vad som är viktigast
+
+***********************
+
+Handledning Vecka 21
+Tisdagen den 19 maj 2015
+Protokollförare: Simon Bothén
+Närvarande: Andreas Karlsson, Simon Johansson, Simon Bothén, Tim Lindstam, Henrik Phan
+
+Vad togs upp:
+Som sagt, lägg upp allt på basecamp så att Jonas kan ha koll på allt.
+Kanske inte lika detailed som på Trello men mer övergripligt.
+
+Fixa klart dokumenten.
+
+Reflektera över vad som har varit bra, vad har varit dåligt? Lärdomar? Hur kunde vi gjort bättre?
+
+Lägg up kod och EXEs!
+
+
+
+
+
